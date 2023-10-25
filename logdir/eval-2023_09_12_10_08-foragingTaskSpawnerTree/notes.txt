@@ -1,0 +1,5 @@
+Was run with
+
+CUDA_VISIBLE_DEVICES=1 xvfb-run -a python train.py --task aai/configs/paper/foragingTask/foragingTaskSpawnerTree.yml --aai aai/env3.1.1/AnimalAI.x86_64 --from-checkpoint ~/Code/comparative-object-permanence/agents/dreamerv3/logdir/training-2023_08_29_12_41-basic_controls/checkpoint.ckpt --eval-mode
+
+Checkpoint is trained on a big collection of environments with basic entities.
