@@ -91,7 +91,6 @@ def run(args: Args):
     logging.info("Closing environment")
     env.close()
     logging.info("Environment closed.")
-    
 
 
 def get_dreamer_config(logdir: Path, dreamer_args: str = '', from_checkpoint: Optional[Path] = None):
