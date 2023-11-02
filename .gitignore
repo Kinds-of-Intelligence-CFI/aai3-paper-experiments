@@ -1,3 +1,5 @@
+logdir/archive
+
 # Ignore Slurm files
 X*.out
 

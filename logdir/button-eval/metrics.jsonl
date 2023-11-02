@@ -1,0 +1,13 @@
+{"step": 96, "episode/length": 95.0, "episode/score": 0.8859999852720648}
+{"step": 100, "timer/duration": 24.815791130065918, "timer/env.step_count": 100.0, "timer/env.step_total": 5.295096397399902, "timer/env.step_frac": 0.21337608660739227, "timer/env.step_avg": 0.052950963973999024, "timer/env.step_min": 0.007430315017700195, "timer/env.step_max": 0.06727766990661621, "timer/agent.policy_count": 100.0, "timer/agent.policy_total": 6.360506296157837, "timer/agent.policy_frac": 0.2563088262155655, "timer/agent.policy_avg": 0.06360506296157836, "timer/agent.policy_min": 0.00451207160949707, "timer/agent.policy_max": 5.871887922286987}
+{"step": 182, "episode/length": 85.0, "episode/score": 0.897999984677881}
+{"step": 289, "episode/length": 106.0, "episode/score": 0.872799985925667}
+{"step": 403, "episode/length": 113.0, "episode/score": 0.8647999931126833}
+{"step": 507, "episode/length": 103.0, "episode/score": 0.8763999857474118}
+{"step": 585, "episode/length": 77.0, "episode/score": 0.907599984202534}
+{"step": 660, "episode/length": 74.0, "episode/score": 0.9111999840242788}
+{"step": 754, "episode/length": 93.0, "episode/score": 0.888399985153228}
+{"step": 853, "episode/length": 98.0, "episode/score": 0.88239998545032}
+{"step": 942, "episode/length": 88.0, "episode/score": 0.8951999983983114}
+{"step": 1020, "episode/length": 77.0, "episode/score": 0.9079999909736216}
+{"step": 1100, "timer/duration": 61.318395137786865, "timer/env.step_count": 1000.0, "timer/env.step_total": 54.38031005859375, "timer/env.step_frac": 0.8868514894494102, "timer/env.step_avg": 0.05438031005859375, "timer/env.step_min": 0.010835647583007812, "timer/env.step_max": 0.06887483596801758, "timer/agent.policy_count": 1000.0, "timer/agent.policy_total": 4.930920124053955, "timer/agent.policy_frac": 0.0804150224899693, "timer/agent.policy_avg": 0.004930920124053955, "timer/agent.policy_min": 0.004393577575683594, "timer/agent.policy_max": 0.009247064590454102, "timer/logger.write_count": 1.0, "timer/logger.write_total": 1.8862881660461426, "timer/logger.write_frac": 0.030762190722824965, "timer/logger.write_avg": 1.8862881660461426, "timer/logger.write_min": 1.8862881660461426, "timer/logger.write_max": 1.8862881660461426, "fps": 16.308128217171134}
