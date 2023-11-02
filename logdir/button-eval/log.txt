@@ -12,3 +12,5 @@
 [2023-11-02 11:49:49,376] [INFO    ] [xla_bridge] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: Interpreter CUDA
 [2023-11-02 11:49:49,378] [INFO    ] [xla_bridge] Unable to initialize backend 'tpu': module 'jaxlib.xla_extension' has no attribute 'get_tpu_client'
 [2023-11-02 11:50:21,345] [INFO    ] [train] Starting evaluation
+[2023-11-02 20:10:24,922] [INFO    ] [train] Closing environment
+[2023-11-02 20:10:25,391] [INFO    ] [train] Environment closed.
