@@ -1,6 +1,6 @@
 !ArenaConfig
 arenas:
-  # 01-01-02.yaml
+  # 01-01-03.yaml
   1: !Arena
     pass_mark: 0
     t: 250
@@ -8,15 +8,15 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 10, y: 0, z: 20}
-      rotations: [270]
+      - !Vector3 {x: 6, y: 0, z: 6}
+      rotations: [225]
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 7, y: 0, z: 20}
+      - !Vector3 {x: 4.5, y: 0, z: 4.5}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}  
-  # 01-02-02.yaml
+  # 01-02-03.yaml
   2: !Arena
     pass_mark: 0
     t: 250
@@ -25,14 +25,14 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 20}
-      rotations: [0]
+      rotations: [45]
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 20, y: 0, z: 35}
+      - !Vector3 {x: 35, y: 0, z: 35}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 01-03-02.yaml
+  # 01-03-03.yaml
   3: !Arena
     pass_mark: 0
     t: 250
@@ -41,14 +41,14 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 1, y: 0, z: 1}
-      rotations: [0]
+      rotations: [45]
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 1, y: 0, z: 39}
+      - !Vector3 {x: 39, y: 0, z: 39}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}  
-  # 01-04-02.yaml
+  # 01-04-03.yaml
   4: !Arena
     pass_mark: 0
     t: 250
@@ -56,15 +56,15 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 38, y: 0, z: 2}
+      - !Vector3 {x: 20, y: 0, z: 1.1}
       rotations: [0]
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 30, y: 0, z: 32}
+      - !Vector3 {x: 1.1, y: 0, z: 38.9}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 01-05-02.yaml
+  # 01-05-03.yaml
   5: !Arena
     pass_mark: 0
     t: 250
@@ -72,15 +72,15 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 2, y: 0, z: 2}
+      - !Vector3 {x: 20, y: 0, z: 1.1}
       rotations: [0]
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 10, y: 0, z: 32}
+      - !Vector3 {x: 38.9, y: 0, z: 38.9}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 01-06-02.yaml
+  # 01-06-03.yaml
   6: !Arena
     pass_mark: 2
     t: 250
@@ -93,10 +93,10 @@ arenas:
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 34, y: 0, z: 26}
+      - !Vector3 {x: 6, y: 0, z: 26}
       sizes:
       - !Vector3 {x: 3, y: 3, z: 3}
-  # 01-07-02.yaml
+  # 01-07-03.yaml
   7: !Arena
     pass_mark: 4
     t: 250
@@ -109,10 +109,10 @@ arenas:
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 34, y: 0, z: 26}
+      - !Vector3 {x: 6, y: 0, z: 26}
       sizes:
       - !Vector3 {x: 5, y: 5, z: 5}
-  # 01-08-02.yaml
+  # 01-08-03.yaml
   8: !Arena
     pass_mark: -0.5
     t: 250
@@ -125,10 +125,10 @@ arenas:
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 23, y: 0, z: 26}
+      - !Vector3 {x: 17, y: 0, z: 26}
       sizes:
       - !Vector3 {x: .5, y: .5, z: .5}
-  # 01-09-02.yaml
+  # 01-09-03.yaml
   9: !Arena
     pass_mark: 0
     t: 250
@@ -141,10 +141,10 @@ arenas:
     - !Item
       name: GoodGoalMulti
       positions:
-      - !Vector3 {x: 28, y: 0, z: 26}
+      - !Vector3 {x: 12, y: 0, z: 26}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 01-10-02.yaml
+  # 01-10-03.yaml
   10: !Arena
     pass_mark: 4
     t: 250
@@ -157,10 +157,10 @@ arenas:
     - !Item
       name: GoodGoalMulti
       positions:
-      - !Vector3 {x: 30, y: 0, z: 26}
+      - !Vector3 {x: 10, y: 0, z: 26}
       sizes:
       - !Vector3 {x: 5, y: 5, z: 5}
-  # 01-11-02.yaml
+  # 01-11-03.yaml
   11: !Arena
     pass_mark: -0.5
     t: 250
@@ -173,10 +173,10 @@ arenas:
     - !Item
       name: GoodGoalMulti
       positions:
-      - !Vector3 {x: 23, y: 0, z: 26}
+      - !Vector3 {x: 17, y: 0, z: 26}
       sizes:
       - !Vector3 {x: .5, y: .5, z: .5}
-  # 01-12-02.yaml
+  # 01-12-03.yaml
   12: !Arena
     pass_mark: 4
     t: 250
@@ -189,10 +189,10 @@ arenas:
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 35, y: 0, z: 22.5}
+      - !Vector3 {x: 5, y: 0, z: 22.5}
       sizes:
       - !Vector3 {x: 5, y: 5, z: 5}  
-  # 01-13-02.yaml
+  # 01-13-03.yaml
   13: !Arena
     pass_mark: 0
     t: 250
@@ -205,10 +205,10 @@ arenas:
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 38, y: 0, z: 22.5}
+      - !Vector3 {x: 2, y: 0, z: 22.5}
       sizes:
-      - !Vector3 {x: 1, y: 1, z: 1}  
-  # 01-14-02.yaml
+      - !Vector3 {x: 1, y: 1, z: 1}
+  # 01-14-03.yaml
   14: !Arena
     pass_mark: -0.5
     t: 250
@@ -221,10 +221,10 @@ arenas:
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 38, y: 0, z: 22.5}
+      - !Vector3 {x: 2, y: 0, z: 22.5}
       sizes:
       - !Vector3 {x: .5, y: .5, z: .5}  
-  # 01-15-02.yaml
+  # 01-15-03.yaml
   15: !Arena
     pass_mark: 0
     t: 250
@@ -237,10 +237,10 @@ arenas:
     - !Item
       name: GoodGoalMulti
       positions:
-      - !Vector3 {x: 38, y: 0, z: 22.5}
+      - !Vector3 {x: 2, y: 0, z: 22.5}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}  
-  # 01-16-02.yaml
+  # 01-16-03.yaml
   16: !Arena
     pass_mark: -0.5
     t: 250
@@ -248,15 +248,15 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 10, y: 0, z: 1}
-      rotations: [180]
+      - !Vector3 {x: 39, y: 0, z: 10}
+      rotations: [118]
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 39, y: 0, z: 30}
+      - !Vector3 {x: 1, y: 0, z: 31}
       sizes:
       - !Vector3 {x: .5, y: .5, z: .5}
-  # 01-17-02.yaml
+  # 01-17-03.yaml
   17: !Arena
     pass_mark: -0.5
     t: 250
@@ -264,15 +264,15 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 10, y: 0, z: 1}
-      rotations: [180]
+      - !Vector3 {x: 39, y: 0, z: 10}
+      rotations: [118]
     - !Item
       name: GoodGoalMulti
       positions:
-      - !Vector3 {x: 39, y: 0, z: 30}
+      - !Vector3 {x: 1, y: 0, z: 31}
       sizes:
       - !Vector3 {x: .5, y: .5, z: .5}
-  # 01-18-02.yaml
+  # 01-18-03.yaml
   18: !Arena
     pass_mark: 0
     t: 250
@@ -285,11 +285,11 @@ arenas:
     - !Item
       name: GoodGoalBounce
       positions:
-      - !Vector3 {x: 20, y: 0, z: 30}
+      - !Vector3 {x: 20, y: 0, z: 12}
       rotations: [90]
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}  
-  # 01-19-02.yaml
+  # 01-19-03.yaml
   19: !Arena
     pass_mark: 0
     t: 250
@@ -302,11 +302,11 @@ arenas:
     - !Item
       name: GoodGoalBounce
       positions:
-      - !Vector3 {x: 20, y: 0, z: 30}
+      - !Vector3 {x: 20, y: 0, z: 12}
       rotations: [270]
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}  
-  # 01-20-02.yaml
+  # 01-20-03.yaml
   20: !Arena
     pass_mark: 4
     t: 250
@@ -319,7 +319,7 @@ arenas:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 01-21-02.yaml
+  # 01-21-03.yaml
   21: !Arena
     pass_mark: 9
     t: 500
@@ -337,7 +337,7 @@ arenas:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 01-22-02.yaml
+  # 01-22-03.yaml
   22: !Arena
     pass_mark: 39
     t: 1000
@@ -385,7 +385,7 @@ arenas:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 01-23-02.yaml
+  # 01-23-03.yaml
   23: !Arena
     pass_mark: 9
     t: 500
@@ -416,7 +416,7 @@ arenas:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 01-24-02.yaml
+  # 01-24-03.yaml
   24: !Arena
     pass_mark: -1.05
     t: 250
@@ -439,6 +439,36 @@ arenas:
       - !Vector3 {x: 20, y: 0, z: -1}
       - !Vector3 {x: 25, y: 0, z: -1}
       - !Vector3 {x: 30, y: 0, z: -1}
+      - !Vector3 {x: -1, y: 0, z: 10}
+      - !Vector3 {x: -1, y: 0, z: 15}
+      - !Vector3 {x: -1, y: 0, z: 20}
+      - !Vector3 {x: -1, y: 0, z: 25}
+      - !Vector3 {x: -1, y: 0, z: 30}
+      - !Vector3 {x: 10, y: 0, z: -1}
+      - !Vector3 {x: 15, y: 0, z: -1}
+      - !Vector3 {x: 20, y: 0, z: -1}
+      - !Vector3 {x: 25, y: 0, z: -1}
+      - !Vector3 {x: 30, y: 0, z: -1}
+      - !Vector3 {x: -1, y: 0, z: 10}
+      - !Vector3 {x: -1, y: 0, z: 15}
+      - !Vector3 {x: -1, y: 0, z: 20}
+      - !Vector3 {x: -1, y: 0, z: 25}
+      - !Vector3 {x: -1, y: 0, z: 30}
+      - !Vector3 {x: 10, y: 0, z: -1}
+      - !Vector3 {x: 15, y: 0, z: -1}
+      - !Vector3 {x: 20, y: 0, z: -1}
+      - !Vector3 {x: 25, y: 0, z: -1}
+      - !Vector3 {x: 30, y: 0, z: -1}
+      - !Vector3 {x: -1, y: 0, z: 10}
+      - !Vector3 {x: -1, y: 0, z: 15}
+      - !Vector3 {x: -1, y: 0, z: 20}
+      - !Vector3 {x: -1, y: 0, z: 25}
+      - !Vector3 {x: -1, y: 0, z: 30}
+      - !Vector3 {x: 10, y: 0, z: -1}
+      - !Vector3 {x: 15, y: 0, z: -1}
+      - !Vector3 {x: 20, y: 0, z: -1}
+      - !Vector3 {x: 25, y: 0, z: -1}
+      - !Vector3 {x: 30, y: 0, z: -1}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
@@ -450,7 +480,37 @@ arenas:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 01-25-02.yaml
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+  # 01-25-03.yaml
   25: !Arena
     pass_mark: 0
     t: 250
@@ -469,30 +529,22 @@ arenas:
     - !Item
       name: BadGoal
       positions:
-      - !Vector3 {x: 3.33, y: 0, z: 15}
-      - !Vector3 {x: 6.66, y: 0, z: 15}
+      - !Vector3 {x: 5, y: 0, z: 15}
       - !Vector3 {x: 10, y: 0, z: 15}
-      - !Vector3 {x: 13.33, y: 0, z: 15}
-      - !Vector3 {x: 16.66, y: 0, z: 15}
+      - !Vector3 {x: 15, y: 0, z: 15}
       - !Vector3 {x: 20, y: 0, z: 15}
-      - !Vector3 {x: 23.33, y: 0, z: 15}
-      - !Vector3 {x: 26.66, y: 0, z: 15}
+      - !Vector3 {x: 25, y: 0, z: 15}
       - !Vector3 {x: 30, y: 0, z: 15}
-      - !Vector3 {x: 33.33, y: 0, z: 15}
-      - !Vector3 {x: 36.66, y: 0, z: 15}
+      - !Vector3 {x: 35, y: 0, z: 15}      
       sizes:
-      - !Vector3 {x: 1, y: 1, z: 1}
-      - !Vector3 {x: 1, y: 1, z: 1}
-      - !Vector3 {x: 1, y: 1, z: 1}
-      - !Vector3 {x: 1, y: 1, z: 1}
-      - !Vector3 {x: 1, y: 1, z: 1}
-      - !Vector3 {x: 1, y: 1, z: 1}
-      - !Vector3 {x: 1, y: 1, z: 1}
-      - !Vector3 {x: 1, y: 1, z: 1}
-      - !Vector3 {x: 1, y: 1, z: 1}
-      - !Vector3 {x: 1, y: 1, z: 1}
-      - !Vector3 {x: 1, y: 1, z: 1}
-  # 01-26-02.yaml
+      - !Vector3 {x: 5, y: 5, z: 5}
+      - !Vector3 {x: 5, y: 5, z: 5}
+      - !Vector3 {x: 5, y: 5, z: 5}
+      - !Vector3 {x: 5, y: 5, z: 5}
+      - !Vector3 {x: 5, y: 5, z: 5}
+      - !Vector3 {x: 5, y: 5, z: 5}
+      - !Vector3 {x: 5, y: 5, z: 5}
+  # 01-26-03.yaml
   26: !Arena
     pass_mark: 0
     t: 250
@@ -536,7 +588,37 @@ arenas:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 01-27-02.yaml
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+  # 01-27-03.yaml
   27: !Arena
     pass_mark: 1
     t: 250
@@ -549,16 +631,16 @@ arenas:
     - !Item
       name: GoodGoalMulti
       positions:
-      - !Vector3 {x: 17, y: 0, z: 23}
+      - !Vector3 {x: 25, y: 0, z: 28}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 23, y: 0, z: 17}
+      - !Vector3 {x: 14, y: 0, z: 12}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 01-28-02.yaml
+  # 01-28-03.yaml
   28: !Arena
     pass_mark: 2
     t: 500
@@ -583,7 +665,7 @@ arenas:
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 01-29-02.yaml
+  # 01-29-03.yaml
   29: !Arena
     pass_mark: 2
     t: 500
@@ -626,9 +708,9 @@ arenas:
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 01-30-02.yaml
+  # 01-30-03.yaml
   30: !Arena
-    pass_mark: 7
+    pass_mark: 10
     t: 1000
     items:
     - !Item
@@ -648,6 +730,9 @@ arenas:
     - !Item
       name: GoodGoalBounce
       positions:
+      - !Vector3 {x: -1, y: 0, z: 10}
+      - !Vector3 {x: -1, y: 0, z: 13}
+      - !Vector3 {x: -1, y: 0, z: 16}
       - !Vector3 {x: -1, y: 0, z: 19}
       - !Vector3 {x: -1, y: 0, z: 22}
       - !Vector3 {x: -1, y: 0, z: 25}
@@ -663,9 +748,15 @@ arenas:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
     - !Item
       name: GoodGoalMultiBounce
       positions:
+      - !Vector3 {x: -1, y: 0, z: 11}
+      - !Vector3 {x: -1, y: 0, z: 14}
+      - !Vector3 {x: -1, y: 0, z: 17}
       - !Vector3 {x: -1, y: 0, z: 20}
       - !Vector3 {x: -1, y: 0, z: 23}
       - !Vector3 {x: -1, y: 0, z: 26}
@@ -681,9 +772,15 @@ arenas:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
     - !Item
       name: BadGoalBounce
       positions:
+      - !Vector3 {x: -1, y: 0, z: 12}
+      - !Vector3 {x: -1, y: 0, z: 15}
+      - !Vector3 {x: -1, y: 0, z: 18}
       - !Vector3 {x: -1, y: 0, z: 21}
       - !Vector3 {x: -1, y: 0, z: 24}
       - !Vector3 {x: -1, y: 0, z: 27}
@@ -699,7 +796,10 @@ arenas:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 02-01-02.yaml
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+  # 02-01-03.yaml
   31: !Arena
     pass_mark: 0
     t: 250
@@ -714,9 +814,9 @@ arenas:
       positions:
       - !Vector3 {x: 10, y: 0, z: 10.25}
       - !Vector3 {x: 30, y: 0, z: 10.25}
-      - !Vector3 {x: 17.78, y: 0, z: 25}
-      - !Vector3 {x: 22.22, y: 0, z: 25}
-      - !Vector3 {x: 20, y: 0, z: 35.25}
+      - !Vector3 {x: 17.78, y: 0, z: 20}
+      - !Vector3 {x: 22.22, y: 0, z: 20}
+      - !Vector3 {x: 20, y: 0, z: 30.25}
       rotations: [45, 135, 258.7, 101.3, 0]
       colors: 
       - !RGB {r: 153, g: 153, b: 153}
@@ -733,10 +833,10 @@ arenas:
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 10, y: 0, z: 30}      
+      - !Vector3 {x: 10, y: 0, z: 25}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 02-02-02.yaml
+  # 02-02-03.yaml
   32: !Arena
     pass_mark: 0
     t: 250
@@ -751,9 +851,9 @@ arenas:
       positions:
       - !Vector3 {x: 10, y: 0, z: 10.25}
       - !Vector3 {x: 30, y: 0, z: 10.25}
-      - !Vector3 {x: 17.78, y: 0, z: 25}
-      - !Vector3 {x: 22.22, y: 0, z: 25}
-      - !Vector3 {x: 20, y: 0, z: 35.25}
+      - !Vector3 {x: 17.78, y: 0, z: 20}
+      - !Vector3 {x: 22.22, y: 0, z: 20}
+      - !Vector3 {x: 20, y: 0, z: 30.25}
       rotations: [45, 135, 258.7, 101.3, 0]
       colors: 
       - !RGB {r: 153, g: 153, b: 153}
@@ -770,10 +870,10 @@ arenas:
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 30, y: 0, z: 30}      
+      - !Vector3 {x: 30, y: 0, z: 25}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 02-03-02.yaml
+  # 02-03-03.yaml
   33: !Arena
     pass_mark: 0
     t: 250
@@ -786,19 +886,22 @@ arenas:
     - !Item
       name: Wall
       positions:
-      - !Vector3 {x: 20, y: 0, z: 20}
-      rotations: [0]
+      - !Vector3 {x: 20, y: 0, z: 10}
+      - !Vector3 {x: 20, y: 0, z: 30}
+      rotations: [0,0]
       colors: 
       - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 153, g: 153, b: 153}
       sizes:
-      - !Vector3 {x: 3, y: 1, z: 40}
+      - !Vector3 {x: 1, y: 1, z: 20}
+      - !Vector3 {x: 1, y: 5, z: 20}
     - !Item
       name: GoodGoal
       positions:
       - !Vector3 {x: 10, y: 0, z: 30}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 02-04-02.yaml
+  # 02-04-03.yaml
   34: !Arena
     pass_mark: 0
     t: 250
@@ -811,19 +914,22 @@ arenas:
     - !Item
       name: Wall
       positions:
-      - !Vector3 {x: 20, y: 0, z: 20}
-      rotations: [0]
+      - !Vector3 {x: 20, y: 0, z: 10}
+      - !Vector3 {x: 20, y: 0, z: 30}
+      rotations: [0,0]
       colors: 
       - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 153, g: 153, b: 153}
       sizes:
-      - !Vector3 {x: 3, y: 1, z: 40}
+      - !Vector3 {x: 1, y: 1, z: 20}
+      - !Vector3 {x: 1, y: 5, z: 20}
     - !Item
       name: GoodGoal
       positions:
       - !Vector3 {x: 30, y: 0, z: 30}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 02-05-02.yaml
+  # 02-05-03.yaml
   35: !Arena
     pass_mark: 0
     t: 250
@@ -831,8 +937,8 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 20, y: 1, z: 5}
-      rotations: [0]
+      - !Vector3 {x: 20, y: 1, z: 2}
+      rotations: [180]
     - !Item
       name: Wall
       positions:
@@ -866,7 +972,7 @@ arenas:
       - !Vector3 {x: 16.5, y: 0, z: 38}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 02-06-02.yaml
+  # 02-06-03.yaml
   36: !Arena
     pass_mark: 0
     t: 250
@@ -874,8 +980,8 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 20, y: 1, z: 5}
-      rotations: [0]
+      - !Vector3 {x: 20, y: 1, z: 2}
+      rotations: [180]
     - !Item
       name: Wall
       positions:
@@ -909,7 +1015,7 @@ arenas:
       - !Vector3 {x: 23.5, y: 0, z: 38}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 02-07-02.yaml
+  # 02-07-03.yaml
   37: !Arena
     pass_mark: 0
     t: 250
@@ -924,9 +1030,9 @@ arenas:
       positions:
       - !Vector3 {x: 10, y: 0, z: 10.25}
       - !Vector3 {x: 30, y: 0, z: 10.25}
-      - !Vector3 {x: 17.78, y: 0, z: 25}
-      - !Vector3 {x: 22.22, y: 0, z: 25}
-      - !Vector3 {x: 20, y: 0, z: 35.25}
+      - !Vector3 {x: 17.78, y: 0, z: 20}
+      - !Vector3 {x: 22.22, y: 0, z: 20}
+      - !Vector3 {x: 20, y: 0, z: 30.25}
       rotations: [45, 135, 258.7, 101.3, 0]
       colors: 
       - !RGB {r: 153, g: 153, b: 153}
@@ -943,16 +1049,16 @@ arenas:
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 10, y: 0, z: 30}      
+      - !Vector3 {x: 10, y: 0, z: 25}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
     - !Item
       name: BadGoal
       positions:
-      - !Vector3 {x: 30, y: 0, z: 30}      
+      - !Vector3 {x: 30, y: 0, z: 25}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 02-08-02.yaml
+  # 02-08-03.yaml
   38: !Arena
     pass_mark: 0
     t: 250
@@ -967,9 +1073,9 @@ arenas:
       positions:
       - !Vector3 {x: 10, y: 0, z: 10.25}
       - !Vector3 {x: 30, y: 0, z: 10.25}
-      - !Vector3 {x: 17.78, y: 0, z: 25}
-      - !Vector3 {x: 22.22, y: 0, z: 25}
-      - !Vector3 {x: 20, y: 0, z: 35.25}
+      - !Vector3 {x: 17.78, y: 0, z: 20}
+      - !Vector3 {x: 22.22, y: 0, z: 20}
+      - !Vector3 {x: 20, y: 0, z: 30.25}
       rotations: [45, 135, 258.7, 101.3, 0]
       colors: 
       - !RGB {r: 153, g: 153, b: 153}
@@ -986,16 +1092,16 @@ arenas:
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 30, y: 0, z: 30}      
+      - !Vector3 {x: 30, y: 0, z: 25}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
     - !Item
       name: BadGoal
       positions:
-      - !Vector3 {x: 10, y: 0, z: 30}      
+      - !Vector3 {x: 10, y: 0, z: 25}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 02-09-02.yaml
+  # 02-09-03.yaml
   39: !Arena
     pass_mark: 0
     t: 250
@@ -1008,12 +1114,15 @@ arenas:
     - !Item
       name: Wall
       positions:
-      - !Vector3 {x: 20, y: 0, z: 20}
-      rotations: [0]
+      - !Vector3 {x: 20, y: 0, z: 10}
+      - !Vector3 {x: 20, y: 0, z: 30}
+      rotations: [0,0]
       colors: 
       - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 153, g: 153, b: 153}
       sizes:
-      - !Vector3 {x: 3, y: 1, z: 40}
+      - !Vector3 {x: 1, y: 1, z: 20}
+      - !Vector3 {x: 1, y: 5, z: 20}
     - !Item
       name: GoodGoal
       positions:
@@ -1026,7 +1135,7 @@ arenas:
       - !Vector3 {x: 30, y: 0, z: 30}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 02-10-02.yaml
+  # 02-10-03.yaml
   40: !Arena
     pass_mark: 0
     t: 250
@@ -1039,12 +1148,15 @@ arenas:
     - !Item
       name: Wall
       positions:
-      - !Vector3 {x: 20, y: 0, z: 20}
-      rotations: [0]
+      - !Vector3 {x: 20, y: 0, z: 10}
+      - !Vector3 {x: 20, y: 0, z: 30}
+      rotations: [0,0]
       colors: 
       - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 153, g: 153, b: 153}
       sizes:
-      - !Vector3 {x: 3, y: 1, z: 40}
+      - !Vector3 {x: 1, y: 1, z: 20}
+      - !Vector3 {x: 1, y: 5, z: 20}
     - !Item
       name: GoodGoal
       positions:
@@ -1057,7 +1169,7 @@ arenas:
       - !Vector3 {x: 10, y: 0, z: 30}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 02-11-02.yaml
+  # 02-11-03.yaml
   41: !Arena
     pass_mark: 0
     t: 250
@@ -1065,8 +1177,8 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 20, y: 1, z: 5}
-      rotations: [0]
+      - !Vector3 {x: 20, y: 1, z: 2}
+      rotations: [180]
     - !Item
       name: Wall
       positions:
@@ -1106,7 +1218,7 @@ arenas:
       - !Vector3 {x: 23.5, y: 0, z: 38}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 02-12-02.yaml
+  # 02-12-03.yaml
   42: !Arena
     pass_mark: 0
     t: 250
@@ -1114,8 +1226,8 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 20, y: 1, z: 5}
-      rotations: [0]
+      - !Vector3 {x: 20, y: 1, z: 2}
+      rotations: [180]
     - !Item
       name: Wall
       positions:
@@ -1155,7 +1267,7 @@ arenas:
       - !Vector3 {x: 16.5, y: 0, z: 38}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 02-13-02.yaml
+  # 02-13-03.yaml
   43: !Arena
     pass_mark: 1
     t: 250
@@ -1170,9 +1282,9 @@ arenas:
       positions:
       - !Vector3 {x: 10, y: 0, z: 10.25}
       - !Vector3 {x: 30, y: 0, z: 10.25}
-      - !Vector3 {x: 17.78, y: 0, z: 25}
-      - !Vector3 {x: 22.22, y: 0, z: 25}
-      - !Vector3 {x: 20, y: 0, z: 35.25}
+      - !Vector3 {x: 17.78, y: 0, z: 20}
+      - !Vector3 {x: 22.22, y: 0, z: 20}
+      - !Vector3 {x: 20, y: 0, z: 30.25}
       rotations: [45, 135, 258.7, 101.3, 0]
       colors: 
       - !RGB {r: 153, g: 153, b: 153}
@@ -1189,12 +1301,12 @@ arenas:
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 30, y: 0, z: 30} 
-      - !Vector3 {x: 10, y: 0, z: 30}     
+      - !Vector3 {x: 30, y: 0, z: 25} 
+      - !Vector3 {x: 10, y: 0, z: 25}     
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 2, y: 2, z: 2}
-  # 02-14-02.yaml
+  # 02-14-03.yaml
   44: !Arena
     pass_mark: 1
     t: 250
@@ -1209,9 +1321,9 @@ arenas:
       positions:
       - !Vector3 {x: 10, y: 0, z: 10.25}
       - !Vector3 {x: 30, y: 0, z: 10.25}
-      - !Vector3 {x: 17.78, y: 0, z: 25}
-      - !Vector3 {x: 22.22, y: 0, z: 25}
-      - !Vector3 {x: 20, y: 0, z: 35.25}
+      - !Vector3 {x: 17.78, y: 0, z: 20}
+      - !Vector3 {x: 22.22, y: 0, z: 20}
+      - !Vector3 {x: 20, y: 0, z: 30.25}
       rotations: [45, 135, 258.7, 101.3, 0]
       colors: 
       - !RGB {r: 153, g: 153, b: 153}
@@ -1228,12 +1340,12 @@ arenas:
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 10, y: 0, z: 30}
-      - !Vector3 {x: 30, y: 0, z: 30}      
+      - !Vector3 {x: 10, y: 0, z: 25}  
+      - !Vector3 {x: 30, y: 0, z: 25}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 2, y: 2, z: 2}
-  # 02-15-02.yaml
+  # 02-15-03.yaml
   45: !Arena
     pass_mark: 1
     t: 250
@@ -1246,21 +1358,24 @@ arenas:
     - !Item
       name: Wall
       positions:
-      - !Vector3 {x: 20, y: 0, z: 20}
-      rotations: [0]
+      - !Vector3 {x: 20, y: 0, z: 10}
+      - !Vector3 {x: 20, y: 0, z: 30}
+      rotations: [0,0]
       colors: 
       - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 153, g: 153, b: 153}
       sizes:
-      - !Vector3 {x: 3, y: 1, z: 40}
+      - !Vector3 {x: 1, y: 1, z: 20}
+      - !Vector3 {x: 1, y: 5, z: 20}
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 30, y: 0, z: 30} 
+      - !Vector3 {x: 30, y: 0, z: 30}   
       - !Vector3 {x: 10, y: 0, z: 30}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 2, y: 2, z: 2}
-  # 02-16-02.yaml
+  # 02-16-03.yaml
   46: !Arena
     pass_mark: 1
     t: 250
@@ -1273,12 +1388,15 @@ arenas:
     - !Item
       name: Wall
       positions:
-      - !Vector3 {x: 20, y: 0, z: 20}
-      rotations: [0]
+      - !Vector3 {x: 20, y: 0, z: 10}
+      - !Vector3 {x: 20, y: 0, z: 30}
+      rotations: [0,0]
       colors: 
       - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 153, g: 153, b: 153}
       sizes:
-      - !Vector3 {x: 3, y: 1, z: 40}
+      - !Vector3 {x: 1, y: 1, z: 20}
+      - !Vector3 {x: 1, y: 5, z: 20}
     - !Item
       name: GoodGoal
       positions:
@@ -1287,7 +1405,7 @@ arenas:
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 2, y: 2, z: 2}
-  # 02-17-02.yaml
+  # 02-17-03.yaml
   47: !Arena
     pass_mark: 1
     t: 250
@@ -1295,8 +1413,8 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 20, y: 1, z: 5}
-      rotations: [0]
+      - !Vector3 {x: 20, y: 1, z: 2}
+      rotations: [180]
     - !Item
       name: Wall
       positions:
@@ -1327,12 +1445,12 @@ arenas:
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 23.5, y: 0, z: 38}   
+      - !Vector3 {x: 23.5, y: 0, z: 38} 
       - !Vector3 {x: 16.5, y: 0, z: 38}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 2, y: 2, z: 2}
-  # 02-18-02.yaml
+  # 02-18-03.yaml
   48: !Arena
     pass_mark: 1
     t: 250
@@ -1340,8 +1458,8 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 20, y: 1, z: 5}
-      rotations: [0]
+      - !Vector3 {x: 20, y: 1, z: 2}
+      rotations: [180]
     - !Item
       name: Wall
       positions:
@@ -1371,15 +1489,15 @@ arenas:
       - !Vector3 {x: 10.1, y: 5, z: .5}
     - !Item
       name: GoodGoal
-      positions:
-      - !Vector3 {x: 16.5, y: 0, z: 38} 
-      - !Vector3 {x: 23.5, y: 0, z: 38}      
+      positions: 
+      - !Vector3 {x: 16.5, y: 0, z: 38}  
+      - !Vector3 {x: 23.5, y: 0, z: 38} 
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 2, y: 2, z: 2}
-  # 02-19-02.yaml
+  # 02-19-03.yaml
   49: !Arena
-    pass_mark: 3
+    pass_mark: 4
     t: 250
     items:
     - !Item
@@ -1411,11 +1529,11 @@ arenas:
       - !Vector3 {x: 30, y: 0, z: 30}
       - !Vector3 {x: 10, y: 0, z: 30}      
       sizes:
-      - !Vector3 {x: 3, y: 3, z: 3}
       - !Vector3 {x: 4, y: 4, z: 4}
-  # 02-20-02.yaml
+      - !Vector3 {x: 5, y: 5, z: 5}
+  # 02-20-03.yaml
   50: !Arena
-    pass_mark: 3
+    pass_mark: 4
     t: 250
     items:
     - !Item
@@ -1447,9 +1565,9 @@ arenas:
       - !Vector3 {x: 10, y: 0, z: 30}
       - !Vector3 {x: 30, y: 0, z: 30}         
       sizes:
-      - !Vector3 {x: 3, y: 3, z: 3}
       - !Vector3 {x: 4, y: 4, z: 4}
-  # 02-21-02.yaml
+      - !Vector3 {x: 5, y: 5, z: 5}
+  # 02-21-03.yaml
   51: !Arena
     pass_mark: 2
     t: 500
@@ -1480,11 +1598,11 @@ arenas:
     - !Item
       name: GoodGoal
       positions: 
-      - !Vector3 {x: 18, y: 3, z: 20}
+      - !Vector3 {x: 19, y: 3, z: 30}
       sizes:
       - !Vector3 {x: 3, y: 3, z: 3} 
 
-  # 02-22-02.yaml
+  # 02-22-03.yaml
   52: !Arena
     pass_mark: 2
     t: 500
@@ -1515,7 +1633,7 @@ arenas:
     - !Item
       name: GoodGoal
       positions: 
-      - !Vector3 {x: 18, y: 3, z: 14}
+      - !Vector3 {x: 19, y: 3, z: 19}
       sizes:
       - !Vector3 {x: 3, y: 3, z: 3} 
     - !Item
@@ -1525,7 +1643,7 @@ arenas:
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
 
-  # 02-23-02.yaml
+  # 02-23-03.yaml
   53: !Arena
     pass_mark: 3
     t: 500
@@ -1556,7 +1674,7 @@ arenas:
     - !Item
       name: GoodGoalMulti
       positions: 
-      - !Vector3 {x: 18, y: 3, z: 14}
+      - !Vector3 {x: 19, y: 3, z: 19}
       sizes:
       - !Vector3 {x: 3, y: 3, z: 3} 
     - !Item
@@ -1566,9 +1684,9 @@ arenas:
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
 
-  # 02-24-02.yaml
+  # 02-24-03.yaml
   54: !Arena
-    pass_mark: 6
+    pass_mark: 10
     t: 500
     items:
     - !Item
@@ -1597,11 +1715,27 @@ arenas:
     - !Item
       name: GoodGoalMulti
       positions: 
-      - !Vector3 {x: 31, y: 2, z: 31}
-      - !Vector3 {x: 34, y: 2, z: 34}
+      - !Vector3 {x: 7, y: 2, z: 20}
+      - !Vector3 {x: 10, y: 2, z: 20}
+      - !Vector3 {x: 13, y: 2, z: 20}
+      - !Vector3 {x: 16, y: 2, z: 20}
+      - !Vector3 {x: 19, y: 2, z: 20}
+      - !Vector3 {x: 22, y: 2, z: 20}
+      - !Vector3 {x: 25, y: 2, z: 20}
+      - !Vector3 {x: 28, y: 2, z: 20}
+      - !Vector3 {x: 31, y: 2, z: 20}
+      - !Vector3 {x: 34, y: 2, z: 20}
       sizes:
-      - !Vector3 {x: 3, y: 3, z: 3}
-      - !Vector3 {x: 3, y: 3, z: 3}   
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}   
     - !Item
       name: GoodGoal
       positions: 
@@ -1609,7 +1743,7 @@ arenas:
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
 
-  # 02-25-02.yaml
+  # 02-25-03.yaml
   55: !Arena
     pass_mark: 2
     t: 500
@@ -1617,8 +1751,8 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 30, y: 0, z: 20}
-      rotations: [270]
+      - !Vector3 {x: 38, y: 0, z: 38}
+      rotations: [235]
     - !Item
       name: Wall
       positions:
@@ -1652,12 +1786,12 @@ arenas:
     - !Item
       name: GoodGoalMulti
       positions:
-      - !Vector3 {x: 10, y: 3.1, z: 16}
       - !Vector3 {x: 10, y: 3.1, z: 20}
+      - !Vector3 {x: 10, y: 3.1, z: 24}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 02-26-02.yaml
+  # 02-26-03.yaml
   56: !Arena
     pass_mark: 4
     t: 500
@@ -1742,70 +1876,80 @@ arenas:
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 20, y: 0, z: 20}
+      - !Vector3 {x: 35, y: 0, z: 35}
       sizes:
       - !Vector3 {x: 2, y: 2, z: 2}
     - !Item
       name: GoodGoalMulti
       positions:
-      - !Vector3 {x: 10, y: 3.1, z: 18}
-      - !Vector3 {x: 20, y: 3.1, z: 18}
-      - !Vector3 {x: 30, y: 3.1, z: 18}
+      - !Vector3 {x: 10, y: 3.1, z: 20}
+      - !Vector3 {x: 20, y: 3.1, z: 20}
+      - !Vector3 {x: 30, y: 3.1, z: 20}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 02-27-02.yaml
+  # 02-27-03.yaml
   57: !Arena
     pass_mark: 0
     t: 500
     items:
     - !Item
-      name: Wall
-      positions: 
-      - !Vector3 {x: 20, y: 0, z: 22.5}
-      rotations: [0]
-      sizes: 
-      - !Vector3 {x: 40, y: .6, z: 35}
-      colors:
-      - !RGB {r: 0, g: 0, b: 255}
-    - !Item
       name: Agent
-      positions: 
-      - !Vector3 {x: 5, y: 0, z: 2.5}
-      rotations: [30]
+      positions:
+      - !Vector3 {x: 5, y: 0, z: 5}
+      rotations: [15]
     - !Item
-      name: GoodGoalMulti
-      positions: 
-      - !Vector3 {x: 7, y: 1, z: 7}
-      - !Vector3 {x: 10, y: 1, z: 10}
-      - !Vector3 {x: 13, y: 1, z: 13}
-      - !Vector3 {x: 16, y: 1, z: 16}
-      - !Vector3 {x: 19, y: 1, z: 19}
-      - !Vector3 {x: 22, y: 1, z: 22}
-      - !Vector3 {x: 25, y: 1, z: 25}
-      - !Vector3 {x: 28, y: 1, z: 28}
-      - !Vector3 {x: 31, y: 1, z: 31}
-      - !Vector3 {x: 34, y: 1, z: 34}
+      name: Wall
+      positions:
+      - !Vector3 {x: 9.6, y: 0, z: 10}
+      - !Vector3 {x: 9.6, y: 0, z: 30}
+      - !Vector3 {x: 9.6, y: 2, z: 20}
+      - !Vector3 {x: 10.4, y: 0, z: 10}
+      - !Vector3 {x: 10.4, y: 0, z: 30}
+      - !Vector3 {x: 10.4, y: 2, z: 20}
+      rotations: [0,0,0,0,0,0]
       sizes:
-      - !Vector3 {x: 1, y: 1, z: 1}
-      - !Vector3 {x: 1, y: 1, z: 1}
-      - !Vector3 {x: 1, y: 1, z: 1}
-      - !Vector3 {x: 1, y: 1, z: 1}
-      - !Vector3 {x: 1, y: 1, z: 1}
-      - !Vector3 {x: 1, y: 1, z: 1}
-      - !Vector3 {x: 1, y: 1, z: 1}
-      - !Vector3 {x: 1, y: 1, z: 1}
-      - !Vector3 {x: 1, y: 1, z: 1}
-      - !Vector3 {x: 1, y: 1, z: 1}   
+      - !Vector3 {x: .3, y: 2, z: .3}
+      - !Vector3 {x: .3, y: 2, z: .3}
+      - !Vector3 {x: .1, y: .1, z: 21}
+      - !Vector3 {x: .3, y: 2, z: .3}
+      - !Vector3 {x: .3, y: 2, z: .3}
+      - !Vector3 {x: .1, y: .1, z: 21}
+      colors:
+      - !RGB {r: 153, g: 153, b: 153}
+      - !RGB {r: 153, g: 153, b: 153}
+      - !RGB {r: 153, g: 153, b: 153}
+      - !RGB {r: 153, g: 153, b: 153}
+      - !RGB {r: 153, g: 153, b: 153}
+      - !RGB {r: 153, g: 153, b: 153}
     - !Item
       name: GoodGoal
-      positions: 
-      - !Vector3 {x: 38, y: 0, z: 2.5}
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 12}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-
-  # 02-28-02.yaml
+    - !Item
+      name: GoodGoalMulti
+      positions:
+      - !Vector3 {x: 10, y: 2.1, z: 12}
+      - !Vector3 {x: 10, y: 2.1, z: 14}
+      - !Vector3 {x: 10, y: 2.1, z: 16}
+      - !Vector3 {x: 10, y: 2.1, z: 18}
+      - !Vector3 {x: 10, y: 2.1, z: 20}
+      - !Vector3 {x: 10, y: 2.1, z: 22}
+      - !Vector3 {x: 10, y: 2.1, z: 24}
+      - !Vector3 {x: 10, y: 2.1, z: 26}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+  # 02-28-03.yaml
   58: !Arena
     pass_mark: 6
     t: 500
@@ -1992,13 +2136,13 @@ arenas:
     - !Item
       name: GoodGoalMulti
       positions:
-      # - !Vector3 {x: 5, y: 3.1, z: 20}
+      - !Vector3 {x: 5, y: 3.1, z: 20}
       - !Vector3 {x: 10, y: 3.1, z: 20}
       - !Vector3 {x: 15, y: 3.1, z: 20}
-      # - !Vector3 {x: 20, y: 3.1, z: 20}
+      - !Vector3 {x: 20, y: 3.1, z: 20}
       - !Vector3 {x: 25, y: 3.1, z: 20}
-      - !Vector3 {x: 30, y: 3.1, z: 20}
-      - !Vector3 {x: 35, y: 3.1, z: 20}
+      # - !Vector3 {x: 30, y: 3.1, z: 20}
+      # - !Vector3 {x: 35, y: 3.1, z: 20}
       sizes:
       # - !Vector3 {x: 1, y: 1, z: 1}
       # - !Vector3 {x: 1, y: 1, z: 1}
@@ -2010,21 +2154,21 @@ arenas:
     - !Item
       name: BadGoal
       positions:
-      - !Vector3 {x: 5, y: 3.1, z: 20}
-      - !Vector3 {x: 20, y: 3.1, z: 20}
+      - !Vector3 {x: 30, y: 3.1, z: 20}
+      - !Vector3 {x: 35, y: 3.1, z: 20}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 02-29-02.yaml
+  # 02-29-03.yaml
   59: !Arena
-    pass_mark: 4
+    pass_mark: 6
     t: 500
     items:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 20, y: 0, z: 20}
-      rotations: [225]
+      - !Vector3 {x: 5, y: 0, z: 5}
+      rotations: [15]
     - !Item
       name: Wall
       positions:
@@ -2062,14 +2206,18 @@ arenas:
       - !Vector3 {x: 10, y: 3.1, z: 16}
       - !Vector3 {x: 10, y: 3.1, z: 18}
       - !Vector3 {x: 10, y: 3.1, z: 20}
+      - !Vector3 {x: 10, y: 3.1, z: 22}
+      - !Vector3 {x: 10, y: 3.1, z: 24}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 02-30-02.yaml
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+  # 02-30-03.yaml
   60: !Arena
-    pass_mark: 3
+    pass_mark: 5
     t: 500
     items:
     - !Item
@@ -2094,10 +2242,28 @@ arenas:
       name: Wall
       positions:
       - !Vector3 {x: 31, y: 0, z: 20}
-      rotations: [0] 
+      - !Vector3 {x: 26, y: .5, z: 29.5}
+      - !Vector3 {x: 26, y: .5, z: 30.5}
+      - !Vector3 {x: 35, y: .5, z: 29.5}
+      - !Vector3 {x: 35, y: .5, z: 30.5}
+      - !Vector3 {x: 30, y: 3, z: 29.5}
+      - !Vector3 {x: 30, y: 3, z: 30.5}
+      rotations: [0,0,0,0,0,0,0] 
       sizes:
-      - !Vector3 {x: 18, y: 5, z: 40}
+      - !Vector3 {x: 18, y: .5, z: 40}
+      - !Vector3 {x: .3, y: 2, z: .3}
+      - !Vector3 {x: .3, y: 2, z: .3}
+      - !Vector3 {x: .3, y: 2.5, z: .3}
+      - !Vector3 {x: .3, y: 2.5, z: .3}
+      - !Vector3 {x: 10, y: .1, z: .3}
+      - !Vector3 {x: 10, y: .1, z: .3}
       colors:
+      - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 153, g: 153, b: 153}
+      - !RGB {r: 153, g: 153, b: 153}
+      - !RGB {r: 153, g: 153, b: 153}
+      - !RGB {r: 153, g: 153, b: 153}
+      - !RGB {r: 153, g: 153, b: 153}
       - !RGB {r: 153, g: 153, b: 153}
     - !Item
       name: GoodGoal
@@ -2114,11 +2280,19 @@ arenas:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
     - !Item
+      name: GoodGoalMulti
+      positions:
+      - !Vector3 {x: 30, y: 3.1, z: 30}
+      - !Vector3 {x: 34, y: 3.1, z: 30}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}
+    - !Item
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 1}
       rotations: [0]
-  # 03-01-02.yaml
+  # 03-01-03.yaml
   61: !Arena
     pass_mark: 0
     t: 250
@@ -2126,8 +2300,8 @@ arenas:
     - !Item
       name: Wall
       positions:
-      - !Vector3 {x: 20, y: 0, z: 25}
-      rotations: [350]
+      - !Vector3 {x: 20, y: 0, z: 30}
+      rotations: [12]
       sizes:
       - !Vector3 {x: 15, y: 10, z: 1}
       colors:
@@ -2135,7 +2309,7 @@ arenas:
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 20, y: 0, z: 31}      
+      - !Vector3 {x: 20, y: 0, z: 35}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
     - !Item
@@ -2143,7 +2317,7 @@ arenas:
       positions:
       - !Vector3 {x: 20, y: 0, z: 1}
       rotations: [0]
-  # 03-02-02.yaml
+  # 03-02-03.yaml
   62: !Arena
     pass_mark: 0
     t: 250
@@ -2151,10 +2325,10 @@ arenas:
     - !Item
       name: Wall
       positions:
-      - !Vector3 {x: 30, y: 0, z: 15}
+      - !Vector3 {x: 30, y: 0, z: 17.5}
       rotations: [0]
       sizes:
-      - !Vector3 {x: 1, y: 5, z: 30}
+      - !Vector3 {x: 1, y: 5, z: 35}
       colors:
       - !RGB {r: 153, g: 153, b: 153}
     - !Item
@@ -2167,8 +2341,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 1, y: 0, z: 1}
-      rotations: [45]
-  # 03-03-02.yaml
+      rotations: [225]
+  # 03-03-03.yaml
   63: !Arena
     pass_mark: 0
     t: 250
@@ -2179,7 +2353,7 @@ arenas:
       - !Vector3 {x: 20, y: 0, z: 20}
       rotations: [0]
       sizes:
-      - !Vector3 {x: 1.5, y: 5, z: 1}
+      - !Vector3 {x: 2, y: 5, z: 1}
       colors:
       - !RGB {r: 153, g: 153, b: 153}
     - !Item
@@ -2193,7 +2367,7 @@ arenas:
       positions:
       - !Vector3 {x: 20, y: 0, z: 1}
       rotations: [0]
-  # 03-04-02.yaml
+  # 03-04-03.yaml
   64: !Arena
     pass_mark: 0
     t: 250
@@ -2219,9 +2393,9 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 15, y: 0, z: 1}
+      - !Vector3 {x: 20, y: 0, z: 1}
       rotations: [0]
-  # 03-05-02.yaml
+  # 03-05-03.yaml
   65: !Arena
     pass_mark: 0
     t: 250
@@ -2244,9 +2418,9 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 15, y: 0, z: 1}
+      - !Vector3 {x: 20, y: 0, z: 1}
       rotations: [0]
-  # 03-06-02.yaml
+  # 03-06-03.yaml
   66: !Arena
     pass_mark: 0
     t: 250
@@ -2263,14 +2437,14 @@ arenas:
     - !Item
       name: WallTransparent
       positions:
-      - !Vector3 {x: 20, y: 0.5, z: 30}
+      - !Vector3 {x: 20, y: 0.5, z: 35}
       rotations: [0]
       sizes:
-      - !Vector3 {x: 15, y: 3, z: 1}
+      - !Vector3 {x: 25, y: 3, z: 1}
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 13, y: 0, z: 34}      
+      - !Vector3 {x: 13, y: 0, z: 38}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
     - !Item
@@ -2278,7 +2452,7 @@ arenas:
       positions:
       - !Vector3 {x: 20, y: .5, z: 1}
       rotations: [0]
-  # 03-07-02.yaml
+  # 03-07-03.yaml
   67: !Arena
     pass_mark: 0
     t: 250
@@ -2304,9 +2478,9 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 25, y: 0, z: 2}
+      - !Vector3 {x: 20, y: 0, z: 2}
       rotations: [0]
-  # 03-08-02.yaml
+  # 03-08-03.yaml
   68: !Arena
     pass_mark: 0
     t: 250
@@ -2329,9 +2503,9 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 25, y: 0, z: 2}
+      - !Vector3 {x: 20, y: 0, z: 2}
       rotations: [0]
-  # 03-09-02.yaml
+  # 03-09-03.yaml
   69: !Arena
     pass_mark: 0
     t: 250
@@ -2348,14 +2522,14 @@ arenas:
     - !Item
       name: WallTransparent
       positions:
-      - !Vector3 {x: 20, y: 0.5, z: 30}
+      - !Vector3 {x: 20, y: 0.5, z: 35}
       rotations: [0]
       sizes:
-      - !Vector3 {x: 15, y: 3, z: 1}
+      - !Vector3 {x: 25, y: 3, z: 1}
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 27, y: 0, z: 34}      
+      - !Vector3 {x: 27, y: 0, z: 38}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
     - !Item
@@ -2363,7 +2537,7 @@ arenas:
       positions:
       - !Vector3 {x: 20, y: .5, z: 1}
       rotations: [0]
-  # 03-10-02.yaml
+  # 03-10-03.yaml
   70: !Arena
     pass_mark: 0
     t: 250
@@ -2371,8 +2545,8 @@ arenas:
     - !Item
       name: WallTransparent
       positions:
-      - !Vector3 {x: 15, y: 0, z: 15}
-      - !Vector3 {x: 25, y: 0, z: 15}
+      - !Vector3 {x: 15, y: 0, z: 10}
+      - !Vector3 {x: 25, y: 0, z: 10}
       rotations: [45, 135]
       sizes:
       - !Vector3 {x: 13, y: 10, z: 1}
@@ -2380,7 +2554,7 @@ arenas:
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 20, y: 0, z: 12}      
+      - !Vector3 {x: 20, y: 0, z: 7}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
     - !Item
@@ -2388,7 +2562,7 @@ arenas:
       positions:
       - !Vector3 {x: 20, y: 0, z: 1}
       rotations: [0]
-  # 03-11-02.yaml
+  # 03-11-03.yaml
   71: !Arena
     pass_mark: 0
     t: 250
@@ -2396,12 +2570,12 @@ arenas:
     - !Item
       name: WallTransparent
       positions:
-      - !Vector3 {x: 15, y: 0, z: 25}
-      - !Vector3 {x: 25, y: 0, z: 25}
+      - !Vector3 {x: 12.7, y: 0, z: 27.5}
+      - !Vector3 {x: 27.3, y: 0, z: 27.5}
       rotations: [45, 135]
       sizes:
-      - !Vector3 {x: 13, y: 10, z: 1}
-      - !Vector3 {x: 13, y: 10, z: 1}
+      - !Vector3 {x: 19.5, y: 10, z: 1}
+      - !Vector3 {x: 19.5, y: 10, z: 1}
     - !Item
       name: GoodGoal
       positions:
@@ -2413,7 +2587,7 @@ arenas:
       positions:
       - !Vector3 {x: 20, y: 0, z: 22}
       rotations: [180]
-  # 03-12-02.yaml
+  # 03-12-03.yaml
   72: !Arena
     pass_mark: 0
     t: 250
@@ -2440,9 +2614,9 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 22, y: 0, z: 20}
-      rotations: [270]
-  # 03-13-02.yaml
+      - !Vector3 {x: 20, y: 0, z: 18}
+      rotations: [0]
+  # 03-13-03.yaml
   73: !Arena
     pass_mark: 0
     t: 250
@@ -2453,7 +2627,7 @@ arenas:
       - !Vector3 {x: 20, y: 0, z: 20}
       rotations: [135]
       sizes:
-      - !Vector3 {x: 20, y: 3, z: 3}
+      - !Vector3 {x: 4, y: 4, z: 20}
       colors:
       - !RGB {r: 153, g: 153, b: 153}
     - !Item
@@ -2465,9 +2639,9 @@ arenas:
     - !Item
       name: Agent
       positions: 
-      - !Vector3 {x: 1, y: 0, z: 1}
+      - !Vector3 {x: 5, y: 0, z: 5}
       rotations: [45]
-  # 03-14-02.yaml
+  # 03-14-03.yaml
   74: !Arena
     pass_mark: 0
     t: 250
@@ -2478,7 +2652,7 @@ arenas:
       - !Vector3 {x: 20, y: 0, z: 20}
       rotations: [135]
       sizes:
-      - !Vector3 {x: 20, y: 3, z: 3}
+      - !Vector3 {x: 4, y: 4, z: 20}
     - !Item
       name: GoodGoal
       positions:
@@ -2488,9 +2662,9 @@ arenas:
     - !Item
       name: Agent
       positions: 
-      - !Vector3 {x: 1, y: 0, z: 1}
+      - !Vector3 {x: 5, y: 0, z: 5}
       rotations: [45]
-  # 03-15-02.yaml
+  # 03-15-03.yaml
   75: !Arena
     pass_mark: 0
     t: 250
@@ -2503,9 +2677,9 @@ arenas:
       - !Vector3 {x: 10, y: 0, z: 20}
       rotations: [90,90,90]
       sizes:
-      - !Vector3 {x: 5, y: 10, z: 10}
-      - !Vector3 {x: 5, y: 10, z: 10}
-      - !Vector3 {x: 5, y: 10, z: 10}
+      - !Vector3 {x: 4, y: 4, z: 10}
+      - !Vector3 {x: 4, y: 4, z: 10}
+      - !Vector3 {x: 4, y: 4, z: 10}
     - !Item
       name: GoodGoal
       positions:
@@ -2517,7 +2691,7 @@ arenas:
       positions: 
       - !Vector3 {x: 20, y: 0, z: 1}
       rotations: [0]
-  # 03-16-02.yaml
+  # 03-16-03.yaml
   76: !Arena
     pass_mark: 0
     t: 250
@@ -2534,7 +2708,7 @@ arenas:
     - !Item
       name: Ramp
       positions:
-      - !Vector3 {x: 30, y: 0, z: 18}
+      - !Vector3 {x: 32, y: 0, z: 18}
       sizes:
       - !Vector3 {x: 4, y: 0.5, z: 4}
       rotations: [180]
@@ -2551,7 +2725,7 @@ arenas:
       positions: 
       - !Vector3 {x: 5, y: 0, z: 5}
       rotations: [45]
-  # 03-17-02.yaml
+  # 03-17-03.yaml
   77: !Arena
     pass_mark: 2
     t: 250
@@ -2559,8 +2733,8 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 1, y: 0, z: 1}
-      rotations: [45]
+      - !Vector3 {x: 1, y: 0, z: 39}
+      rotations: [15]
     - !Item
       name: Wall
       positions:
@@ -2585,7 +2759,7 @@ arenas:
       - !Vector3 {x: 5, y: 3, z: 5}
       colors:
       - !RGB {r: 255, g: 0, b: 255}
-  # 03-18-02.yaml
+  # 03-18-03.yaml
   78: !Arena
     pass_mark: 1
     t: 500
@@ -2606,7 +2780,7 @@ arenas:
       - !RGB {r: 0, g: 0, b: 255}
       sizes:
       - !Vector3 {x: 5, y: 2, z: 15}
-      - !Vector3 {x: 15, y: 2, z: 1}
+      - !Vector3 {x: 15, y: 2, z: .5}
     - !Item
       name: GoodGoal
       positions:
@@ -2622,7 +2796,7 @@ arenas:
       - !Vector3 {x: 5, y: 2, z: 5}
       colors:
       - !RGB {r: 255, g: 0, b: 255}
-  # 03-19-02.yaml
+  # 03-19-03.yaml
   79: !Arena
     pass_mark: 1
     t: 500
@@ -2631,7 +2805,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 39, y: 0, z: 1}
-      rotations: [320]
+      rotations: [340]
     - !Item
       name: Wall
       positions:
@@ -2645,7 +2819,7 @@ arenas:
       - !RGB {r: 0, g: 0, b: 255}
       sizes:
       - !Vector3 {x: 4, y: 1, z: 15}
-      - !Vector3 {x: 16, y: 1, z: 1}
+      - !Vector3 {x: 16, y: 1, z: .5}
       - !Vector3 {x: 4, y: 1, z: 15}
     - !Item
       name: GoodGoal
@@ -2662,7 +2836,7 @@ arenas:
       - !Vector3 {x: 4, y: 1, z: 5}
       colors:
       - !RGB {r: 255, g: 0, b: 255}
-  # 03-20-02.yaml
+  # 03-20-03.yaml
   80: !Arena
     pass_mark: 0
     t: 250
@@ -2682,9 +2856,9 @@ arenas:
     - !Item
       name: Ramp
       positions:
-      - !Vector3 {x: 30, y: 0, z: 14}
+      - !Vector3 {x: 35, y: 0, z: 15}
       sizes:
-      - !Vector3 {x: 8, y: 2, z: 4}
+      - !Vector3 {x: 6, y: 2, z: 4}
       rotations: [180]
       colors:
       - !RGB {r: 255, g: 0, b: 255}
@@ -2699,7 +2873,7 @@ arenas:
       positions: 
       - !Vector3 {x: 2, y: 1, z: 2}
       rotations: [45]
-  # 03-21-02.yaml
+  # 03-21-03.yaml
   81: !Arena
     pass_mark: 0
     t: 500
@@ -2726,9 +2900,9 @@ arenas:
       - !Vector3 {x: 10, y: 1, z: 19}
       - !Vector3 {x: 20, y: 2, z: 29}
       sizes:
-      - !Vector3 {x: 15, y: 1, z: 2}
-      - !Vector3 {x: 15, y: 1, z: 2}
-      - !Vector3 {x: 15, y: 1, z: 2}
+      - !Vector3 {x: 5, y: 1, z: 2}
+      - !Vector3 {x: 5, y: 1, z: 2}
+      - !Vector3 {x: 5, y: 1, z: 2}
       rotations: [180, 180, 180]
       colors:
       - !RGB {r: 255, g: 0, b: 255}
@@ -2745,7 +2919,7 @@ arenas:
       positions: 
       - !Vector3 {x: 2, y: 1, z: 2}
       rotations: [45]
-  # 03-22-02.yaml
+  # 03-22-03.yaml
   82: !Arena
     pass_mark: 0
     t: 250
@@ -2775,14 +2949,16 @@ arenas:
       name: GoodGoal
       positions:
       - !Vector3 {x: 35, y: 0, z: 35}
+      - !Vector3 {x: 35, y: 0, z: 5}
       sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
     - !Item
       name: Agent
       positions: 
-      - !Vector3 {x: 5, y: 0, z: 20}
-      rotations: [90]
-  # 03-23-02.yaml
+      - !Vector3 {x: 1, y: 0, z: 1}
+      rotations: [45]
+  # 03-23-03.yaml
   83: !Arena
     pass_mark: 0
     t: 250
@@ -2818,9 +2994,9 @@ arenas:
     - !Item
       name: Agent
       positions: 
-      - !Vector3 {x: 1, y: 0, z: 1}
-      rotations: [45]
-  # 03-24-02.yaml
+      - !Vector3 {x: 1, y: 0, z: 39}
+      rotations: [135]
+  # 03-24-03.yaml
   84: !Arena
     pass_mark: 0
     t: 250
@@ -2853,9 +3029,9 @@ arenas:
     - !Item
       name: Agent
       positions: 
-      - !Vector3 {x: 1, y: 0, z: 25}
+      - !Vector3 {x: 1, y: 0, z: 15}
       rotations: [90]
-  # 03-25-02.yaml
+  # 03-25-03.yaml
   85: !Arena
     pass_mark: 1
     t: 250
@@ -2904,7 +3080,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: .1, z: 20}
-  # 03-26-02.yaml
+  # 03-26-03.yaml
   86: !Arena
     pass_mark: 1
     t: 250
@@ -2957,7 +3133,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: .1, z: 20}
-  # 03-27-02.yaml
+  # 03-27-03.yaml
   87: !Arena
     pass_mark: 1
     t: 500
@@ -3028,7 +3204,7 @@ arenas:
       positions:
       - !Vector3 {x: 20, y: .1, z: 20}
 
-  # 03-28-02.yaml
+  # 03-28-03.yaml
   88: !Arena
     pass_mark: 0
     t: 250
@@ -3066,9 +3242,9 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 22, y: 0, z: 23}
+      - !Vector3 {x: 22, y: 0, z: 21}
       rotations: [0]
-  # 03-29-02.yaml
+  # 03-29-03.yaml
   89: !Arena
     pass_mark: 0
     t: 250
@@ -3112,9 +3288,9 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 22, y: 0, z: 23}
+      - !Vector3 {x: 22, y: 0, z: 21}
       rotations: [0]
-  # 03-30-02.yaml
+  # 03-30-03.yaml
   90: !Arena
     pass_mark: 0
     t: 250
@@ -3156,7 +3332,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 16, y: 0, z: 20}
-  # 04-01-02.yaml
+  # 04-01-03.yaml
   91: !Arena
     pass_mark: 0
     t: 250
@@ -3167,19 +3343,19 @@ arenas:
       - !Vector3 {x: 20, y: 0, z: 20}
       rotations: [45]
       sizes:
-      - !Vector3 {x: 10, y: 0, z: 10}
+      - !Vector3 {x: 20, y: 0, z: 20}
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 20, y: 0, z: 30}      
+      - !Vector3 {x: 20, y: 0, z: 39}      
       sizes:
-      - !Vector3 {x: 1, y: 1, z: 1} 
+      - !Vector3 {x: 1, y: 1, z: 1}
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 20, y: 0, z: 10}
+      - !Vector3 {x: 20, y: 0, z: 1}
       rotations: [0]
-  # 04-02-02.yaml
+  # 04-02-03.yaml
   92: !Arena
     pass_mark: 0
     t: 250
@@ -3200,9 +3376,9 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 30, y: 0, z: 5}
+      - !Vector3 {x: 35, y: 0, z: 5}
       rotations: [0]
-  # 04-03-02.yaml
+  # 04-03-03.yaml
   93: !Arena
     pass_mark: 0
     t: 250
@@ -3214,8 +3390,8 @@ arenas:
       - !Vector3 {x: 25, y: 0, z: 25}
       rotations: [0,0]
       sizes:
-      - !Vector3 {x: 5, y: 0, z: 30}
-      - !Vector3 {x: 5, y: 0, z: 30}
+      - !Vector3 {x: 7, y: 0, z: 30}
+      - !Vector3 {x: 7, y: 0, z: 30}
     - !Item
       name: GoodGoal
       positions:
@@ -3227,7 +3403,7 @@ arenas:
       positions:
       - !Vector3 {x: 5, y: 0, z: 20}
       rotations: [90]
-  # 04-04-02.yaml
+  # 04-04-03.yaml
   94: !Arena
     pass_mark: -0.99
     t: 250
@@ -3248,9 +3424,9 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 10, y: 0, z: 1}
+      - !Vector3 {x: 30, y: 0, z: 1}
       rotations: [0]
-  # 04-05-02.yaml
+  # 04-05-03.yaml
   95: !Arena
     pass_mark: 0
     t: 250
@@ -3279,9 +3455,9 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 1, y: 0, z: 20}
+      - !Vector3 {x: 1, y: 0, z: 10}
       rotations: [90]
-  # 04-06-02.yaml
+  # 04-06-03.yaml
   96: !Arena
     pass_mark: -0.99
     t: 250
@@ -3321,42 +3497,10 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 1, y: 0, z: 1}
+      - !Vector3 {x: 39, y: 0, z: 1}
       rotations: [283]
-  # 04-07-02.yaml
+  # 04-07-03.yaml
   97: !Arena
-    pass_mark: 0.15
-    t: 250
-    items:
-    - !Item
-      name: Agent
-      positions:
-      - !Vector3 {x: 20, y: 0, z: 1}
-      rotations: [10]
-    - !Item
-      name: Wall
-      positions:
-      - !Vector3 {x: 20, y: 0, z: 20}
-      rotations: [90]
-      colors: 
-      - !RGB {r: 153, g: 153, b: 153}
-      sizes:
-      - !Vector3 {x: 20, y: .5, z: 1}
-    - !Item
-      name: HotZone
-      positions:
-      - !Vector3 {x: 10, y: 0, z: 20}
-      sizes:
-      - !Vector3 {x: 19.9, y: 0, z: 20}
-      rotations: [0]
-    - !Item
-      name: GoodGoal
-      positions:
-      - !Vector3 {x: 20, y: 0, z: 35}      
-      sizes:
-      - !Vector3 {x: 1, y: 1, z: 1}  
-  # 04-08-02.yaml
-  98: !Arena
     pass_mark: 0.15
     t: 250
     items:
@@ -3377,6 +3521,38 @@ arenas:
     - !Item
       name: HotZone
       positions:
+      - !Vector3 {x: 10, y: 0, z: 20}
+      sizes:
+      - !Vector3 {x: 19.9, y: 0, z: 20}
+      rotations: [0]
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 35}      
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}  
+  # 04-08-03.yaml
+  98: !Arena
+    pass_mark: 0.15
+    t: 250
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 1}
+      rotations: [10]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 20}
+      rotations: [90]
+      colors: 
+      - !RGB {r: 153, g: 153, b: 153}
+      sizes:
+      - !Vector3 {x: 20, y: .5, z: 1}
+    - !Item
+      name: HotZone
+      positions:
       - !Vector3 {x: 30, y: 0, z: 20}
       sizes:
       - !Vector3 {x: 19.9, y: 0, z: 20}
@@ -3387,7 +3563,7 @@ arenas:
       - !Vector3 {x: 20, y: 0, z: 35}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}  
-  # 04-09-02.yaml
+  # 04-09-03.yaml
   99: !Arena
     pass_mark: 0.2
     t: 250
@@ -3396,7 +3572,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 1}
-      rotations: [10]
+      rotations: [350]
     - !Item
       name: Wall
       positions:
@@ -3422,7 +3598,7 @@ arenas:
       - !Vector3 {x: 20, y: 0, z: 35}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}  
-  # 04-10-02.yaml
+  # 04-10-03.yaml
   100: !Arena
     pass_mark: 0.05
     t: 250
@@ -3435,14 +3611,14 @@ arenas:
     - !Item
       name: DeathZone
       positions:
-      - !Vector3 {x: 20, y: 0, z: 20}
+      - !Vector3 {x: 26.666, y: 0, z: 20}
       sizes:
       - !Vector3 {x: 6.666, y: 0, z: 20}
       rotations: [0]
     - !Item
       name: HotZone
       positions:
-      - !Vector3 {x: 13.333, y: 0, z: 20}
+      - !Vector3 {x: 20, y: 0, z: 20}
       sizes:
       - !Vector3 {x: 6.666, y: 0, z: 20}
       rotations: [0]
@@ -3464,7 +3640,7 @@ arenas:
       - !Vector3 {x: 20, y: 0, z: 35}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}  
-  # 04-11-02.yaml
+  # 04-11-03.yaml
   101: !Arena
     pass_mark: 0.05
     t: 250
@@ -3477,28 +3653,28 @@ arenas:
     - !Item
       name: DeathZone
       positions:
-      - !Vector3 {x: 20, y: 0, z: 10}
+      - !Vector3 {x: 26.666, y: 0, z: 10}
       sizes:
       - !Vector3 {x: 6.666, y: 0, z: 10}
       rotations: [0]
     - !Item
       name: HotZone
       positions:
-      - !Vector3 {x: 13.333, y: 0, z: 10}
+      - !Vector3 {x: 20, y: 0, z: 10}
       sizes:
       - !Vector3 {x: 6.666, y: 0, z: 10}
       rotations: [0]
     - !Item
       name: DeathZone
       positions:
-      - !Vector3 {x: 26.666, y: 0, z: 30}
+      - !Vector3 {x: 13.333, y: 0, z: 30}
       sizes:
       - !Vector3 {x: 6.666, y: 0, z: 10}
       rotations: [0]
     - !Item
       name: HotZone
       positions:
-      - !Vector3 {x: 20, y: 0, z: 30}
+      - !Vector3 {x: 26.666, y: 0, z: 30}
       sizes:
       - !Vector3 {x: 6.666, y: 0, z: 10}
       rotations: [0]
@@ -3520,7 +3696,7 @@ arenas:
       - !Vector3 {x: 20, y: 0, z: 38}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}  
-  # 04-12-02.yaml
+  # 04-12-03.yaml
   102: !Arena
     pass_mark: 0
     t: 250
@@ -3533,8 +3709,8 @@ arenas:
     - !Item
       name: DeathZone
       positions:
-      - !Vector3 {x: 17.5, y: 0, z: 30}
-      - !Vector3 {x: 22.5, y: 0, z: 10}
+      - !Vector3 {x: 22.5, y: 0, z: 30}
+      - !Vector3 {x: 17.5, y: 0, z: 10}
       sizes:
       - !Vector3 {x: 15, y: 0, z: 10}
       - !Vector3 {x: 15, y: 0, z: 10}
@@ -3557,7 +3733,7 @@ arenas:
       - !Vector3 {x: 20, y: 0, z: 38}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}  
-  # 04-13-02.yaml
+  # 04-13-03.yaml
   103: !Arena
     pass_mark: 0
     t: 250
@@ -3580,9 +3756,9 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 15, y: 0, z: 1}
+      - !Vector3 {x: 20, y: 0, z: 1}
       rotations: [0]
-  # 04-14-02.yaml
+  # 04-14-03.yaml
   104: !Arena
     pass_mark: 0
     t: 250
@@ -3605,9 +3781,9 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 25, y: 0, z: 1}
+      - !Vector3 {x: 20, y: 0, z: 1}
       rotations: [0]
-  # 04-15-02.yaml
+  # 04-15-03.yaml
   105: !Arena
     pass_mark: 0
     t: 250
@@ -3636,9 +3812,9 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 22, y: 0, z: 20}
-      rotations: [270]
-  # 04-16-02.yaml
+      - !Vector3 {x: 20, y: 0, z: 22}
+      rotations: [180]
+  # 04-16-03.yaml
   106: !Arena
     pass_mark: 0.5
     t: 250
@@ -3656,7 +3832,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 1, z: 1}
-      rotations: [2]
+      rotations: [358]
     - !Item
       name: HotZone
       positions:
@@ -3682,7 +3858,7 @@ arenas:
       - !Vector3 {x: 5, y: 5, z: 5}
       - !Vector3 {x: .5, y: .5, z: .5}      
 
-  # 04-17-02.yaml
+  # 04-17-03.yaml
   107: !Arena
     pass_mark: 0.5
     t: 250
@@ -3700,7 +3876,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 1, z: 1}
-      rotations: [2]
+      rotations: [358]
     - !Item
       name: HotZone
       positions:
@@ -3726,7 +3902,7 @@ arenas:
       - !Vector3 {x: 5, y: 5, z: 5}
       - !Vector3 {x: .5, y: .5, z: .5}      
 
-  # 04-18-02.yaml
+  # 04-18-03.yaml
   108: !Arena
     pass_mark: 1
     t: 250
@@ -3734,8 +3910,8 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 1, y: 1, z: 39}
-      rotations: [137]
+      - !Vector3 {x: 5, y: 1, z: 35}
+      rotations: [160]
     - !Item
       name: HotZone
       positions:
@@ -3750,9 +3926,9 @@ arenas:
       - !Vector3 {x: 9, y: 0, z: 23}      
       sizes:
       - !Vector3 {x: 5, y: 5, z: 5}
-      - !Vector3 {x: 1, y: 1, z: 1}
+      - !Vector3 {x: 1, y: 1, z: 1}      
 
-  # 04-19-02.yaml
+  # 04-19-03.yaml
   109: !Arena
     pass_mark: 0
     t: 250
@@ -3782,7 +3958,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 10, y: 0, z: 5}
-  # 04-20-02.yaml
+  # 04-20-03.yaml
   110: !Arena
     pass_mark: 0
     t: 250
@@ -3791,12 +3967,12 @@ arenas:
       name: DeathZone
       positions:
       - !Vector3 {x: 9.5, y: 0, z: 20}
-      - !Vector3 {x: 31.5, y: 0, z: 13.5}
+      - !Vector3 {x: 30.5, y: 0, z: 14.5}
       - !Vector3 {x: 29.5, y: 0, z: 25.5}
       rotations: [0,0,0]
       sizes:
       - !Vector3 {x: 19, y: 0, z: 20}
-      - !Vector3 {x: 17, y: 0, z: 7}
+      - !Vector3 {x: 19, y: 0, z: 9}
       - !Vector3 {x: 21, y: 0, z: 9}
     - !Item
       name: GoodGoal
@@ -3808,7 +3984,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 10, y: 0, z: 5}
-  # 04-21-02.yaml
+  # 04-21-03.yaml
   111: !Arena
     pass_mark: 0
     t: 250
@@ -3817,15 +3993,15 @@ arenas:
       name: DeathZone
       positions:
       - !Vector3 {x: 9.5, y: 0, z: 20}
-      - !Vector3 {x: 31.5, y: 0, z: 13.5}
+      - !Vector3 {x: 30.5, y: 0, z: 14.5}
       - !Vector3 {x: 27.5, y: 0, z: 25.5}
-      - !Vector3 {x: 39.5, y: 0, z: 25.5}
+      - !Vector3 {x: 39, y: 0, z: 25.5}
       rotations: [0,0,0,0]
       sizes:
       - !Vector3 {x: 19, y: 0, z: 20}
-      - !Vector3 {x: 17, y: 0, z: 7}
+      - !Vector3 {x: 19, y: 0, z: 9}
       - !Vector3 {x: 17, y: 0, z: 9}
-      - !Vector3 {x: 1, y: 0, z: 9}
+      - !Vector3 {x: 2, y: 0, z: 9}
     - !Item
       name: GoodGoal
       positions:
@@ -3836,7 +4012,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 10, y: 0, z: 5}
-  # 04-22-02.yaml
+  # 04-22-03.yaml
   112: !Arena
     pass_mark: 0
     t: 250
@@ -3854,7 +4030,7 @@ arenas:
       - !Vector3 {x: 20, y: 0, z: 20}
       rotations: [0]
       sizes:
-      - !Vector3 {x: 6, y: 0.1, z: 22}
+      - !Vector3 {x: 2, y: 0.1, z: 22}
       colors:
       - !RGB {r: 153, g: 153, b: 153}
     - !Item
@@ -3867,7 +4043,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 10, y: 0, z: 5}
-  # 04-23-02.yaml
+  # 04-23-03.yaml
   113: !Arena
     pass_mark: 0
     t: 250
@@ -3891,14 +4067,11 @@ arenas:
     - !Item
       name: Wall
       positions:
-      - !Vector3 {x: 30, y: 0, z: 20}
       - !Vector3 {x: 31, y: 0, z: 20}
-      rotations: [0,0]
+      rotations: [0]
       sizes:
       - !Vector3 {x: 0.1, y: 1, z: 20}
-      - !Vector3 {x: 0.1, y: 1, z: 20}
       colors:
-      - !RGB {r: 153, g: 153, b: 153}
       - !RGB {r: 153, g: 153, b: 153}
     - !Item
       name: GoodGoal
@@ -3911,7 +4084,7 @@ arenas:
       positions:
       - !Vector3 {x: 10, y: 1, z: 5}
       rotations: [10]
-  # 04-24-02.yaml
+  # 04-24-03.yaml
   114: !Arena
     pass_mark: 0
     t: 250
@@ -3935,9 +4108,9 @@ arenas:
     - !Item
       name: Wall
       positions:
-      - !Vector3 {x: 20, y: 0, z: 15}
-      - !Vector3 {x: 30, y: 0, z: 25}
-      - !Vector3 {x: 10, y: 0, z: 20}
+      - !Vector3 {x: 30, y: 0, z: 15}
+      - !Vector3 {x: 10, y: 0, z: 25}
+      - !Vector3 {x: 20, y: 0, z: 20}
       rotations: [0,0,0]
       sizes:
       - !Vector3 {x: 5, y: 0.5, z: 10}
@@ -3958,7 +4131,7 @@ arenas:
       positions:
       - !Vector3 {x: 1, y: 1, z: 1}
       rotations: [45]
-  # 04-25-02.yaml
+  # 04-25-03.yaml
   115: !Arena
     pass_mark: 0
     t: 250
@@ -3973,10 +4146,10 @@ arenas:
     - !Item
       name: Ramp
       positions:
-      - !Vector3 {x: 25, y: 0, z: 15.5}
+      - !Vector3 {x: 30, y: 0, z: 15.5}
       rotations: [180]
       sizes:
-      - !Vector3 {x: 10, y: 1, z: 4}
+      - !Vector3 {x: 5, y: 1, z: 4}
       colors:
       - !RGB {r: 255, g: 0, b: 255}
     - !Item
@@ -3990,7 +4163,7 @@ arenas:
       positions:
       - !Vector3 {x: 10, y: 0, z: 5}
       rotations: [0]
-  # 04-26-02.yaml
+  # 04-26-03.yaml
   116: !Arena
     pass_mark: 0
     t: 250
@@ -4005,8 +4178,8 @@ arenas:
     - !Item
       name: Ramp
       positions:
-      - !Vector3 {x: 2.5, y: 0, z: 20}
-      rotations: [90]
+      - !Vector3 {x: 37.5, y: 0, z: 20}
+      rotations: [270]
       sizes:
       - !Vector3 {x: 24, y: 7, z: 5}
       colors:
@@ -4020,9 +4193,9 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 30, y: 0, z: 5}
+      - !Vector3 {x: 10, y: 0, z: 5}
       rotations: [0]
-  # 04-27-02.yaml
+  # 04-27-03.yaml
   117: !Arena
     pass_mark: 0
     t: 250
@@ -4040,7 +4213,7 @@ arenas:
       - !Vector3 {x: 30, y: 0, z: 10.5}
       rotations: [180]
       sizes:
-      - !Vector3 {x: 10, y: 1, z: 5}
+      - !Vector3 {x: 5, y: 1, z: 5}
       colors:
       - !RGB {r: 255, g: 0, b: 255}
     - !Item
@@ -4056,7 +4229,7 @@ arenas:
       - !Vector3 {x: 12, y: 0, z: 25.5}
       rotations: [180]
       sizes:
-      - !Vector3 {x: 10, y: 1, z: 5}
+      - !Vector3 {x: 5, y: 1, z: 5}
       colors:
       - !RGB {r: 255, g: 0, b: 255}
     - !Item
@@ -4070,7 +4243,7 @@ arenas:
       positions:
       - !Vector3 {x: 10, y: 0, z: 5}
       rotations: [0]
-  # 04-28-02.yaml
+  # 04-28-03.yaml
   118: !Arena
     pass_mark: -1.1
     t: 250
@@ -4078,22 +4251,28 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 10, y: 0, z: 10}
+      - !Vector3 {x: 1, y: 0, z: 1}
       rotations: [15]
     - !Item
       name: DeathZone
       positions:
-      - !Vector3 {x: 20, y: 0, z: 20}
-      rotations: [0]
+      - !Vector3 {x: 20, y: 0, z: 15}
+      - !Vector3 {x: 20, y: 0, z: 25}
+      - !Vector3 {x: 15, y: 0, z: 20}
+      - !Vector3 {x: 25, y: 0, z: 20}
+      rotations: [0,0,0,0]
       sizes:
-      - !Vector3 {x: 10, y: 0, z: 40}
+      - !Vector3 {x: 15, y: 10, z: 5}
+      - !Vector3 {x: 15, y: 10, z: 5}
+      - !Vector3 {x: 5, y: 10, z: 15}
+      - !Vector3 {x: 5, y: 10, z: 15}
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 35, y: 0, z: 35}
+      - !Vector3 {x: 20, y: 0, z: 20}
       sizes:
-      - !Vector3 {x: 5, y: 5, z: 5}
-  # 04-29-02.yaml
+      - !Vector3 {x: 1, y: 1, z: 1}
+  # 04-29-03.yaml
   119: !Arena
     pass_mark: 5
     t: 500
@@ -4155,7 +4334,7 @@ arenas:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 04-30-02.yaml
+  # 04-30-03.yaml
   120: !Arena
     pass_mark: 0
     t: 250
@@ -4177,11 +4356,11 @@ arenas:
     - !Item
       name: GoodGoalBounce
       positions:
-      - !Vector3 {x: 39, y: 0, z: 22}
+      - !Vector3 {x: 39, y: 0, z: 36}
       rotations: [260]
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 05-01-02.yaml
+  # 05-01-03.yaml
   121: !Arena
     pass_mark: 0
     t: 250
@@ -4208,7 +4387,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 1}
-  # 05-02-02.yaml
+  # 05-02-03.yaml
   122: !Arena
     pass_mark: 0
     t: 250
@@ -4235,7 +4414,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 1}
-  # 05-03-02.yaml
+  # 05-03-03.yaml
   123: !Arena
     pass_mark: 1
     t: 250
@@ -4264,7 +4443,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 1}
-  # 05-04-02.yaml
+  # 05-04-03.yaml
   124: !Arena
     pass_mark: 0
     t: 250
@@ -4272,22 +4451,22 @@ arenas:
     - !Item
       name: Wall
       positions:
-      - !Vector3 {x: 25, y: 0, z: 25}
-      - !Vector3 {x: 28.5, y: 0, z: 25.5}
-      - !Vector3 {x: 25.5, y: 0, z: 28.5}
+      - !Vector3 {x: 10, y: 0, z: 10}
+      - !Vector3 {x: 23.5, y: 0, z: 20.5}
+      - !Vector3 {x: 20.5, y: 0, z: 23.5}
       rotations: [45,225,225]
       colors: 
       - !RGB {r: 153, g: 153, b: 153}
       - !RGB {r: 153, g: 153, b: 153}
       - !RGB {r: 153, g: 153, b: 153}
       sizes:
-      - !Vector3 {x: 5, y: 3, z: 1}
-      - !Vector3 {x: 1, y: 3, z: 4}
-      - !Vector3 {x: 1, y: 3, z: 4}
+      - !Vector3 {x: 5.3, y: 3, z: 1}
+      - !Vector3 {x: 1, y: 3, z: 32.8}
+      - !Vector3 {x: 1, y: 3, z: 32.8}
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 26, y: 0, z: 26}      
+      - !Vector3 {x: 11, y: 0, z: 11}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
     - !Item
@@ -4295,7 +4474,7 @@ arenas:
       positions:
       - !Vector3 {x: 1, y: 0, z: 1}
       rotations: [15]
-  # 05-05-02.yaml
+  # 05-05-03.yaml
   125: !Arena
     pass_mark: 0
     t: 250
@@ -4318,7 +4497,7 @@ arenas:
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 2.25, y: 0, z: 7}      
+      - !Vector3 {x: 2.25, y: 0, z: 1}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
     - !Item
@@ -4333,12 +4512,12 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 1, y: 0, z: 1}
-      rotations: [195]
-  # 05-06-02.yaml
+      - !Vector3 {x: 2.25, y: 0, z: 7}
+      rotations: [15]
+  # 05-06-03.yaml
   126: !Arena
     pass_mark: 0
-    t: 250
+    t: 500
     items:
     - !Item
       name: Wall
@@ -4373,9 +4552,9 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 1, y: 0, z: 1}
-      rotations: [15]
-  # 05-07-02.yaml
+      - !Vector3 {x: 1, y: 0, z: 39}
+      rotations: [225]
+  # 05-07-03.yaml
   127: !Arena
     pass_mark: 0
     t: 250
@@ -4403,7 +4582,7 @@ arenas:
       - !Vector3 {x: 10, y: 0, z: 20}
       rotations: [83]
       sizes:
-      - !Vector3 {x: 5, y: 5, z: 5}
+      - !Vector3 {x: 4, y: 4, z: 10}
       colors:
       - !RGB {r: 153, g: 153, b: 153}
     - !Item
@@ -4421,7 +4600,7 @@ arenas:
       colors:
       - !RGB {r: 153, g: 153, b: 153}
 
-  # 05-08-02.yaml
+  # 05-08-03.yaml
   128: !Arena
     pass_mark: 0
     t: 250
@@ -4449,7 +4628,7 @@ arenas:
       - !Vector3 {x: 30, y: 0, z: 20}
       rotations: [83]
       sizes:
-      - !Vector3 {x: 5, y: 5, z: 5}
+      - !Vector3 {x: 4, y: 4, z: 10}
       colors:
       - !RGB {r: 153, g: 153, b: 153}      
     - !Item
@@ -4467,7 +4646,7 @@ arenas:
       colors:
       - !RGB {r: 153, g: 153, b: 153}
 
-  # 05-09-02.yaml
+  # 05-09-03.yaml
   129: !Arena
     pass_mark: 0
     t: 250
@@ -4492,7 +4671,7 @@ arenas:
     - !Item
       name: Wall
       positions:
-      - !Vector3 {x: 10, y: 0, z: 20}
+      - !Vector3 {x: 10, y: 0, z: 30}
       sizes:
       - !Vector3 {x: 5, y: 2, z: .5}
       rotations: [135]
@@ -4501,7 +4680,7 @@ arenas:
     - !Item
       name: GoodGoal
       positions: 
-      - !Vector3 {x: 10, y: 0, z: 24}
+      - !Vector3 {x: 10, y: 0, z: 34}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
     - !Item
@@ -4513,7 +4692,7 @@ arenas:
       colors:
       - !RGB {r: 153, g: 153, b: 153}
 
-  # 05-10-02.yaml
+  # 05-10-03.yaml
   130: !Arena
     pass_mark: 0
     t: 250
@@ -4538,7 +4717,7 @@ arenas:
     - !Item
       name: Wall
       positions:
-      - !Vector3 {x: 30, y: 0, z: 20}
+      - !Vector3 {x: 30, y: 0, z: 30}
       sizes:
       - !Vector3 {x: 5, y: 2, z: .5}
       rotations: [45]
@@ -4547,7 +4726,7 @@ arenas:
     - !Item
       name: GoodGoal
       positions: 
-      - !Vector3 {x: 30, y: 0, z: 24}
+      - !Vector3 {x: 30, y: 0, z: 34}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
     - !Item
@@ -4559,7 +4738,7 @@ arenas:
       colors:
       - !RGB {r: 153, g: 153, b: 153}
 
-  # 05-11-02.yaml
+  # 05-11-03.yaml
   131: !Arena
     pass_mark: 0
     t: 250
@@ -4586,7 +4765,7 @@ arenas:
       positions:
       - !Vector3 {x: 10, y: 0, z: 20}
       sizes:
-      - !Vector3 {x: 5, y: 5, z: 5}
+      - !Vector3 {x: 4, y: 4, z: 10}
       rotations: [83]
       colors:
       - !RGB {r: 153, g: 153, b: 153}
@@ -4601,10 +4780,10 @@ arenas:
       positions:
       - !Vector3 {x: 30, y: 0, z: 20}
       sizes:
-      - !Vector3 {x: 5, y: 5, z: 5}
+      - !Vector3 {x: 4, y: 4, z: 10}
       rotations: [128]
 
-  # 05-12-02.yaml
+  # 05-12-03.yaml
   132: !Arena
     pass_mark: 0
     t: 250
@@ -4631,7 +4810,7 @@ arenas:
       positions:
       - !Vector3 {x: 30, y: 0, z: 20}
       sizes:
-      - !Vector3 {x: 5, y: 5, z: 5}
+      - !Vector3 {x: 4, y: 4, z: 10}
       rotations: [83]
       colors:
       - !RGB {r: 153, g: 153, b: 153}
@@ -4646,10 +4825,10 @@ arenas:
       positions:
       - !Vector3 {x: 10, y: 0, z: 20}
       sizes:
-      - !Vector3 {x: 5, y: 5, z: 5}
+      - !Vector3 {x: 4, y: 4, z: 10}
       rotations: [128]
 
-  # 05-13-02.yaml
+  # 05-13-03.yaml
   133: !Arena
     pass_mark: 0
     t: 250
@@ -4667,7 +4846,7 @@ arenas:
       - !Vector3 {x: 20, y: 2, z: 20}      
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 05-14-02.yaml
+  # 05-14-03.yaml
   134: !Arena
     pass_mark: -0.5
     t: 250
@@ -4691,7 +4870,7 @@ arenas:
       - !Vector3 {x: 20, y: 4, z: 20}      
       sizes:
       - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
-  # 05-15-02.yaml
+  # 05-15-03.yaml
   135: !Arena
     pass_mark: 0
     t: 500
@@ -4717,7 +4896,7 @@ arenas:
       - !Vector3 {x: 12, y: 0, z: 15}
       sizes:
       - !Vector3 {x: 3, y: 3, z: 3}
-  # 05-16-02.yaml
+  # 05-16-03.yaml
   136: !Arena
     pass_mark: 0
     t: 250
@@ -4725,7 +4904,7 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 19, y: 0.5, z: 1}
+      - !Vector3 {x: 21, y: 0.5, z: 1}
       rotations: [0]
     - !Item
       name: Wall
@@ -4765,7 +4944,7 @@ arenas:
       - !Vector3 {x: 5, y: 15, z: 39}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}  
-  # 05-17-02.yaml
+  # 05-17-03.yaml
   137: !Arena
     pass_mark: 0
     t: 250
@@ -4773,7 +4952,7 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 19, y: 0.5, z: 1}
+      - !Vector3 {x: 21, y: 0.5, z: 1}
       rotations: [0]
     - !Item
       name: Wall
@@ -4813,7 +4992,7 @@ arenas:
       - !Vector3 {x: 35, y: 15, z: 39}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}  
-  # 05-18-02.yaml
+  # 05-18-03.yaml
   138: !Arena
     pass_mark: 0
     t: 250
@@ -4821,7 +5000,7 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 19, y: 0.5, z: 1}
+      - !Vector3 {x: 21, y: 0.5, z: 1}
       rotations: [0]
     - !Item
       name: Wall
@@ -4863,7 +5042,7 @@ arenas:
       - !Vector3 {x: 5, y: 15, z: 39}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}  
-  # 05-19-02.yaml
+  # 05-19-03.yaml
   139: !Arena
     pass_mark: 0
     t: 250
@@ -4871,7 +5050,7 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 19, y: 0.5, z: 1}
+      - !Vector3 {x: 21, y: 0.5, z: 1}
       rotations: [0]
     - !Item
       name: Wall
@@ -4913,7 +5092,7 @@ arenas:
       - !Vector3 {x: 35, y: 15, z: 39}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}  
-  # 05-20-02.yaml
+  # 05-20-03.yaml
   140: !Arena
     pass_mark: 0
     t: 250
@@ -4921,7 +5100,7 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 21, y: 0.5, z: 1}
+      - !Vector3 {x: 19, y: 0.5, z: 1}
       rotations: [0]
     - !Item
       name: Wall
@@ -4977,7 +5156,7 @@ arenas:
       - !Vector3 {x: 10, y: 15, z: 39}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}  
-  # 05-21-02.yaml
+  # 05-21-03.yaml
   141: !Arena
     pass_mark: 0
     t: 250
@@ -4985,7 +5164,7 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 21, y: 0.5, z: 1}
+      - !Vector3 {x: 19, y: 0.5, z: 1}
       rotations: [0]
     - !Item
       name: Wall
@@ -5041,7 +5220,7 @@ arenas:
       - !Vector3 {x: 30, y: 15, z: 39}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}  
-  # 05-22-02.yaml
+  # 05-22-03.yaml
   142: !Arena
     pass_mark: 1
     t: 500
@@ -5178,7 +5357,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 20}
-  # 05-23-02.yaml
+  # 05-23-03.yaml
   143: !Arena
     pass_mark: 1
     t: 500
@@ -5333,7 +5512,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 20}
-  # 05-24-02.yaml
+  # 05-24-03.yaml
   144: !Arena
     pass_mark: 3
     t: 500
@@ -5468,7 +5647,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 20}
-  # 05-25-02.yaml
+  # 05-25-03.yaml
   145: !Arena
     pass_mark: 3
     t: 500
@@ -5633,7 +5812,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 20}
-  # 05-26-02.yaml
+  # 05-26-03.yaml
   146: !Arena
     pass_mark: 5
     t: 1000
@@ -5766,7 +5945,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 20}
-  # 05-27-02.yaml
+  # 05-27-03.yaml
   147: !Arena
     pass_mark: 5
     t: 1000
@@ -5947,7 +6126,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 20}
-  # 05-28-02.yaml
+  # 05-28-03.yaml
   148: !Arena
     pass_mark: 7
     t: 1000
@@ -6072,7 +6251,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 20}
-  # 05-29-02.yaml
+  # 05-29-03.yaml
   149: !Arena
     pass_mark: 7
     t: 1000
@@ -6257,7 +6436,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 20}
-  # 05-30-02.yaml
+  # 05-30-03.yaml
   150: !Arena
     pass_mark: 7
     t: 1000
@@ -6449,7 +6628,7 @@ arenas:
       sizes:
       - !Vector3 {x: 3, y: 5, z: 3}
       rotations: [0]
-  # 06-01-02.yaml
+  # 06-01-03.yaml
   151: !Arena
     pass_mark: 0
     t: 250
@@ -6477,7 +6656,7 @@ arenas:
       - !Vector3 {x: 24, y: 0, z: 23}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 06-02-02.yaml
+  # 06-02-03.yaml
   152: !Arena
     pass_mark: 0
     t: 250
@@ -6505,7 +6684,7 @@ arenas:
       - !Vector3 {x: 18, y: 0, z: 24}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 06-03-02.yaml
+  # 06-03-03.yaml
   153: !Arena
     pass_mark: 0
     t: 250
@@ -6533,7 +6712,7 @@ arenas:
       - !Vector3 {x: 30, y: 0, z: 35}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 06-04-02.yaml
+  # 06-04-03.yaml
   154: !Arena
     pass_mark: 0
     t: 250
@@ -6555,7 +6734,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: -1, y: 0.1, z: -1}
-  # 06-05-02.yaml
+  # 06-05-03.yaml
   155: !Arena
     pass_mark: 0
     t: 250
@@ -6583,7 +6762,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 10, y: 0, z: 10}
-  # 06-06-02.yaml
+  # 06-06-03.yaml
   156: !Arena
     pass_mark: 0
     t: 250
@@ -6618,7 +6797,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 10, y: .1, z: 10}
-  # 06-07-02.yaml
+  # 06-07-03.yaml
   157: !Arena
     pass_mark: 0
     t: 250
@@ -6655,7 +6834,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 10, y: .1, z: 10}
-  # 06-08-02.yaml
+  # 06-08-03.yaml
   158: !Arena
     pass_mark: 0
     t: 250
@@ -6692,7 +6871,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 10, y: .1, z: 10}
-  # 06-09-02.yaml
+  # 06-09-03.yaml
   159: !Arena
     pass_mark: 0
     t: 250
@@ -6729,7 +6908,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 10, y: .1, z: 10}
-  # 06-10-02.yaml
+  # 06-10-03.yaml
   160: !Arena
     pass_mark: 0
     t: 250
@@ -6831,8 +7010,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 10}
-      rotations: [2]
-  # 06-11-02.yaml
+      rotations: [358]
+  # 06-11-03.yaml
   161: !Arena
     pass_mark: 0
     t: 250
@@ -6961,8 +7140,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 10}
-      rotations: [2]
-  # 06-12-02.yaml
+      rotations: [358]
+  # 06-12-03.yaml
   162: !Arena
     pass_mark: 0
     t: 250
@@ -7091,8 +7270,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 22}
-      rotations: [182]
-  # 06-13-02.yaml
+      rotations: [178]
+  # 06-13-03.yaml
   163: !Arena
     pass_mark: 0
     t: 250
@@ -7142,7 +7321,7 @@ arenas:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 06-14-02.yaml
+  # 06-14-03.yaml
   164: !Arena
     pass_mark: 2
     t: 500
@@ -7205,7 +7384,7 @@ arenas:
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 06-15-02.yaml
+  # 06-15-03.yaml
   165: !Arena
     pass_mark: 9
     t: 1000
@@ -7283,7 +7462,7 @@ arenas:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 06-16-02.yaml
+  # 06-16-03.yaml
   166: !Arena
     pass_mark: 1
     t: 250
@@ -7309,7 +7488,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 1}
-  # 06-17-02.yaml
+  # 06-17-03.yaml
   167: !Arena
     pass_mark: 1
     t: 500
@@ -7411,7 +7590,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 20}
-  # 06-18-02.yaml
+  # 06-18-03.yaml
   168: !Arena
     pass_mark: 1
     t: 500
@@ -7526,7 +7705,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 20}
-  # 06-19-02.yaml
+  # 06-19-03.yaml
   169: !Arena
     pass_mark: 3
     t: 500
@@ -7628,7 +7807,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 20}
-  # 06-20-02.yaml
+  # 06-20-03.yaml
   170: !Arena
     pass_mark: 3
     t: 500
@@ -7751,7 +7930,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 20}
-  # 06-21-02.yaml
+  # 06-21-03.yaml
   171: !Arena
     pass_mark: 5
     t: 1000
@@ -7853,7 +8032,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 20}
-  # 06-22-02.yaml
+  # 06-22-03.yaml
   172: !Arena
     pass_mark: 5
     t: 1000
@@ -7989,7 +8168,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 20}
-  # 06-23-02.yaml
+  # 06-23-03.yaml
   173: !Arena
     pass_mark: 7
     t: 1000
@@ -8086,7 +8265,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 20}
-  # 06-24-02.yaml
+  # 06-24-03.yaml
   174: !Arena
     pass_mark: 7
     t: 1000
@@ -8225,7 +8404,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 20}
-  # 06-25-02.yaml
+  # 06-25-03.yaml
   175: !Arena
     pass_mark: 1
     t: 500
@@ -8262,7 +8441,7 @@ arenas:
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
 
-  # 06-26-02.yaml
+  # 06-26-03.yaml
   176: !Arena
     pass_mark: 0
     t: 250
@@ -8306,7 +8485,7 @@ arenas:
       positions: 
       - !Vector3 {x: 5, y: 1, z: 20}
       rotations: [90]
-  # 06-27-02.yaml
+  # 06-27-03.yaml
   177: !Arena
     pass_mark: 0
     t: 250
@@ -8341,7 +8520,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 16, y: 0, z: 20}
-  # 06-28-02.yaml
+  # 06-28-03.yaml
   178: !Arena
     pass_mark: 0
     t: 250
@@ -8374,7 +8553,7 @@ arenas:
       positions:
       - !Vector3 {x: 22, y: 0, z: 22}
       rotations: [0]
-  # 06-29-02.yaml
+  # 06-29-03.yaml
   179: !Arena
     pass_mark: 0
     t: 250
@@ -8411,7 +8590,7 @@ arenas:
       positions:
       - !Vector3 {x: 22, y: 0, z: 22}
       rotations: [0]
-  # 06-30-02.yaml
+  # 06-30-03.yaml
   180: !Arena
     pass_mark: 0
     t: 250
@@ -8449,45 +8628,11 @@ arenas:
       positions: 
       - !Vector3 {x: 2, y: 1, z: 2}
       rotations: [45]
-  # 07-01-02.yaml
+  # 07-01-03.yaml
   181: !Arena
     pass_mark: 0
     t: 250
     blackouts: [-20]
-    items:
-    - !Item
-      name: Agent
-      positions:
-      - !Vector3 {x: 7, y: 0, z: 7}
-      rotations: [245]
-    - !Item
-      name: GoodGoal
-      positions:
-      - !Vector3 {x: 32, y: 0, z: 32}
-      sizes:
-      - !Vector3 {x: 1, y: 1, z: 1}  
-  # 07-02-02.yaml
-  182: !Arena
-    pass_mark: 0
-    t: 250
-    blackouts: [-40]
-    items:
-    - !Item
-      name: Agent
-      positions:
-      - !Vector3 {x: 7, y: 0, z: 7}
-      rotations: [245]
-    - !Item
-      name: GoodGoal
-      positions:
-      - !Vector3 {x: 32, y: 0, z: 32}
-      sizes:
-      - !Vector3 {x: 1, y: 1, z: 1}  
-  # 07-03-02.yaml
-  183: !Arena
-    pass_mark: 0
-    t: 250
-    blackouts: [-60]
     items:
     - !Item
       name: Agent
@@ -8500,11 +8645,45 @@ arenas:
       - !Vector3 {x: 32, y: 0, z: 32}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}  
-  # 07-04-02.yaml
+  # 07-02-03.yaml
+  182: !Arena
+    pass_mark: 0
+    t: 250
+    blackouts: [-40]
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 7, y: 0, z: 7}
+      rotations: [205]
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 32, y: 0, z: 32}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}  
+  # 07-03-03.yaml
+  183: !Arena
+    pass_mark: 0
+    t: 250
+    blackouts: [-60]
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 7, y: 0, z: 7}
+      rotations: [245]
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 32, y: 0, z: 32}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}  
+  # 07-04-03.yaml
   184: !Arena
     pass_mark: 0
     t: 250
-    blackouts: [0, 100]
+    blackouts: [0, 150]
     items:
     - !Item
       name: Agent
@@ -8517,11 +8696,11 @@ arenas:
       - !Vector3 {x: 20, y: 0, z: 35}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}  
-  # 07-05-02.yaml
+  # 07-05-03.yaml
   185: !Arena
     pass_mark: 0
     t: 250
-    blackouts: [0, 100]
+    blackouts: [0, 150]
     items:
     - !Item
       name: Agent
@@ -8534,11 +8713,11 @@ arenas:
       - !Vector3 {x: 15, y: 0, z: 30}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 07-06-02.yaml
+  # 07-06-03.yaml
   186: !Arena
     pass_mark: 0
     t: 250
-    blackouts: [0, 100]
+    blackouts: [0, 150]
     items:
     - !Item
       name: Agent
@@ -8551,7 +8730,7 @@ arenas:
       - !Vector3 {x: 30, y: 0, z: 15}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 07-07-02.yaml
+  # 07-07-03.yaml
   187: !Arena
     pass_mark: 0
     t: 250
@@ -8560,15 +8739,15 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 20, y: 0, z: 1}
-      rotations: [5]
+      - !Vector3 {x: 20, y: 0, z: 5}
+      rotations: [355]
     - !Item
       name: GoodGoal
       positions:
       - !Vector3 {x: 20, y: 0, z: 35}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}  
-  # 07-08-02.yaml
+  # 07-08-03.yaml
   188: !Arena
     pass_mark: 0
     t: 250
@@ -8578,14 +8757,14 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 5, y: 0, z: 1}
-      rotations: [55]
+      rotations: [35]
     - !Item
       name: GoodGoal
       positions:
       - !Vector3 {x: 15, y: 0, z: 30}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 07-09-02.yaml
+  # 07-09-03.yaml
   189: !Arena
     pass_mark: 0
     t: 250
@@ -8595,14 +8774,14 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 5, y: 0, z: 1}
-      rotations: [55]
+      rotations: [35]
     - !Item
       name: GoodGoal
       positions:
       - !Vector3 {x: 30, y: 0, z: 15}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 07-10-02.yaml
+  # 07-10-03.yaml
   190: !Arena
     pass_mark: 1
     t: 250
@@ -8612,7 +8791,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 5}
-      rotations: [350]
+      rotations: [10]
     - !Item
       name: Wall
       positions:
@@ -8637,7 +8816,7 @@ arenas:
       - !Vector3 {x: 14, y: 0, z: 38}
       sizes:
       - !Vector3 {x: 2, y: 2, z: 2}
-  # 07-11-02.yaml
+  # 07-11-03.yaml
   191: !Arena
     pass_mark: 1
     t: 250
@@ -8647,7 +8826,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 5}
-      rotations: [10]
+      rotations: [350]
     - !Item
       name: Wall
       positions:
@@ -8672,9 +8851,50 @@ arenas:
       - !Vector3 {x: 26, y: 0, z: 38}
       sizes:
       - !Vector3 {x: 2, y: 2, z: 2}
-  # 07-12-02.yaml
+  # 07-12-03.yaml
   192: !Arena
     pass_mark: 1
+    t: 250
+    blackouts: [5, 10, 15, 20, 25]
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 5}
+      rotations: [10]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 24.5, y: 0, z: 20}
+      - !Vector3 {x: 17.65, y: 0, z: 30}
+      - !Vector3 {x: 22.35, y: 0, z: 30}
+      rotations: [258.7, 101.3, 258.7, 101.3]
+      colors: 
+      - !RGB {r: 153, g: 153, b: 153}
+      - !RGB {r: 153, g: 153, b: 153}
+      - !RGB {r: 153, g: 153, b: 153}
+      - !RGB {r: 153, g: 153, b: 153}
+      sizes:
+      - !Vector3 {x: 39, y: 5, z: 1}
+      - !Vector3 {x: 39, y: 5, z: 1}
+      - !Vector3 {x: 19, y: 5, z: 1}
+      - !Vector3 {x: 19, y: 5, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 14, y: 0, z: 38}
+      sizes:
+      - !Vector3 {x: 2, y: 2, z: 2}
+    - !Item
+      name: BadGoal
+      positions:
+      - !Vector3 {x: 26, y: 0, z: 38}
+      sizes:
+      - !Vector3 {x: 2, y: 2, z: 2}
+  # 07-13-03.yaml
+  193: !Arena
+    pass_mark: 4
     t: 250
     blackouts: [5, 10, 15, 20, 25]
     items:
@@ -8704,47 +8924,6 @@ arenas:
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 14, y: 0, z: 38}
-      sizes:
-      - !Vector3 {x: 2, y: 2, z: 2}
-    - !Item
-      name: BadGoal
-      positions:
-      - !Vector3 {x: 26, y: 0, z: 38}
-      sizes:
-      - !Vector3 {x: 2, y: 2, z: 2}
-  # 07-13-02.yaml
-  193: !Arena
-    pass_mark: 4
-    t: 250
-    blackouts: [5, 10, 15, 20, 25]
-    items:
-    - !Item
-      name: Agent
-      positions:
-      - !Vector3 {x: 20, y: 0, z: 5}
-      rotations: [10]
-    - !Item
-      name: Wall
-      positions:
-      - !Vector3 {x: 15.5, y: 0, z: 20}
-      - !Vector3 {x: 24.5, y: 0, z: 20}
-      - !Vector3 {x: 17.65, y: 0, z: 30}
-      - !Vector3 {x: 22.35, y: 0, z: 30}
-      rotations: [258.7, 101.3, 258.7, 101.3]
-      colors: 
-      - !RGB {r: 153, g: 153, b: 153}
-      - !RGB {r: 153, g: 153, b: 153}
-      - !RGB {r: 153, g: 153, b: 153}
-      - !RGB {r: 153, g: 153, b: 153}
-      sizes:
-      - !Vector3 {x: 39, y: 5, z: 1}
-      - !Vector3 {x: 39, y: 5, z: 1}
-      - !Vector3 {x: 19, y: 5, z: 1}
-      - !Vector3 {x: 19, y: 5, z: 1}
-    - !Item
-      name: GoodGoal
-      positions:
       - !Vector3 {x: 26, y: 0, z: 38}
       sizes:
       - !Vector3 {x: 2, y: 2, z: 2}
@@ -8754,7 +8933,7 @@ arenas:
       - !Vector3 {x: 14, y: 0, z: 38}
       sizes:
       - !Vector3 {x: 2, y: 2, z: 2}
-  # 07-14-02.yaml
+  # 07-14-03.yaml
   194: !Arena
     pass_mark: 4
     t: 500
@@ -8786,10 +8965,10 @@ arenas:
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 24, y: 3, z: 35}
+      - !Vector3 {x: 32, y: 3, z: 35}
       sizes:
       - !Vector3 {x: 5, y: 5, z: 5}
-  # 07-15-02.yaml
+  # 07-15-03.yaml
   195: !Arena
     pass_mark: 4
     t: 500
@@ -8821,22 +9000,22 @@ arenas:
     - !Item
       name: GoodGoal
       positions:
-      - !Vector3 {x: 24, y: 3, z: 35}
+      - !Vector3 {x: 29, y: 3, z: 35}
       sizes:
       - !Vector3 {x: 5, y: 5, z: 5}
     - !Item
       name: BadGoal
       positions:
-      - !Vector3 {x: 20, y: 3, z: 35}
-      - !Vector3 {x: 28, y: 3, z: 35}
+      - !Vector3 {x: 25, y: 3, z: 35}
+      - !Vector3 {x: 33, y: 3, z: 35}
       sizes:
       - !Vector3 {x: 3, y: 3, z: 3}
       - !Vector3 {x: 3, y: 3, z: 3}
-  # 07-16-02.yaml
+  # 07-16-03.yaml
   196: !Arena
     pass_mark: 0
     t: 250
-    blackouts: [-40]
+    blackouts: [-60]
     items:
     - !Item
       name: DeathZone
@@ -8856,11 +9035,11 @@ arenas:
       positions:
       - !Vector3 {x: 20, y: 0, z: 15}
       rotations: [0]
-  # 07-17-02.yaml
+  # 07-17-03.yaml
   197: !Arena
     pass_mark: 0
     t: 500
-    blackouts: [-40]
+    blackouts: [-60]
     items:
     - !Item
       name: DeathZone
@@ -8880,11 +9059,11 @@ arenas:
       positions:
       - !Vector3 {x: 20, y: 0, z: 5}
       rotations: [0]
-  # 07-18-02.yaml
+  # 07-18-03.yaml
   198: !Arena
     pass_mark: 0
     t: 500
-    blackouts: [-40]
+    blackouts: [-60]
     items:
     - !Item
       name: DeathZone
@@ -8906,7 +9085,7 @@ arenas:
       positions:
       - !Vector3 {x: 5, y: 0, z: 20}
       rotations: [90]
-  # 07-19-02.yaml
+  # 07-19-03.yaml
   199: !Arena
     pass_mark: 0
     t: 250
@@ -8915,8 +9094,8 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 20, y: 0, z: 5}
-      rotations: [300]
+      - !Vector3 {x: 25, y: 0, z: 25}
+      rotations: [235]
     - !Item
       name: Wall
       positions:
@@ -8948,7 +9127,7 @@ arenas:
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
 
-  # 07-20-02.yaml
+  # 07-20-03.yaml
   200: !Arena
     pass_mark: 0
     t: 500
@@ -8958,7 +9137,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 5, y: 0, z: 5}
-      rotations: [17]
+      rotations: [13]
     - !Item
       name: Wall
       positions:
@@ -8989,7 +9168,7 @@ arenas:
       - !Vector3 {x: 10, y: 3.1, z: 30}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 07-21-02.yaml
+  # 07-21-03.yaml
   201: !Arena
     pass_mark: 0
     t: 500
@@ -8999,7 +9178,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 5, y: 0, z: 5}
-      rotations: [17]
+      rotations: [13]
     - !Item
       name: Wall
       positions:
@@ -9037,7 +9216,7 @@ arenas:
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
 
-  # 07-22-02.yaml
+  # 07-22-03.yaml
   202: !Arena
     pass_mark: 0
     t: 500
@@ -9047,7 +9226,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 5, y: 0, z: 5}
-      rotations: [17]
+      rotations: [13]
     - !Item
       name: Wall
       positions:
@@ -9103,7 +9282,7 @@ arenas:
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
 
-  # 07-23-02.yaml
+  # 07-23-03.yaml
   203: !Arena
     pass_mark: 2
     t: 500
@@ -9113,7 +9292,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 5, y: 0, z: 5}
-      rotations: [17]
+      rotations: [13]
     - !Item
       name: Wall
       positions:
@@ -9173,7 +9352,7 @@ arenas:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
 
-  # 07-24-02.yaml
+  # 07-24-03.yaml
   204: !Arena
     pass_mark: 0
     t: 500
@@ -9183,7 +9362,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 38, y: 0, z: 2}
-      rotations: [317]
+      rotations: [313]
     - !Item
       name: Wall
       positions: 
@@ -9210,7 +9389,7 @@ arenas:
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
 
-  # 07-25-02.yaml
+  # 07-25-03.yaml
   205: !Arena
     pass_mark: 2
     t: 500
@@ -9222,7 +9401,7 @@ arenas:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 07-26-02.yaml
+  # 07-26-03.yaml
   206: !Arena
     pass_mark: 0
     t: 250
@@ -9247,8 +9426,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 5}
-      rotations: [2]
-  # 07-27-02.yaml
+      rotations: [358]
+  # 07-27-03.yaml
   207: !Arena
     pass_mark: 0
     t: 250
@@ -9277,8 +9456,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 18}
-      rotations: [2]
-  # 07-28-02.yaml
+      rotations: [358]
+  # 07-28-03.yaml
   208: !Arena
     pass_mark: 3
     t: 500
@@ -9414,7 +9593,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 20}
-  # 07-29-02.yaml
+  # 07-29-03.yaml
   209: !Arena
     pass_mark: 3
     t: 500
@@ -9580,7 +9759,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 20}
-  # 07-30-02.yaml
+  # 07-30-03.yaml
   210: !Arena
     pass_mark: 7
     t: 1000
@@ -9706,7 +9885,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 20}
-  # 08-01-02.yaml
+  # 08-01-03.yaml
   211: !Arena
     pass_mark: 3
     t: 250
@@ -9744,8 +9923,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 1}
-      rotations: [2]
-  # 08-02-02.yaml
+      rotations: [358]
+  # 08-02-03.yaml
   212: !Arena
     pass_mark: 3
     t: 250
@@ -9783,8 +9962,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 1}
-      rotations: [2]
-  # 08-03-02.yaml
+      rotations: [358]
+  # 08-03-03.yaml
   213: !Arena
     pass_mark: 3
     t: 250
@@ -9822,8 +10001,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 1}
-      rotations: [2]
-  # 08-04-02.yaml
+      rotations: [358]
+  # 08-04-03.yaml
   214: !Arena
     pass_mark: 1
     t: 500
@@ -9878,8 +10057,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 1}
-      rotations: [2]
-  # 08-05-02.yaml
+      rotations: [358]
+  # 08-05-03.yaml
   215: !Arena
     pass_mark: 1
     t: 250
@@ -9934,8 +10113,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 1}
-      rotations: [2]
-  # 08-06-02.yaml
+      rotations: [358]
+  # 08-06-03.yaml
   216: !Arena
     pass_mark: 1
     t: 250
@@ -9990,8 +10169,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 1}
-      rotations: [2]
-  # 08-07-02.yaml
+      rotations: [358]
+  # 08-07-03.yaml
   217: !Arena
     pass_mark: 2
     t: 250
@@ -10017,8 +10196,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 5, y: 0, z: 5}
-      rotations: [27]
-  # 08-08-02.yaml
+      rotations: [23]
+  # 08-08-03.yaml
   218: !Arena
     pass_mark: 2
     t: 250
@@ -10049,8 +10228,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 5, y: 5, z: 5}
-      rotations: [2]
-  # 08-09-02.yaml
+      rotations: [358]
+  # 08-09-03.yaml
   219: !Arena
     pass_mark: 2
     t: 250
@@ -10087,8 +10266,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 38, y: 5, z: 5}
-      rotations: [272]
-  # 08-10-02.yaml
+      rotations: [268]
+  # 08-10-03.yaml
   220: !Arena
     pass_mark: 1
     t: 250
@@ -10723,8 +10902,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 6, z: 2}
-      rotations: [2]
-  # 08-11-02.yaml
+      rotations: [358]
+  # 08-11-03.yaml
   221: !Arena
     pass_mark: 1
     t: 250
@@ -11359,8 +11538,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 6, z: 2}
-      rotations: [2]
-  # 08-12-02.yaml
+      rotations: [358]
+  # 08-12-03.yaml
   222: !Arena
     pass_mark: 1
     t: 250
@@ -11995,8 +12174,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 6, z: 2}
-      rotations: [2]
-  # 08-13-02.yaml
+      rotations: [358]
+  # 08-13-03.yaml
   223: !Arena
     pass_mark: 0
     t: 250
@@ -12005,7 +12184,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 2}
-      rotations: [2]
+      rotations: [358]
     - !Item
       name: Wall
       positions:
@@ -12037,7 +12216,7 @@ arenas:
       rotations: [270]
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 08-14-02.yaml
+  # 08-14-03.yaml
   224: !Arena
     pass_mark: 0
     t: 250
@@ -12046,7 +12225,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0, z: 2}
-      rotations: [2]
+      rotations: [358]
     - !Item
       name: Wall
       positions:
@@ -12078,7 +12257,7 @@ arenas:
       rotations: [90]
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 08-15-02.yaml
+  # 08-15-03.yaml
   225: !Arena
     pass_mark: 0
     t: 250
@@ -12087,7 +12266,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0.5, z: 2}
-      rotations: [2]
+      rotations: [358]
     - !Item
       name: Wall
       positions:
@@ -12131,7 +12310,7 @@ arenas:
       rotations: [270]
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 08-16-02.yaml
+  # 08-16-03.yaml
   226: !Arena
     pass_mark: 0
     t: 250
@@ -12140,7 +12319,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 0.5, z: 2}
-      rotations: [2]
+      rotations: [358]
     - !Item
       name: Wall
       positions:
@@ -12184,7 +12363,7 @@ arenas:
       rotations: [90]
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 08-17-02.yaml
+  # 08-17-03.yaml
   227: !Arena
     pass_mark: 1
     t: 250
@@ -12252,8 +12431,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 2, z: 10}
-      rotations: [2]
-  # 08-18-02.yaml
+      rotations: [358]
+  # 08-18-03.yaml
   228: !Arena
     pass_mark: 1
     t: 250
@@ -12321,8 +12500,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 2, z: 10}
-      rotations: [2]
-  # 08-19-02.yaml
+      rotations: [358]
+  # 08-19-03.yaml
   229: !Arena
     pass_mark: 1
     t: 500
@@ -12332,7 +12511,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 1, z: 2}
-      rotations: [358]
+      rotations: [2]
     - !Item
       name: Wall
       positions:
@@ -12383,7 +12562,7 @@ arenas:
       rotations: [358]
       sizes:
       - !Vector3 {x: 2, y: 2, z: 2}
-  # 08-20-02.yaml
+  # 08-20-03.yaml
   230: !Arena
     pass_mark: 1
     t: 500
@@ -12393,7 +12572,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 1, z: 2}
-      rotations: [2]
+      rotations: [358]
     - !Item
       name: Wall
       positions:
@@ -12444,7 +12623,7 @@ arenas:
       rotations: [2]
       sizes:
       - !Vector3 {x: 2, y: 2, z: 2}
-  # 08-21-02.yaml
+  # 08-21-03.yaml
   231: !Arena
     pass_mark: 1
     t: 500
@@ -12454,7 +12633,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 1, z: 2}
-      rotations: [358]
+      rotations: [2]
     - !Item
       name: Wall
       positions:
@@ -12501,7 +12680,7 @@ arenas:
       sizes:
       - !Vector3 {x: .5, y: .5, z: .5}
       - !Vector3 {x: .5, y: .5, z: .5}
-  # 08-22-02.yaml
+  # 08-22-03.yaml
   232: !Arena
     pass_mark: 1
     t: 500
@@ -12511,7 +12690,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 1, z: 2}
-      rotations: [2]
+      rotations: [358]
     - !Item
       name: Wall
       positions:
@@ -12558,7 +12737,7 @@ arenas:
       sizes:
       - !Vector3 {x: .5, y: .5, z: .5}
       - !Vector3 {x: .5, y: .5, z: .5}
-  # 08-23-02.yaml
+  # 08-23-03.yaml
   233: !Arena
     pass_mark: 1
     t: 500
@@ -12568,7 +12747,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 1, z: 2}
-      rotations: [358]
+      rotations: [2]
     - !Item
       name: WallTransparent
       positions:
@@ -12613,7 +12792,7 @@ arenas:
       rotations: [358]
       sizes:
       - !Vector3 {x: 2, y: 2, z: 2}
-  # 08-24-02.yaml
+  # 08-24-03.yaml
   234: !Arena
     pass_mark: 1
     t: 500
@@ -12623,7 +12802,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 1, z: 2}
-      rotations: [2]
+      rotations: [358]
     - !Item
       name: WallTransparent
       positions:
@@ -12668,7 +12847,7 @@ arenas:
       rotations: [2]
       sizes:
       - !Vector3 {x: 2, y: 2, z: 2}
-  # 08-25-02.yaml
+  # 08-25-03.yaml
   235: !Arena
     pass_mark: 1
     t: 500
@@ -12678,7 +12857,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 1, z: 2}
-      rotations: [358]
+      rotations: [2]
     - !Item
       name: Wall
       positions:
@@ -12720,7 +12899,7 @@ arenas:
       rotations: [358]
       sizes:
       - !Vector3 {x: 2, y: 2, z: 2}
-  # 08-26-02.yaml
+  # 08-26-03.yaml
   236: !Arena
     pass_mark: 1
     t: 500
@@ -12730,7 +12909,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 1, z: 2}
-      rotations: [2]
+      rotations: [358]
     - !Item
       name: Wall
       positions:
@@ -12772,7 +12951,7 @@ arenas:
       rotations: [2]
       sizes:
       - !Vector3 {x: 2, y: 2, z: 2}
-  # 08-27-02.yaml
+  # 08-27-03.yaml
   237: !Arena
     pass_mark: 1
     t: 500
@@ -12782,7 +12961,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 1, z: 2}
-      rotations: [358]
+      rotations: [2]
     - !Item
       name: Wall
       positions:
@@ -12824,7 +13003,7 @@ arenas:
       rotations: [358]
       sizes:
       - !Vector3 {x: 2, y: 2, z: 2}
-  # 08-28-02.yaml
+  # 08-28-03.yaml
   238: !Arena
     pass_mark: 1
     t: 500
@@ -12834,7 +13013,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 1, z: 2}
-      rotations: [2]
+      rotations: [358]
     - !Item
       name: Wall
       positions:
@@ -12876,7 +13055,7 @@ arenas:
       rotations: [2]
       sizes:
       - !Vector3 {x: 2, y: 2, z: 2}
-  # 08-29-02.yaml
+  # 08-29-03.yaml
   239: !Arena
     pass_mark: 1
     t: 500
@@ -12886,7 +13065,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 1, z: 2}
-      rotations: [358]
+      rotations: [2]
     - !Item
       name: Ramp
       positions:
@@ -12949,7 +13128,7 @@ arenas:
       rotations: [358]
       sizes:
       - !Vector3 {x: 2, y: 2, z: 2}
-  # 08-30-02.yaml
+  # 08-30-03.yaml
   240: !Arena
     pass_mark: 1
     t: 500
@@ -12959,7 +13138,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 1, z: 2}
-      rotations: [2]
+      rotations: [358]
     - !Item
       name: Ramp
       positions:
@@ -13022,7 +13201,7 @@ arenas:
       rotations: [2]
       sizes:
       - !Vector3 {x: 2, y: 2, z: 2}
-  # 09-01-02.yaml
+  # 09-01-03.yaml
   241: !Arena
     pass_mark: 0.9
     t: 250
@@ -13039,7 +13218,7 @@ arenas:
     - !Item
       name: Agent
       positions: 
-      - !Vector3 {x: 20, y: 1.1, z: 39}
+      - !Vector3 {x: 20, y: 1.1, z: 1}
       rotations: [180]
     - !Item
       name: GoodGoalMulti
@@ -13058,7 +13237,7 @@ arenas:
       # - !Vector3 {x: 37, y: 0, z: -1}
       sizes:
       - !Vector3 {x: 2, y: 2, z: 2}
-  # 09-02-02.yaml
+  # 09-02-03.yaml
   242: !Arena
     pass_mark: 8.9
     t: 250
@@ -13099,7 +13278,7 @@ arenas:
       - !Vector3 {x: 2, y: 2, z: 2}
       - !Vector3 {x: 2, y: 2, z: 2}
       - !Vector3 {x: 2, y: 2, z: 2}
-  # 09-03-02.yaml
+  # 09-03-03.yaml
   243: !Arena
     pass_mark: 10.9
     t: 250
@@ -13144,7 +13323,7 @@ arenas:
       - !Vector3 {x: 2, y: 2, z: 2}
       - !Vector3 {x: 2, y: 2, z: 2}
       - !Vector3 {x: 2, y: 2, z: 2}
-  # 09-04-02.yaml
+  # 09-04-03.yaml
   244: !Arena
     pass_mark: 10.9
     t: 250
@@ -13189,7 +13368,7 @@ arenas:
       - !Vector3 {x: 2, y: 2, z: 2}
       - !Vector3 {x: 2, y: 2, z: 2}
       - !Vector3 {x: 2, y: 2, z: 2}
-  # 09-05-02.yaml
+  # 09-05-03.yaml
   245: !Arena
     pass_mark: 10.9
     t: 250
@@ -13236,7 +13415,7 @@ arenas:
       - !Vector3 {x: 2, y: 2, z: 2}
       - !Vector3 {x: 2, y: 2, z: 2}
       - !Vector3 {x: 2, y: 2, z: 2}
-  # 09-06-02.yaml
+  # 09-06-03.yaml
   246: !Arena
     pass_mark: 6.9
     t: 250
@@ -13280,7 +13459,7 @@ arenas:
       - !Vector3 {x: 2, y: 2, z: 2}
       - !Vector3 {x: 2, y: 2, z: 2}
       - !Vector3 {x: 2, y: 2, z: 2}
-  # 09-07-02.yaml
+  # 09-07-03.yaml
   247: !Arena
     pass_mark: 4.9
     t: 250
@@ -13320,7 +13499,7 @@ arenas:
       - !Vector3 {x: 2, y: 2, z: 2}
       - !Vector3 {x: 2, y: 2, z: 2}
       - !Vector3 {x: 2, y: 2, z: 2}
-  # 09-08-02.yaml
+  # 09-08-03.yaml
   248: !Arena
     pass_mark: 2.9
     t: 250
@@ -13358,7 +13537,7 @@ arenas:
       - !Vector3 {x: 2, y: 2, z: 2}
       - !Vector3 {x: 2, y: 2, z: 2}
 
-  # 09-09-02.yaml
+  # 09-09-03.yaml
   249: !Arena
     pass_mark: 6.9
     t: 250
@@ -13400,7 +13579,7 @@ arenas:
       - !Vector3 {x: 2, y: 2, z: 2}
       - !Vector3 {x: 2, y: 2, z: 2}
 
-  # 09-10-02.yaml
+  # 09-10-03.yaml
   250: !Arena
     pass_mark: 6.9
     t: 250
@@ -13442,7 +13621,7 @@ arenas:
       - !Vector3 {x: 2, y: 2, z: 2}
       - !Vector3 {x: 2, y: 2, z: 2}
 
-  # 09-11-02.yaml
+  # 09-11-03.yaml
   251: !Arena
     pass_mark: 8.9
     t: 250
@@ -13486,7 +13665,7 @@ arenas:
       - !Vector3 {x: 2, y: 2, z: 2}
       - !Vector3 {x: 2, y: 2, z: 2}
 
-  # 09-12-02.yaml
+  # 09-12-03.yaml
   252: !Arena
     pass_mark: 8.9
     t: 250
@@ -13531,7 +13710,7 @@ arenas:
       - !Vector3 {x: 2, y: 2, z: 2}
       - !Vector3 {x: 2, y: 2, z: 2}
 
-  # 09-13-02.yaml
+  # 09-13-03.yaml
   253: !Arena
     pass_mark: 4.9
     t: 250
@@ -13595,8 +13774,8 @@ arenas:
       - !Vector3 {x: 14, y: 2, z: 38.1}
       - !Vector3 {x: 18, y: 2, z: 38.1}
       # - !Vector3 {x: 22, y: 2, z: 36}
-      - !Vector3 {x: 26, y: 2, z: 36}
-      # - !Vector3 {x: 30, y: 2, z: 36}
+      # - !Vector3 {x: 26, y: 2, z: 36}
+      - !Vector3 {x: 30, y: 2, z: 36}
       rotations: [90, 90, 90, 270]     
       sizes:
       - !Vector3 {x: 2, y: 2, z: 2}
@@ -13608,7 +13787,7 @@ arenas:
       positions:
       - !Vector3 {x: 20, y: 2, z: 10}
       rotations: [0]
-  # 09-14-02.yaml
+  # 09-14-03.yaml
   254: !Arena
     pass_mark: 4.9
     t: 250
@@ -13669,8 +13848,8 @@ arenas:
       name: GoodGoalMultiBounce
       positions:
       # - !Vector3 {x: 10, y: 2, z: 38.1}
-      - !Vector3 {x: 14, y: 2, z: 38.1}
-      # - !Vector3 {x: 18, y: 2, z: 38.1}
+      # - !Vector3 {x: 14, y: 2, z: 38.1}
+      - !Vector3 {x: 18, y: 2, z: 38.1}
       - !Vector3 {x: 22, y: 2, z: 36}
       - !Vector3 {x: 26, y: 2, z: 36}
       - !Vector3 {x: 30, y: 2, z: 36}
@@ -13685,84 +13864,8 @@ arenas:
       positions:
       - !Vector3 {x: 20, y: 2, z: 10}
       rotations: [0]
-  # 09-15-02.yaml
+  # 09-15-03.yaml
   255: !Arena
-    pass_mark: 2.9
-    t: 250
-    items:
-    - !Item #FLOOR
-      name: Wall
-      positions:
-      - !Vector3 {x: 20, y: 0, z: 15}
-      - !Vector3 {x: 20, y: 0, z: 32.5}
-      - !Vector3 {x: 20, y: 0, z: 37.5}
-      rotations: [0,0,0]
-      colors: 
-      - !RGB {r: 0, g: 0, b: 255}
-      - !RGB {r: 153, g: 153, b: 153}
-      - !RGB {r: 153, g: 153, b: 153}
-      sizes:
-      - !Vector3 {x: 30, y: 2, z: 30}
-      - !Vector3 {x: 20, y: 2, z: 5}
-      - !Vector3 {x: 40, y: 2, z: 5}
-    - !Item #CORNERS
-      name: Wall
-      positions:
-      - !Vector3 {x: 6.5, y: 2, z: 37.5}
-      - !Vector3 {x: 33.5, y: 2, z: 37.5}
-      rotations: [135,45]
-      colors: 
-      - !RGB {r: 153, g: 153, b: 153}
-      - !RGB {r: 153, g: 153, b: 153}
-      sizes:
-      - !Vector3 {x: 5, y: 3, z: .1}
-      - !Vector3 {x: 5, y: 3, z: .1}
-    - !Item #HidingWalls
-      name: Wall
-      positions:
-      - !Vector3 {x: 5, y: 2, z: 29.5}
-      - !Vector3 {x: 35, y: 2, z: 29.5}
-      - !Vector3 {x: 10.5, y: 2, z: 32.5}
-      - !Vector3 {x: 29.5, y: 2, z: 32.5}
-      rotations: [0,0,0,0]
-      colors: 
-      - !RGB {r: 153, g: 153, b: 153}
-      - !RGB {r: 153, g: 153, b: 153}
-      - !RGB {r: 153, g: 153, b: 153}
-      - !RGB {r: 153, g: 153, b: 153}
-      sizes:
-      - !Vector3 {x: 10, y: 3, z: 1}
-      - !Vector3 {x: 10, y: 3, z: 1}
-      - !Vector3 {x: 1, y: 3, z: 5}
-      - !Vector3 {x: 1, y: 3, z: 5}
-    - !Item #Middle Transparent Block
-      name: WallTransparent
-      positions:
-      - !Vector3 {x: 20, y: 2, z: 32.5}
-      rotations: [0]
-      sizes:
-      - !Vector3 {x: 18, y: 2, z: 5}  
-    - !Item
-      name: GoodGoalMultiBounce
-      positions:
-      - !Vector3 {x: 10, y: 2, z: 38.1}
-      - !Vector3 {x: 14, y: 2, z: 38.1}
-      # - !Vector3 {x: 18, y: 2, z: 38.1}
-      - !Vector3 {x: 22, y: 2, z: 36}
-      # - !Vector3 {x: 26, y: 2, z: 36}
-      # - !Vector3 {x: 30, y: 2, z: 36}
-      rotations: [90, 90, 270]     
-      sizes:
-      - !Vector3 {x: 2, y: 2, z: 2}
-      - !Vector3 {x: 2, y: 2, z: 2}
-      - !Vector3 {x: 2, y: 2, z: 2}
-    - !Item
-      name: Agent
-      positions:
-      - !Vector3 {x: 20, y: 2, z: 10}
-      rotations: [0]
-  # 09-16-02.yaml
-  256: !Arena
     pass_mark: 2.9
     t: 250
     items:
@@ -13823,10 +13926,86 @@ arenas:
       positions:
       # - !Vector3 {x: 10, y: 2, z: 38.1}
       - !Vector3 {x: 14, y: 2, z: 38.1}
-      # - !Vector3 {x: 18, y: 2, z: 38.1}
+      - !Vector3 {x: 18, y: 2, z: 38.1}
       # - !Vector3 {x: 22, y: 2, z: 36}
-      - !Vector3 {x: 26, y: 2, z: 36}
+      # - !Vector3 {x: 26, y: 2, z: 36}
       - !Vector3 {x: 30, y: 2, z: 36}
+      rotations: [90, 90, 270]     
+      sizes:
+      - !Vector3 {x: 2, y: 2, z: 2}
+      - !Vector3 {x: 2, y: 2, z: 2}
+      - !Vector3 {x: 2, y: 2, z: 2}
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 20, y: 2, z: 10}
+      rotations: [0]
+  # 09-16-03.yaml
+  256: !Arena
+    pass_mark: 2.9
+    t: 250
+    items:
+    - !Item #FLOOR
+      name: Wall
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 15}
+      - !Vector3 {x: 20, y: 0, z: 32.5}
+      - !Vector3 {x: 20, y: 0, z: 37.5}
+      rotations: [0,0,0]
+      colors: 
+      - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 153, g: 153, b: 153}
+      - !RGB {r: 153, g: 153, b: 153}
+      sizes:
+      - !Vector3 {x: 30, y: 2, z: 30}
+      - !Vector3 {x: 20, y: 2, z: 5}
+      - !Vector3 {x: 40, y: 2, z: 5}
+    - !Item #CORNERS
+      name: Wall
+      positions:
+      - !Vector3 {x: 6.5, y: 2, z: 37.5}
+      - !Vector3 {x: 33.5, y: 2, z: 37.5}
+      rotations: [135,45]
+      colors: 
+      - !RGB {r: 153, g: 153, b: 153}
+      - !RGB {r: 153, g: 153, b: 153}
+      sizes:
+      - !Vector3 {x: 5, y: 3, z: .1}
+      - !Vector3 {x: 5, y: 3, z: .1}
+    - !Item #HidingWalls
+      name: Wall
+      positions:
+      - !Vector3 {x: 5, y: 2, z: 29.5}
+      - !Vector3 {x: 35, y: 2, z: 29.5}
+      - !Vector3 {x: 10.5, y: 2, z: 32.5}
+      - !Vector3 {x: 29.5, y: 2, z: 32.5}
+      rotations: [0,0,0,0]
+      colors: 
+      - !RGB {r: 153, g: 153, b: 153}
+      - !RGB {r: 153, g: 153, b: 153}
+      - !RGB {r: 153, g: 153, b: 153}
+      - !RGB {r: 153, g: 153, b: 153}
+      sizes:
+      - !Vector3 {x: 10, y: 3, z: 1}
+      - !Vector3 {x: 10, y: 3, z: 1}
+      - !Vector3 {x: 1, y: 3, z: 5}
+      - !Vector3 {x: 1, y: 3, z: 5}
+    - !Item #Middle Transparent Block
+      name: WallTransparent
+      positions:
+      - !Vector3 {x: 20, y: 2, z: 32.5}
+      rotations: [0]
+      sizes:
+      - !Vector3 {x: 18, y: 2, z: 5}  
+    - !Item
+      name: GoodGoalMultiBounce
+      positions:
+      - !Vector3 {x: 10, y: 2, z: 38.1}
+      # - !Vector3 {x: 14, y: 2, z: 38.1}
+      # - !Vector3 {x: 18, y: 2, z: 38.1}
+      - !Vector3 {x: 22, y: 2, z: 36}
+      - !Vector3 {x: 26, y: 2, z: 36}
+      # - !Vector3 {x: 30, y: 2, z: 36}
       rotations: [90, 270, 270]     
       sizes:
       - !Vector3 {x: 2, y: 2, z: 2}
@@ -13837,7 +14016,7 @@ arenas:
       positions:
       - !Vector3 {x: 20, y: 2, z: 10}
       rotations: [0]
-  # 09-17-02.yaml
+  # 09-17-03.yaml
   257: !Arena
     pass_mark: 4.9
     t: 250
@@ -13900,8 +14079,8 @@ arenas:
       - !Vector3 {x: 10, y: 2, z: 38.1}
       - !Vector3 {x: 14, y: 2, z: 38.1}
       - !Vector3 {x: 18, y: 2, z: 38.1}
-      - !Vector3 {x: 22, y: 2, z: 36}
-      # - !Vector3 {x: 26, y: 2, z: 36}
+      # - !Vector3 {x: 22, y: 2, z: 36}
+      - !Vector3 {x: 26, y: 2, z: 36}
       - !Vector3 {x: 30, y: 2, z: 36}
       rotations: [90, 90, 90, 270, 270]     
       sizes:
@@ -13915,7 +14094,7 @@ arenas:
       positions:
       - !Vector3 {x: 20, y: 2, z: 10}
       rotations: [0]
-  # 09-18-02.yaml
+  # 09-18-03.yaml
   258: !Arena
     pass_mark: 4.9
     t: 250
@@ -13975,8 +14154,8 @@ arenas:
     - !Item
       name: GoodGoalMultiBounce
       positions:
-      - !Vector3 {x: 10, y: 2, z: 38.1}
-      # - !Vector3 {x: 14, y: 2, z: 38.1}
+      # - !Vector3 {x: 10, y: 2, z: 38.1}
+      - !Vector3 {x: 14, y: 2, z: 38.1}
       - !Vector3 {x: 18, y: 2, z: 38.1}
       - !Vector3 {x: 22, y: 2, z: 36}
       - !Vector3 {x: 26, y: 2, z: 36}
@@ -13993,7 +14172,7 @@ arenas:
       positions:
       - !Vector3 {x: 20, y: 2, z: 10}
       rotations: [0]
-  # 09-19-02.yaml
+  # 09-19-03.yaml
   259: !Arena
     pass_mark: 2.9
     t: 250
@@ -14066,8 +14245,8 @@ arenas:
       name: GoodGoalMultiBounce
       positions:
       # - !Vector3 {x: 10, y: 2, z: 38.1}
-      - !Vector3 {x: 14, y: 2, z: 38.1}
-      # - !Vector3 {x: 18, y: 2, z: 38.1}
+      # - !Vector3 {x: 14, y: 2, z: 38.1}
+      - !Vector3 {x: 18, y: 2, z: 38.1}
       # - !Vector3 {x: 22, y: 2, z: 36}
       # - !Vector3 {x: 26, y: 2, z: 36}
       # - !Vector3 {x: 30, y: 2, z: 36}
@@ -14083,7 +14262,7 @@ arenas:
       positions:
       - !Vector3 {x: 20, y: 2, z: 10}
       rotations: [0]
-  # 09-20-02.yaml
+  # 09-20-03.yaml
   260: !Arena
     pass_mark: 2.9
     t: 250
@@ -14159,8 +14338,8 @@ arenas:
       # - !Vector3 {x: 14, y: 2, z: 38.1}
       # - !Vector3 {x: 18, y: 2, z: 38.1}
       # - !Vector3 {x: 22, y: 2, z: 36}
-      - !Vector3 {x: 26, y: 2, z: 36}
-      # - !Vector3 {x: 30, y: 2, z: 36}
+      # - !Vector3 {x: 26, y: 2, z: 36}
+      - !Vector3 {x: 30, y: 2, z: 36}
       rotations: [270]     
       sizes:
       - !Vector3 {x: 2, y: 2, z: 2}
@@ -14173,7 +14352,7 @@ arenas:
       positions:
       - !Vector3 {x: 20, y: 2, z: 10}
       rotations: [0]
-  # 09-21-02.yaml
+  # 09-21-03.yaml
   261: !Arena
     pass_mark: 4.9
     t: 250
@@ -14262,8 +14441,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 2, z: 10}
-      rotations: [2]
-  # 09-22-02.yaml
+      rotations: [358]
+  # 09-22-03.yaml
   262: !Arena
     pass_mark: 4.9
     t: 250
@@ -14352,8 +14531,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 2, z: 10}
-      rotations: [2]
-  # 09-23-02.yaml
+      rotations: [358]
+  # 09-23-03.yaml
   263: !Arena
     pass_mark: 4.9
     t: 250
@@ -14429,8 +14608,8 @@ arenas:
       - !Vector3 {x: 14, y: 2, z: 38.1}
       - !Vector3 {x: 18, y: 2, z: 38.1}
       # - !Vector3 {x: 22, y: 2, z: 36}
-      - !Vector3 {x: 26, y: 2, z: 36}
-      # - !Vector3 {x: 30, y: 2, z: 36}
+      # - !Vector3 {x: 26, y: 2, z: 36}
+      - !Vector3 {x: 30, y: 2, z: 36}
       rotations: [90, 90, 90, 270]     
       sizes:
       - !Vector3 {x: 2, y: 2, z: 2}
@@ -14443,7 +14622,7 @@ arenas:
       positions:
       - !Vector3 {x: 20, y: 2, z: 10}
       rotations: [0]
-  # 09-24-02.yaml
+  # 09-24-03.yaml
   264: !Arena
     pass_mark: 4.9
     t: 250
@@ -14516,8 +14695,8 @@ arenas:
       name: GoodGoalMultiBounce
       positions:
       # - !Vector3 {x: 10, y: 2, z: 38.1}
-      - !Vector3 {x: 14, y: 2, z: 38.1}
-      # - !Vector3 {x: 18, y: 2, z: 38.1}
+      # - !Vector3 {x: 14, y: 2, z: 38.1}
+      - !Vector3 {x: 18, y: 2, z: 38.1}
       - !Vector3 {x: 22, y: 2, z: 36}
       - !Vector3 {x: 26, y: 2, z: 36}
       - !Vector3 {x: 30, y: 2, z: 36}
@@ -14533,7 +14712,7 @@ arenas:
       positions:
       - !Vector3 {x: 20, y: 2, z: 10}
       rotations: [0]
-  # 09-25-02.yaml
+  # 09-25-03.yaml
   265: !Arena
     pass_mark: 6.9
     t: 250
@@ -14609,8 +14788,8 @@ arenas:
       - !Vector3 {x: 14, y: 2, z: 38.1}
       - !Vector3 {x: 18, y: 2, z: 38.1}
       # - !Vector3 {x: 22, y: 2, z: 36}
-      - !Vector3 {x: 26, y: 2, z: 36}
-      # - !Vector3 {x: 30, y: 2, z: 36}
+      # - !Vector3 {x: 26, y: 2, z: 36}
+      - !Vector3 {x: 30, y: 2, z: 36}
       rotations: [90, 90, 90, 270]
       sizes:
       - !Vector3 {x: 2, y: 2, z: 2}
@@ -14623,7 +14802,7 @@ arenas:
       positions:
       - !Vector3 {x: 20, y: 2, z: 10}
       rotations: [0]
-  # 09-26-02.yaml
+  # 09-26-03.yaml
   266: !Arena
     pass_mark: 6.9
     t: 250
@@ -14696,8 +14875,8 @@ arenas:
       name: GoodGoalMultiBounce
       positions:
       # - !Vector3 {x: 10, y: 2, z: 38.1}
-      - !Vector3 {x: 14, y: 2, z: 38.1}
-      # - !Vector3 {x: 18, y: 2, z: 38.1}
+      # - !Vector3 {x: 14, y: 2, z: 38.1}
+      - !Vector3 {x: 18, y: 2, z: 38.1}
       - !Vector3 {x: 22, y: 2, z: 36}
       - !Vector3 {x: 26, y: 2, z: 36}
       - !Vector3 {x: 30, y: 2, z: 36}
@@ -14713,20 +14892,11 @@ arenas:
       positions:
       - !Vector3 {x: 20, y: 2, z: 10}
       rotations: [0]
-  # 09-27-02.yaml
+  # 09-27-03.yaml
   267: !Arena
-    pass_mark: 3.9
+    pass_mark: 8
     t: 250
     items:
-    - !Item
-      name: Wall
-      positions: 
-      - !Vector3 {x: 20, y: 0, z: 20}
-      rotations: [0]
-      sizes: 
-      - !Vector3 {x: 2, y: 1, z: 40}
-      colors:
-      - !RGB {r: 0, g: 0, b: 255}
     - !Item
       name: HotZone
       positions:
@@ -14755,17 +14925,17 @@ arenas:
       - !Vector3 {x: 34, y: 0, z: -1}
       - !Vector3 {x: 37, y: 0, z: -1}
       sizes:
-      - !Vector3 {x: 1.5, y: 1.5, z: 1.5}
-      - !Vector3 {x: 1.5, y: 1.5, z: 1.5}
-      - !Vector3 {x: 1.5, y: 1.5, z: 1.5}
-      - !Vector3 {x: 1.5, y: 1.5, z: 1.5}
-      - !Vector3 {x: 1.5, y: 1.5, z: 1.5}
+      - !Vector3 {x: 3, y: 3, z: 3}
+      - !Vector3 {x: 3, y: 3, z: 3}
+      - !Vector3 {x: 3, y: 3, z: 3}
+      - !Vector3 {x: 3, y: 3, z: 3}
+      - !Vector3 {x: 3, y: 3, z: 3}
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 09-28-02.yaml
+  # 09-28-03.yaml
   268: !Arena
     pass_mark: 3.9
     t: 500
@@ -14788,8 +14958,8 @@ arenas:
     - !Item
       name: Agent
       positions: 
-      - !Vector3 {x: 2.5, y: 1, z: 20}
-      rotations: [90]
+      - !Vector3 {x: 20, y: 1, z: 37.5}
+      rotations: [180]
     - !Item
       name: GoodGoalMulti
       positions: 
@@ -14838,7 +15008,7 @@ arenas:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
-  # 09-29-02.yaml
+  # 09-29-03.yaml
   269: !Arena
     pass_mark: 3.9
     t: 500
@@ -14861,8 +15031,8 @@ arenas:
     - !Item
       name: Agent
       positions: 
-      - !Vector3 {x: 2.5, y: 1, z: 20}
-      rotations: [90]
+      - !Vector3 {x: 20, y: 1, z: 37.5}
+      rotations: [180]
     - !Item
       name: GoodGoalMulti
       positions: 
@@ -14896,7 +15066,7 @@ arenas:
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 1, y: 1, z: 1}
       - !Vector3 {x: 3, y: 1, z: 1}
-  # 09-30-02.yaml
+  # 09-30-03.yaml
   270: !Arena
     pass_mark: 5.9
     t: 500
@@ -14919,8 +15089,8 @@ arenas:
     - !Item
       name: Agent
       positions: 
-      - !Vector3 {x: 2.5, y: 1, z: 20}
-      rotations: [90]
+      - !Vector3 {x: 20, y: 1, z: 37.5}
+      rotations: [180]
     - !Item
       name: GoodGoalMulti
       positions: 
@@ -14951,7 +15121,7 @@ arenas:
       - !Vector3 {x: 2, y: 1, z: 1}
       - !Vector3 {x: 3, y: 1, z: 1}
       - !Vector3 {x: 2, y: 1, z: 1}
-  # 10-01-02.yaml
+  # 10-01-03.yaml
   271: !Arena
     pass_mark: 0
     t: 500
@@ -14998,7 +15168,7 @@ arenas:
       name: Agent
       positions: 
       - !Vector3 {x: 5, y: 0, z: 5}
-  # 10-02-02.yaml
+  # 10-02-03.yaml
   272: !Arena
     pass_mark: 0
     t: 500
@@ -15027,7 +15197,7 @@ arenas:
       name: Agent
       positions: 
       - !Vector3 {x: 5, y: 0, z: 5}
-  # 10-03-02.yaml
+  # 10-03-03.yaml
   273: !Arena
     pass_mark: 0
     t: 500
@@ -15056,7 +15226,7 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 30, y: 0, z: 30}
-  # 10-04-02.yaml
+  # 10-04-03.yaml
   274: !Arena
     pass_mark: 0
     t: 500
@@ -15086,7 +15256,7 @@ arenas:
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
 
-  # 10-05-02.yaml
+  # 10-05-03.yaml
   275: !Arena
     pass_mark: 0
     t: 500
@@ -15116,7 +15286,7 @@ arenas:
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
 
-  # 10-06-02.yaml
+  # 10-06-03.yaml
   276: !Arena
     pass_mark: 0
     t: 500
@@ -15148,7 +15318,7 @@ arenas:
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
 
-  # 10-07-02.yaml
+  # 10-07-03.yaml
   277: !Arena
     pass_mark: 0
     t: 500
@@ -15188,9 +15358,9 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 2, z: 1}
-      rotations: [2]
+      rotations: [358]
 
-  # 10-08-02.yaml
+  # 10-08-03.yaml
   278: !Arena
     pass_mark: 0
     t: 500
@@ -15237,9 +15407,9 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 2, z: 1}
-      rotations: [2]
+      rotations: [358]
 
-  # 10-09-02.yaml
+  # 10-09-03.yaml
   279: !Arena
     pass_mark: 0
     t: 500
@@ -15286,9 +15456,9 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 2, z: 1}
-      rotations: [2]
+      rotations: [358]
 
-  # 10-10-02.yaml
+  # 10-10-03.yaml
   280: !Arena
     pass_mark: 0
     t: 500
@@ -15328,9 +15498,9 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 2, z: 1}
-      rotations: [2]
+      rotations: [358]
 
-  # 10-11-02.yaml
+  # 10-11-03.yaml
   281: !Arena
     pass_mark: 0
     t: 500
@@ -15377,9 +15547,9 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 2, z: 1}
-      rotations: [2]
+      rotations: [358]
 
-  # 10-12-02.yaml
+  # 10-12-03.yaml
   282: !Arena
     pass_mark: 0
     t: 500
@@ -15426,9 +15596,9 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 2, z: 1}
-      rotations: [2]
+      rotations: [358]
 
-  # 10-13-02.yaml
+  # 10-13-03.yaml
   283: !Arena
     pass_mark: 0
     t: 500
@@ -15482,8 +15652,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 2, z: 1}
-      rotations: [2]
-  # 10-14-02.yaml
+      rotations: [358]
+  # 10-14-03.yaml
   284: !Arena
     pass_mark: 0
     t: 500
@@ -15525,8 +15695,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 2, z: 1}
-      rotations: [2]
-  # 10-15-02.yaml
+      rotations: [358]
+  # 10-15-03.yaml
   285: !Arena
     pass_mark: 0
     t: 500
@@ -15568,8 +15738,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 2, z: 1}
-      rotations: [2]
-  # 10-16-02.yaml
+      rotations: [358]
+  # 10-16-03.yaml
   286: !Arena
     pass_mark: 0
     t: 500
@@ -15623,8 +15793,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 2, z: 1}
-      rotations: [2]
-  # 10-17-02.yaml
+      rotations: [358]
+  # 10-17-03.yaml
   287: !Arena
     pass_mark: 0
     t: 500
@@ -15666,8 +15836,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 2, z: 1}
-      rotations: [2]
-  # 10-18-02.yaml
+      rotations: [358]
+  # 10-18-03.yaml
   288: !Arena
     pass_mark: 0
     t: 500
@@ -15709,8 +15879,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 20, y: 2, z: 1}
-      rotations: [2]
-  # 10-19-02.yaml
+      rotations: [358]
+  # 10-19-03.yaml
   289: !Arena
     pass_mark: 0
     t: 500
@@ -15745,7 +15915,7 @@ arenas:
     - !Item
       name: Cardbox2
       positions: 
-      - !Vector3 {x: 23, y: 1, z: 15}
+      - !Vector3 {x: 27, y: 1, z: 15}
       rotations: [0]
       sizes:
       - !Vector3 {x: 1.5, y: 1.5, z: 1.5}
@@ -15754,7 +15924,7 @@ arenas:
       positions: 
       - !Vector3 {x: 20, y: 3, z: 2.5}
       rotations: [0]
-  # 10-20-02.yaml
+  # 10-20-03.yaml
   290: !Arena
     pass_mark: 0
     t: 500
@@ -15809,8 +15979,8 @@ arenas:
       name: Agent
       positions: 
       - !Vector3 {x: 20, y: 3, z: 2.5}
-      rotations: [2]
-  # 10-21-02.yaml
+      rotations: [358]
+  # 10-21-03.yaml
   291: !Arena
     pass_mark: 0
     t: 500
@@ -15865,15 +16035,16 @@ arenas:
       name: Agent
       positions: 
       - !Vector3 {x: 20, y: 3, z: 2.5}
-      rotations: [2]
-  # 10-22-02.yaml
+      rotations: [358]
+  # 10-22-03.yaml
   292: !Arena
+    pass_mark: 0
     t: 500
     items:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 20, y: 0, z: 1}
+      - !Vector3 {x: 30, y: 0, z: 10}
       rotations: [15]
     - !Item
       name: Wall
@@ -15905,8 +16076,7 @@ arenas:
       - !Vector3 {x: 10, y: 0, z: 17}
       sizes:
       - !Vector3 {x: 5, y: 1.5, z: 5}
-
-  # 10-23-02.yaml
+  # 10-23-03.yaml
   293: !Arena
     pass_mark: 0
     t: 500
@@ -15945,7 +16115,7 @@ arenas:
       - !Vector3 {x: 28, y: 0, z: 10}
       sizes:
       - !Vector3 {x: 5, y: .5, z: 5}
-  # 10-24-02.yaml
+  # 10-24-03.yaml
   294: !Arena
     pass_mark: 0
     t: 1000
@@ -15986,7 +16156,7 @@ arenas:
       sizes:
       - !Vector3 {x: 2, y: .5, z: 2}
       - !Vector3 {x: 2, y: .5, z: 2}
-  # 10-25-02.yaml
+  # 10-25-03.yaml
   295: !Arena
     pass_mark: 0
     t: 500
@@ -16035,8 +16205,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 2, y: 3, z: 20}
-      rotations: [92]
-  # 10-26-02.yaml
+      rotations: [88]
+  # 10-26-03.yaml
   296: !Arena
     pass_mark: 0
     t: 500
@@ -16085,8 +16255,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 2, y: 3, z: 20}
-      rotations: [92]
-  # 10-27-02.yaml
+      rotations: [88]
+  # 10-27-03.yaml
   297: !Arena
     pass_mark: 0
     t: 500
@@ -16135,8 +16305,8 @@ arenas:
       name: Agent
       positions:
       - !Vector3 {x: 2, y: 3, z: 20}
-      rotations: [92]
-  # 10-28-02.yaml
+      rotations: [88]
+  # 10-28-03.yaml
   298: !Arena
     pass_mark: -0.1
     t: 500
@@ -16185,7 +16355,7 @@ arenas:
       positions:
       - !Vector3 {x: 5, y: 0, z: 5}
 
-  # 10-29-02.yaml
+  # 10-29-03.yaml
   299: !Arena
     pass_mark: -0.1
     t: 500
@@ -16234,9 +16404,9 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 20, y: 0, z: 5}
+      - !Vector3 {x: 35, y: 0, z: 5}
 
-  # 10-30-02.yaml
+  # 10-30-03.yaml
   300: !Arena
     pass_mark: -0.1
     t: 500
@@ -16285,5 +16455,5 @@ arenas:
     - !Item
       name: Agent
       positions:
-      - !Vector3 {x: 20, y: 0, z: 5}
+      - !Vector3 {x: 35, y: 0, z: 5}
 
