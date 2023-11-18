@@ -5,3 +5,4 @@ xvfb-run -a python train.py \
   --from-checkpoint ./logdir/competition-train/checkpoint.ckpt \
   --eval-mode \
   --dreamer-args "--run.steps 5000000"
+
