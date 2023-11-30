@@ -54,7 +54,6 @@ def main():
         sys.exit(1)
         raise e
 
-
 def run(args: Args):
     assert args.from_checkpoint is not None if args.eval_mode else True, "Must provide a checkpoint to evaluate from."
     assert args.from_checkpoint.exists() if  args.from_checkpoint is not None else True, f"Checkpoint not found: {args.from_checkpoint}."
@@ -143,7 +142,7 @@ def get_dreamer_config(logdir: Path, dreamer_args: str = '', from_checkpoint: Op
     logger = embodied.Logger(step, [
         embodied.logger.TerminalOutput(),
         embodied.logger.JSONLOutput(logdir, 'metrics.jsonl'),
-        embodied.logger.TensorBoardOutput(logdir),
+        # embodied.logger.TensorBoardOutput(logdir),
         embodied.logger.WandBOutput(wandb_init_kwargs={
           'project': 'dreamerv3-animalai',
           'name': logdir.name,
