@@ -3,6 +3,7 @@ import os
 os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"  # noqa
 
 from typing import *
+import sys
 import random
 import shutil
 import shlex
@@ -20,6 +21,7 @@ logging.basicConfig(  # noqa
 import dreamerv3
 from dreamerv3 import embodied
 from dreamerv3.embodied.envs import from_gym
+import gym
 from gym.wrappers.compatibility import EnvCompatibility
 from mlagents_envs.envs.unity_gym_env import UnityToGymWrapper
 from animalai.envs.environment import AnimalAIEnvironment
@@ -33,6 +35,24 @@ class Args:
     logdir: Optional[Path]
     dreamer_args: str
 
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--task', type=Path, required=True, help='Path to the task file.')
+    parser.add_argument('--env', type=Path, required=True, help='Path to the AnimalAI executable.')
+    parser.add_argument('--eval-mode', action='store_true', help='Run in evaluation mode. Make sure to also load a checkpoint.')
+    parser.add_argument('--from-checkpoint', type=Path, help='Load a checkpoint to continue training or evaluate from.')
+    parser.add_argument('--logdir', type=Path, help='Directory to save logs to.')
+    parser.add_argument('--dreamer-args', type=str, default='', help='Extra args to pass to dreamerv3.')
+    args_raw = parser.parse_args()
+
+    args = Args(**vars(args_raw))
+
+    try:
+        run(args)
+    except Exception as e:
+        logging.error(f"Exception: {e}")
+        sys.exit(1)
+        raise e
 
 def run(args: Args):
     assert args.from_checkpoint is not None if args.eval_mode else True, "Must provide a checkpoint to evaluate from."
@@ -56,7 +76,11 @@ def run(args: Args):
     handler.setLevel(logging.INFO)
     handler.setFormatter(logging.Formatter('[%(asctime)s] [%(levelname)-8s] [%(module)s] %(message)s'))
     logging.getLogger().addHandler(handler)
-    shutil.copy(task_path, logdir / task_path.name) # Copy task file to logdir for reference
+    # Copy task file to logdir for reference
+    if task_path.is_dir():
+        shutil.copytree(task_path, logdir / task_path.name)
+    else:
+        shutil.copy(task_path, logdir / task_path.name) 
 
     logging.info(f"Args: {args}")
 
@@ -68,7 +92,10 @@ def run(args: Args):
     dreamer_config.save(logdir / 'dreamer_config.yaml')
 
     logging.info(f"Creating AAI Dreamer Environment")
-    env = get_aai_env(task_path, args.env, dreamer_config)
+    if task_path.is_dir():
+        env = get_multi_aai_env(task_path, args.env, dreamer_config)
+    else:
+        env = get_aai_env(task_path, args.env, dreamer_config)
 
     logging.info("Creating DreamerV3 Agent")
     agent = dreamerv3.Agent(env.obs_space, env.act_space, step, dreamer_config)
@@ -115,7 +142,7 @@ def get_dreamer_config(logdir: Path, dreamer_args: str = '', from_checkpoint: Op
     logger = embodied.Logger(step, [
         embodied.logger.TerminalOutput(),
         embodied.logger.JSONLOutput(logdir, 'metrics.jsonl'),
-        embodied.logger.TensorBoardOutput(logdir),
+        # embodied.logger.TensorBoardOutput(logdir),
         embodied.logger.WandBOutput(wandb_init_kwargs={
           'project': 'dreamerv3-animalai',
           'name': logdir.name,
@@ -149,25 +176,79 @@ def get_aai_env(task_path: Union[Path, str], env_path: Union[Path, str], dreamer
     logging.info(f"Using observation space {env.obs_space}")
     logging.info(f"Using action space {env.act_space}")
     env = dreamerv3.wrap_env(env, dreamer_config)
-    # env = MonkeyPatchLen(env)  # Dreamerv3 expects env to have a __len__ method.
     env = embodied.BatchEnv([env], parallel=False)
 
     return env
 
-class MonkeyPatchLen(embodied.core.base.Wrapper):
-    def __len__(self):
-        return 1
+def get_multi_aai_env(task_path: Union[Path, str], env_path: Union[Path, str], dreamer_config):
+    tasks = sorted(task_path / f for f in os.listdir(task_path))
+    env = MultiAAIEnv(tasks, env_path)
+    env = from_gym.FromGym(env, obs_key='image')
+    logging.info(f"Using observation space {env.obs_space}")
+    logging.info(f"Using action space {env.act_space}")
+    env = dreamerv3.wrap_env(env, dreamer_config)
+    env = embodied.BatchEnv([env], parallel=False)
+    return env
+
+class MultiAAIEnv(gym.Env):
+    def __init__(self, tasks: list[Path], env_path: Path) -> None:
+        self.env_path = env_path
+        self.tasks = tasks
+        self.current_task_idx = 0
+        self.current_env = self.__initialize(self.current_task_idx)
+        super().__init__()
+
+    def step(self, action):
+        step_result = self.current_env.step(action)
+        done = step_result[2] # It's (observation, reward, terminated, truncated, info) after EnvCompatibility.
+        if done:
+            self.current_task_idx = (self.current_task_idx + 1) % len(self.tasks)
+            self.current_env.close()
+            self.current_env = self.__initialize(self.current_task_idx)
+        return step_result
+
+    def reset(self, *args, **kwargs):
+        return self.current_env.reset(*args, **kwargs)
+
+    def render(self, *args, **kwargs):
+        return self.current_env.render(*args, **kwargs)
+
+    def close(self):
+        return self.current_env.close()
+
+    def __initialize(self, task_idx: int) -> gym.Env:
+        task_path = self.tasks[task_idx]
+        assert task_path.exists(), f"Task file not found: {task_path}."
+        logging.info(f"Initializing AAI environment for task {task_path}")
+        aai_env = AnimalAIEnvironment(
+            file_name=str(self.env_path),
+            base_port=5005 + random.randint(0, 5000),
+            worker_id=random.randint(0, 5000),
+            arenas_configurations=str(task_path),
+            # Set pixels to 64x64 cause it has to be power of 2 for dreamerv3
+            resolution=64,  # same size as Minecraft in DreamerV3
+            no_graphics=False,  # Without graphics we get gray only observations.
+        )
+        env = UnityToGymWrapper(
+            aai_env,
+            uint8_visual=True,
+            # allow_multiple_obs=True, # This crashes somewhere in one of the wrappers.
+            flatten_branched=True,
+        )  # Necessary. Dreamerv3 doesn't support MultiDiscrete action space.
+        env = EnvCompatibility(env, render_mode="rgb_array")  # type: ignore
+        return env
+
+    @property
+    def observation_space(self):
+        return self.current_env.observation_space
+
+    @property
+    def action_space(self):
+        return self.current_env.action_space
+
+    @property
+    def render_mode(self):
+        return self.current_env.render_mode
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--task', type=Path, required=True, help='Path to the task file.')
-    parser.add_argument('--env', type=Path, required=True, help='Path to the AnimalAI executable.')
-    parser.add_argument('--eval-mode', action='store_true', help='Run in evaluation mode. Make sure to also load a checkpoint.')
-    parser.add_argument('--from-checkpoint', type=Path, help='Load a checkpoint to continue training or evaluate from.')
-    parser.add_argument('--logdir', type=Path, help='Directory to save logs to.')
-    parser.add_argument('--dreamer-args', type=str, default='', help='Extra args to pass to dreamerv3.')
-    args_raw = parser.parse_args()
-
-    args = Args(**vars(args_raw))
-
-    run(args)
+    main()
