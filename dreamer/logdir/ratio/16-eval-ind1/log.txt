@@ -1,0 +1,16 @@
+[2023-11-29 14:17:37,164] [INFO    ] [train] Args: Args(task=PosixPath('aai/configs/paper/aai-competition-test-1.yml'), env=PosixPath('aai/env/env3.1.3/AAI.x86_64'), eval_mode=True, from_checkpoint=PosixPath('logdir/ratio/16/checkpoint.ckpt'), logdir=PosixPath('logdir/ratio/16-eval-ind1'), dreamer_args='--run.steps 0.3e6 --run.train_ratio 16')
+[2023-11-29 14:17:37,165] [INFO    ] [train] Creating DreamerV3 config
+[2023-11-29 14:17:40,038] [INFO    ] [train] Creating AAI Dreamer Environment
+[2023-11-29 14:17:40,039] [INFO    ] [train] Initializing AAI environment
+[2023-11-29 14:17:42,740] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2023-11-29 14:17:44,296] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2023-11-29 14:17:44,310] [INFO    ] [train] Wrapping AAI environment
+[2023-11-29 14:17:44,310] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2023-11-29 14:17:44,368] [INFO    ] [train] Using observation space {'image': Space(dtype=uint8, shape=(64, 64, 3), low=0, high=255), 'reward': Space(dtype=float32, shape=(), low=-inf, high=inf), 'is_first': Space(dtype=bool, shape=(), low=False, high=True), 'is_last': Space(dtype=bool, shape=(), low=False, high=True), 'is_terminal': Space(dtype=bool, shape=(), low=False, high=True)}
+[2023-11-29 14:17:44,368] [INFO    ] [train] Using action space {'action': Space(dtype=int32, shape=(), low=0, high=9), 'reset': Space(dtype=bool, shape=(), low=False, high=True)}
+[2023-11-29 14:17:44,369] [INFO    ] [train] Creating DreamerV3 Agent
+[2023-11-29 14:17:44,621] [INFO    ] [xla_bridge] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: CUDA Interpreter
+[2023-11-29 14:17:44,622] [INFO    ] [xla_bridge] Unable to initialize backend 'tpu': module 'jaxlib.xla_extension' has no attribute 'get_tpu_client'
+[2023-11-29 14:17:58,729] [INFO    ] [train] Starting evaluation
+[2023-11-29 19:26:26,853] [INFO    ] [train] Closing environment
+[2023-11-29 19:26:34,159] [INFO    ] [train] Environment closed.
