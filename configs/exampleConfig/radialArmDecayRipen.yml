@@ -1,0 +1,103 @@
+!ArenaConfig 
+showNotification: true # show/hide the notification box. Default is false.
+arenas:
+  0: !Arena
+    pass_mark: 8 # how many points to pass the episode?
+    t: 500 # how many timesteps in the episode?
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 20}
+      rotations: [-1] # Randomized starting rotation
+      skins:
+      - "hedgehog"
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 18, y: 0, z: 9} # Lower arm
+      - !Vector3 {x: 22, y: 0, z: 9} # Lower arm
+      - !Vector3 {x: 18, y: 0, z: 31} # Upper arm
+      - !Vector3 {x: 22, y: 0, z: 31} # Upper arm
+      - !Vector3 {x: 8.75, y: 0, z: 18} # Left arm
+      - !Vector3 {x: 8.75, y: 0, z: 22} # Left arm
+      - !Vector3 {x: 31.25, y: 0, z: 18} # Right arm
+      - !Vector3 {x: 31.25, y: 0, z: 22} # Right arm
+      sizes:
+      - !Vector3 {x: 1, y: 3, z: 17.9} # Lower arm
+      - !Vector3 {x: 1, y: 3, z: 17.9} # Lower arm
+      - !Vector3 {x: 1, y: 3, z: 18} # Upper arm
+      - !Vector3 {x: 1, y: 3, z: 18} # Upper arm
+      - !Vector3 {x: 17.5, y: 3, z: 1} # Left arm
+      - !Vector3 {x: 17.5, y: 3, z: 1} # Left arm
+      - !Vector3 {x: 17.5, y: 3, z: 1} # Right arm
+      - !Vector3 {x: 17.5, y: 3, z: 1} # Right arm
+      colors:  
+      - !RGB {r: 180, g: 0, b: 0} # Lower arm: red
+      - !RGB {r: 180, g: 0, b: 0} # Lower arm: red
+      - !RGB {r: 0, g: 180, b: 0} # Upper arm: green
+      - !RGB {r: 0, g: 180, b: 0} # Upper arm: green
+      - !RGB {r: 0, g: 0, b: 180} # Left arm: blue
+      - !RGB {r: 0, g: 0, b: 180} # Left arm: blue
+      - !RGB {r: 180, g: 180, b: 0} # Right arm: yellow
+      - !RGB {r: 180, g: 180, b: 0} # Right arm: yellow
+      rotations: [0,0,0,0,0,0,0,0] 
+    - !Item
+      name: Ramp 
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 16.5} # Lower arm
+      - !Vector3 {x: 20, y: 0, z: 9.5} # Lower arm
+      - !Vector3 {x: 20, y: 0, z: 23.5} # Upper arm
+      - !Vector3 {x: 20, y: 0, z: 30.5} # Upper arm
+      - !Vector3 {x: 16.5, y: 0, z: 20} # Left arm
+      - !Vector3 {x: 9.5, y: 0, z: 20} # Left arm
+      - !Vector3 {x: 23.5, y: 0, z: 20} # Right arm
+      - !Vector3 {x: 30.5, y: 0, z: 20} # Right arm
+      sizes:
+      - !Vector3 {x: 3, y: 2, z: 3} # Lower arm
+      - !Vector3 {x: 3, y: 2, z: 11} # Lower arm
+      - !Vector3 {x: 3, y: 2, z: 3} # Upper arm
+      - !Vector3 {x: 3, y: 2, z: 11} # Upper arm
+      - !Vector3 {x: 3, y: 2, z: 3} # Left arm
+      - !Vector3 {x: 3, y: 2, z: 11} # Left arm
+      - !Vector3 {x: 3, y: 2, z: 3} # Right arm
+      - !Vector3 {x: 3, y: 2, z: 11} # Right arm
+      colors:
+      - !RGB {r: 180, g: 0, b: 0} # Lower arm: red
+      - !RGB {r: 180, g: 0, b: 0} # Lower arm: red
+      - !RGB {r: 0, g: 180, b: 0} # Upper arm: green
+      - !RGB {r: 0, g: 180, b: 0} # Upper arm: green
+      - !RGB {r: 0, g: 0, b: 180} # Left arm: blue
+      - !RGB {r: 0, g: 0, b: 180} # Left arm: blue
+      - !RGB {r: 180, g: 180, b: 0} # Right arm: yellow
+      - !RGB {r: 180, g: 180, b: 0} # Right arm: yellow
+      rotations: [0,180,180,0,90,270,270,90]
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 38} # In green arm
+      sizes:
+      - !Vector3 {x: 2, y: 2, z: 2}
+    - !Item
+      name: GoodGoalMulti
+      positions:
+      - !Vector3 {x: 38, y: 0, z: 20} # In grey arm
+      sizes:
+      - !Vector3 {x: 2, y: 2, z: 2}
+    - !Item
+      name: DecayGoal
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 2} # In red arm
+      initialValues: [2.5]
+      finalValues: [0]
+      delays: [100]
+      changeRates: [-0.003]
+    - !Item
+      name: AntiDecayGoal
+      positions:
+      - !Vector3 {x: 2, y: 0, z: 20} # In blue arm
+      initialValues: [0]
+      finalValues: [2.5]
+      delays: [100]
+      changeRates: [-0.003]
+      
