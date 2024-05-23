@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Train dreamer on curriculum, working through levels of AAI testbed.
 
 #CUDA_VISIBLE_DEVICES=0 xvfb-run -a python train.py \
@@ -6,7 +8,7 @@
 #  --logdir ./logdir/competition-curriculum/competition-curriculum-L1 \
 #  --dreamer-args "--run.steps 5000000"
 
-mkdir ./logdir/competition-curriculum/competition-curriculum-L1_2 && cp ./logdir/competition-curriculum/competition-curriculum-L1/checkpoint.ckpt ./logdir/competition-curriculum/competition-curriculum-L1_2/ 
+mkdir -p ./logdir/competition-curriculum/competition-curriculum-L1_2 && cp ./logdir/competition-curriculum/competition-curriculum-L1/checkpoint.ckpt ./logdir/competition-curriculum/competition-curriculum-L1_2/ 
 
 CUDA_VISIBLE_DEVICES=0 xvfb-run -a python train.py \
   --task ./aai/configs/paper/curriculumL1_2.yaml \
@@ -15,7 +17,7 @@ CUDA_VISIBLE_DEVICES=0 xvfb-run -a python train.py \
   --from-checkpoint ./logdir/competition-curriculum/competition-curriculum-L1/checkpoint.ckpt \
   --dreamer-args "--run.steps 2000000" 
 
-mkdir ./logdir/competition-curriculum/competition-curriculum-L1_3 && cp ./logdir/competition-curriculum/competition-curriculum-L1_2/checkpoint.ckpt ./logdir/competition-curriculum/competition-curriculum-L1_3/
+mkdir -p ./logdir/competition-curriculum/competition-curriculum-L1_3 && cp ./logdir/competition-curriculum/competition-curriculum-L1_2/checkpoint.ckpt ./logdir/competition-curriculum/competition-curriculum-L1_3/
 
 CUDA_VISIBLE_DEVICES=0 xvfb-run -a python train.py \
   --task ./aai/configs/paper/curriculumL1_3.yaml \
@@ -24,7 +26,7 @@ CUDA_VISIBLE_DEVICES=0 xvfb-run -a python train.py \
   --from-checkpoint ./logdir/competition-curriculum/competition-curriculum-L1_2/checkpoint.ckpt \
   --dreamer-args "--run.steps 2000000"
 
-mkdir ./logdir/competition-curriculum/competition-curriculum-L1_4 && cp ./logdir/competition-curriculum/competition-curriculum-L1_3/checkpoint.ckpt ./logdir/competition-curriculum/competition-curriculum-L1_4/
+mkdir -p ./logdir/competition-curriculum/competition-curriculum-L1_4 && cp ./logdir/competition-curriculum/competition-curriculum-L1_3/checkpoint.ckpt ./logdir/competition-curriculum/competition-curriculum-L1_4/
 
 CUDA_VISIBLE_DEVICES=0 xvfb-run -a python train.py \
   --task ./aai/configs/paper/curriculumL1_4.yaml \
@@ -33,7 +35,7 @@ CUDA_VISIBLE_DEVICES=0 xvfb-run -a python train.py \
   --from-checkpoint ./logdir/competition-curriculum/competition-curriculum-L1_3/checkpoint.ckpt \
   --dreamer-args "--run.steps 2000000"
 
-mkdir ./logdir/competition-curriculum/competition-curriculum-L1_5 && cp ./logdir/competition-curriculum/competition-curriculum-L1_4/checkpoint.ckpt ./logdir/competition-curriculum/competition-curriculum-L1_5/
+mkdir -p ./logdir/competition-curriculum/competition-curriculum-L1_5 && cp ./logdir/competition-curriculum/competition-curriculum-L1_4/checkpoint.ckpt ./logdir/competition-curriculum/competition-curriculum-L1_5/
 
 CUDA_VISIBLE_DEVICES=0 xvfb-run -a python train.py \
   --task ./aai/configs/paper/curriculumL1_5.yaml \
@@ -42,7 +44,7 @@ CUDA_VISIBLE_DEVICES=0 xvfb-run -a python train.py \
   --from-checkpoint ./logdir/competition-curriculum/competition-curriculum-L1_4/checkpoint.ckpt \
   --dreamer-args "--run.steps 2000000"
 
-mkdir ./logdir/competition-curriculum/competition-curriculum-L1_6 && cp ./logdir/competition-curriculum/competition-curriculum-L1_5/checkpoint.ckpt ./logdir/competition-curriculum/competition-curriculum-L1_6/
+mkdir -p ./logdir/competition-curriculum/competition-curriculum-L1_6 && cp ./logdir/competition-curriculum/competition-curriculum-L1_5/checkpoint.ckpt ./logdir/competition-curriculum/competition-curriculum-L1_6/
 
 CUDA_VISIBLE_DEVICES=0 xvfb-run -a python train.py \
   --task ./aai/configs/paper/curriculumL1_6.yaml \
@@ -51,7 +53,7 @@ CUDA_VISIBLE_DEVICES=0 xvfb-run -a python train.py \
   --from-checkpoint ./logdir/competition-curriculum/competition-curriculum-L1_5/checkpoint.ckpt \
   --dreamer-args "--run.steps 2000000"
 
-mkdir ./logdir/competition-curriculum/competition-curriculum-L1_7 && cp ./logdir/competition-curriculum/competition-curriculum-L1_6/checkpoint.ckpt ./logdir/competition-curriculum/competition-curriculum-L1_7/
+mkdir -p ./logdir/competition-curriculum/competition-curriculum-L1_7 && cp ./logdir/competition-curriculum/competition-curriculum-L1_6/checkpoint.ckpt ./logdir/competition-curriculum/competition-curriculum-L1_7/
 
 CUDA_VISIBLE_DEVICES=0 xvfb-run -a python train.py \
   --task ./aai/configs/paper/curriculumL1_7.yaml \
@@ -60,7 +62,7 @@ CUDA_VISIBLE_DEVICES=0 xvfb-run -a python train.py \
   --from-checkpoint ./logdir/competition-curriculum/competition-curriculum-L1_6/checkpoint.ckpt \
   --dreamer-args "--run.steps 2000000"
 
-mkdir ./logdir/competition-curriculum/competition-curriculum-L1_8 && cp ./logdir/competition-curriculum/competition-curriculum-L1_7/checkpoint.ckpt ./logdir/competition-curriculum/competition-curriculum-L1_8/
+mkdir -p ./logdir/competition-curriculum/competition-curriculum-L1_8 && cp ./logdir/competition-curriculum/competition-curriculum-L1_7/checkpoint.ckpt ./logdir/competition-curriculum/competition-curriculum-L1_8/
 
 CUDA_VISIBLE_DEVICES=0 xvfb-run -a python train.py \
   --task ./aai/configs/paper/curriculumL1_8.yaml \
@@ -69,7 +71,7 @@ CUDA_VISIBLE_DEVICES=0 xvfb-run -a python train.py \
   --from-checkpoint ./logdir/competition-curriculum/competition-curriculum-L1_7/checkpoint.ckpt \
   --dreamer-args "--run.steps 2000000"
 
-mkdir ./logdir/competition-curriculum/competition-curriculum-L1_9 && cp ./logdir/competition-curriculum/competition-curriculum-L1_8/checkpoint.ckpt ./logdir/competition-curriculum/competition-curriculum-L1_9/
+mkdir -p ./logdir/competition-curriculum/competition-curriculum-L1_9 && cp ./logdir/competition-curriculum/competition-curriculum-L1_8/checkpoint.ckpt ./logdir/competition-curriculum/competition-curriculum-L1_9/
 
 CUDA_VISIBLE_DEVICES=0 xvfb-run -a python train.py \
   --task ./aai/configs/paper/curriculumL1_9.yaml \
@@ -78,7 +80,7 @@ CUDA_VISIBLE_DEVICES=0 xvfb-run -a python train.py \
   --from-checkpoint ./logdir/competition-curriculum/competition-curriculum-L1_8/checkpoint.ckpt \
   --dreamer-args "--run.steps 2000000"
 
-mkdir ./logdir/competition-curriculum/competition-curriculum-L1_10 && cp ./logdir/competition-curriculum/competition-curriculum-L1_9/checkpoint.ckpt ./logdir/competition-curriculum/competition-curriculum-L1_10/
+mkdir -p ./logdir/competition-curriculum/competition-curriculum-L1_10 && cp ./logdir/competition-curriculum/competition-curriculum-L1_9/checkpoint.ckpt ./logdir/competition-curriculum/competition-curriculum-L1_10/
 
 CUDA_VISIBLE_DEVICES=0 xvfb-run -a python train.py \
   --task ./aai/configs/paper/curriculumL1_10.yaml \
