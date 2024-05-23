@@ -6,7 +6,7 @@
 #  --logdir ./logdir/competition-curriculum/competition-curriculum-L1 \
 #  --dreamer-args "--run.steps 5000000"
 
-mkdir ./logdir/competition-curriculum/competition-curriculum-L1_2 && cp .logdir/competition-curriculum/competition-curriculum-L1/checkpoint.ckpt .logdir/competition-curriculum/competition-curriculum-L1_2/ 
+mkdir ./logdir/competition-curriculum/competition-curriculum-L1_2 && cp ./logdir/competition-curriculum/competition-curriculum-L1/checkpoint.ckpt ./logdir/competition-curriculum/competition-curriculum-L1_2/ 
 
 CUDA_VISIBLE_DEVICES=0 xvfb-run -a python train.py \
   --task ./aai/configs/paper/curriculumL1_2.yaml \
