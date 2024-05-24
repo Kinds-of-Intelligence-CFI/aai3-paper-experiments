@@ -176,7 +176,7 @@ run:
   log_zeros: false
   save_every: 900
   script: train
-  steps: 2000000.0
+  steps: 4000000.0
   sync_every: 10
   train_fill: 0
   train_ratio: 64.0

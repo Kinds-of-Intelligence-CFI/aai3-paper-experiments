@@ -70,7 +70,7 @@ def run(args: Args):
         logdir = args.logdir
     else:
         logdir = Path("./logdir/") / f'{"eval" if args.eval_mode else "training"}-{date}-{task_name}'
-    logdir.mkdir(parents=True, exist_ok=True)
+    logdir.mkdir(parents=True, exist_ok=False)
     (logdir / 'log.txt').touch()
     handler = logging.FileHandler(logdir / 'log.txt')
     handler.setLevel(logging.INFO)
