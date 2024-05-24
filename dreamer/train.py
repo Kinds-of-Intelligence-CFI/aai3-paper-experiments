@@ -34,6 +34,7 @@ class Args:
     from_checkpoint: Optional[Path]
     logdir: Optional[Path]
     dreamer_args: str
+    aai_timescale: Optional[int]
 
 def main():
     parser = argparse.ArgumentParser()
@@ -43,6 +44,7 @@ def main():
     parser.add_argument('--from-checkpoint', type=Path, help='Load a checkpoint to continue training or evaluate from.')
     parser.add_argument('--logdir', type=Path, help='Directory to save logs to.')
     parser.add_argument('--dreamer-args', type=str, default='', help='Extra args to pass to dreamerv3.')
+    parser.add_argument('--aai-timescale', type=int, required=False, default=1, help='The timescale to run AAI at. Defaults to 1, the human-play timescale.')
     args_raw = parser.parse_args()
 
     args = Args(**vars(args_raw))
@@ -60,7 +62,7 @@ def run(args: Args):
     assert args.from_checkpoint.is_file() if  args.from_checkpoint is not None else True, f"Checkpoint must be a file but is not: {args.from_checkpoint}."
     assert args.task.exists(), f"Task file not found: {args.task}."
     assert args.env.exists(), f"AAI executable file not found: {args.env}."
-
+    assert args.aai_timescale > 0, "The timescale cannot be 0. To ensure this works, it must be an integer"
     task_path = args.task
     task_name = Path(args.task).stem
 
@@ -93,9 +95,9 @@ def run(args: Args):
 
     logging.info(f"Creating AAI Dreamer Environment")
     if task_path.is_dir():
-        env = get_multi_aai_env(task_path, args.env, dreamer_config)
+        env = get_multi_aai_env(task_path, args.env, dreamer_config, args.aai_timescale)
     else:
-        env = get_aai_env(task_path, args.env, dreamer_config)
+        env = get_aai_env(task_path, args.env, dreamer_config, args.aai_timescale)
 
     logging.info("Creating DreamerV3 Agent")
     agent = dreamerv3.Agent(env.obs_space, env.act_space, step, dreamer_config)
@@ -154,7 +156,7 @@ def get_dreamer_config(logdir: Path, dreamer_args: str = '', from_checkpoint: Op
     return config, step, logger
 
 
-def get_aai_env(task_path: Union[Path, str], env_path: Union[Path, str], dreamer_config):
+def get_aai_env(task_path: Union[Path, str], env_path: Union[Path, str], dreamer_config, aai_timescale: int):
     # Use a random port to avoid problems if a previous version exits slowly
     port = 5005 + random.randint(0, 1000)
 
@@ -165,6 +167,7 @@ def get_aai_env(task_path: Union[Path, str], env_path: Union[Path, str], dreamer
         arenas_configurations=str(task_path),
         # Set pixels to 64x64 cause it has to be power of 2 for dreamerv3
         resolution=64, # same size as Minecraft in DreamerV3
+        timescale=aai_timescale,
     )
     logging.info("Wrapping AAI environment")
     env = UnityToGymWrapper(
@@ -180,9 +183,9 @@ def get_aai_env(task_path: Union[Path, str], env_path: Union[Path, str], dreamer
 
     return env
 
-def get_multi_aai_env(task_path: Union[Path, str], env_path: Union[Path, str], dreamer_config):
+def get_multi_aai_env(task_path: Union[Path, str], env_path: Union[Path, str], dreamer_config, aai_timescale):
     tasks = sorted(task_path / f for f in os.listdir(task_path))
-    env = MultiAAIEnv(tasks, env_path)
+    env = MultiAAIEnv(tasks, env_path, aai_timescale)
     env = from_gym.FromGym(env, obs_key='image')
     logging.info(f"Using observation space {env.obs_space}")
     logging.info(f"Using action space {env.act_space}")
@@ -191,11 +194,12 @@ def get_multi_aai_env(task_path: Union[Path, str], env_path: Union[Path, str], d
     return env
 
 class MultiAAIEnv(gym.Env):
-    def __init__(self, tasks: list[Path], env_path: Path) -> None:
+    def __init__(self, tasks: list[Path], env_path: Path, aai_timescale: int) -> None:
         self.env_path = env_path
         self.tasks = tasks
         self.current_task_idx = 0
         self.current_env = self.__initialize(self.current_task_idx)
+        self.timescale = aai_timescale
         super().__init__()
 
     def step(self, action):
@@ -228,6 +232,7 @@ class MultiAAIEnv(gym.Env):
             # Set pixels to 64x64 cause it has to be power of 2 for dreamerv3
             resolution=64,  # same size as Minecraft in DreamerV3
             no_graphics=False,  # Without graphics we get gray only observations.
+            timescale=self.aai_timescale,
         )
         env = UnityToGymWrapper(
             aai_env,
