@@ -1,4 +1,4 @@
-xvfb-run -a python train.py \
+CUDA_VISIBLE_DEVICES=1 xvfb-run -a python train.py \
   --task ./aai/configs/paper/competition1 \
   --env ./aai/env/env3.1.3/AAI.x86_64 \
   --logdir ./logdir/competition-curriculum/competition-curriculum-eval-ind1 \
@@ -6,7 +6,7 @@ xvfb-run -a python train.py \
   --eval-mode \
   --dreamer-args "--run.steps 900000"
 
-xvfb-run -a python train.py \
+CUDA_VISIBLE_DEVICES=1 xvfb-run -a python train.py \
   --task ./aai/configs/paper/competition2 \
   --env ./aai/env/env3.1.3/AAI.x86_64 \
   --logdir ./logdir/competition-curriculum/competition-curriculum-eval-ind2 \
@@ -14,7 +14,7 @@ xvfb-run -a python train.py \
   --eval-mode \
   --dreamer-args "--run.steps 900000"
 
-xvfb-run -a python train.py \
+CUDA_VISIBLE_DEVICES=1 xvfb-run -a python train.py \
   --task ./aai/configs/paper/competition3 \
   --env ./aai/env/env3.1.3/AAI.x86_64 \
   --logdir ./logdir/competition-curriculum/competition-curriculum-eval-ind3 \
