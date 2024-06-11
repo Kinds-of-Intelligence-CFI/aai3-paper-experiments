@@ -183,7 +183,7 @@ def get_aai_env(task_path: Union[Path, str], env_path: Union[Path, str], dreamer
 
     return env
 
-def get_multi_aai_env(task_path: Union[Path, str], env_path: Union[Path, str], dreamer_config, aai_timescale):
+def get_multi_aai_env(task_path: Union[Path, str], env_path: Union[Path, str], dreamer_config, aai_timescale: int):
     tasks = sorted(task_path / f for f in os.listdir(task_path))
     env = MultiAAIEnv(tasks, env_path, aai_timescale)
     env = from_gym.FromGym(env, obs_key='image')
@@ -198,7 +198,7 @@ class MultiAAIEnv(gym.Env):
         self.env_path = env_path
         self.tasks = tasks
         self.current_task_idx = 0
-        self.current_env = self.__initialize(self.current_task_idx)
+        self.current_env = self.__initialize(self.current_task_idx, self.aai_timescale)
         self.aai_timescale = aai_timescale
         super().__init__()
 
@@ -208,7 +208,7 @@ class MultiAAIEnv(gym.Env):
         if done:
             self.current_task_idx = (self.current_task_idx + 1) % len(self.tasks)
             self.current_env.close()
-            self.current_env = self.__initialize(self.current_task_idx)
+            self.current_env = self.__initialize(self.current_task_idx, self.aai_timescale)
         return step_result
 
     def reset(self, *args, **kwargs):
@@ -220,7 +220,7 @@ class MultiAAIEnv(gym.Env):
     def close(self):
         return self.current_env.close()
 
-    def __initialize(self, task_idx: int) -> gym.Env:
+    def __initialize(self, task_idx: int, aai_timescale: int) -> gym.Env:
         task_path = self.tasks[task_idx]
         assert task_path.exists(), f"Task file not found: {task_path}."
         logging.info(f"Initializing AAI environment for task {task_path}")
