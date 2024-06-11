@@ -1,0 +1,62 @@
+
+<class 'pathlib.PosixPath'>
+[INFO] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[INFO] Connected new brain: AnimalAI?team=0
+[WARNING] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+Starting training...
+Using cpu device
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+Wrapping the env in a VecTransposeImage.
+[2024-06-10 12:26:52,758] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-10 12:26:53,064] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-10 12:26:53,069] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+/Users/mgm61/Documents/cambridge_cfi/animal-ai-stablebaselines3/.venv/lib/python3.9/site-packages/stable_baselines3/common/vec_env/patch_gym.py:49: UserWarning: You provided an OpenAI Gym environment. We strongly recommend transitioning to Gymnasium environments. Stable-Baselines3 is automatically wrapping your environments in a compatibility layer, which could potentially cause issues.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mgm61/Documents/cambridge_cfi/animal-ai-stablebaselines3/.venv/bin/train", line 8, in <module>
+    sys.exit(main())
+  File "/Users/mgm61/Documents/cambridge_cfi/animal-ai-stablebaselines3/src/animalai_stable_baselines/train.py", line 197, in main
+    train(task=Path("./aai/configs/sanityGreen.yml"),
+  File "/Users/mgm61/Documents/cambridge_cfi/animal-ai-stablebaselines3/src/animalai_stable_baselines/train.py", line 164, in train
+    model = sb3_algorithm(policy,
+  File "/Users/mgm61/Documents/cambridge_cfi/animal-ai-stablebaselines3/.venv/lib/python3.9/site-packages/sb3_contrib/ppo_recurrent/ppo_recurrent.py", line 137, in __init__
+    self._setup_model()
+  File "/Users/mgm61/Documents/cambridge_cfi/animal-ai-stablebaselines3/.venv/lib/python3.9/site-packages/sb3_contrib/ppo_recurrent/ppo_recurrent.py", line 145, in _setup_model
+    self.policy = self.policy_class(
+  File "/Users/mgm61/Documents/cambridge_cfi/animal-ai-stablebaselines3/.venv/lib/python3.9/site-packages/sb3_contrib/common/recurrent/policies.py", line 498, in __init__
+    super().__init__(
+  File "/Users/mgm61/Documents/cambridge_cfi/animal-ai-stablebaselines3/.venv/lib/python3.9/site-packages/sb3_contrib/common/recurrent/policies.py", line 90, in __init__
+    super().__init__(
+  File "/Users/mgm61/Documents/cambridge_cfi/animal-ai-stablebaselines3/.venv/lib/python3.9/site-packages/stable_baselines3/common/policies.py", line 507, in __init__
+    self.features_extractor = self.make_features_extractor()
+  File "/Users/mgm61/Documents/cambridge_cfi/animal-ai-stablebaselines3/.venv/lib/python3.9/site-packages/stable_baselines3/common/policies.py", line 120, in make_features_extractor
+    return self.features_extractor_class(self.observation_space, **self.features_extractor_kwargs)
+  File "/Users/mgm61/Documents/cambridge_cfi/animal-ai-stablebaselines3/.venv/lib/python3.9/site-packages/stable_baselines3/common/torch_layers.py", line 101, in __init__
+    n_flatten = self.cnn(th.as_tensor(observation_space.sample()[None]).float()).shape[1]
+  File "/Users/mgm61/Documents/cambridge_cfi/animal-ai-stablebaselines3/.venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/mgm61/Documents/cambridge_cfi/animal-ai-stablebaselines3/.venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/mgm61/Documents/cambridge_cfi/animal-ai-stablebaselines3/.venv/lib/python3.9/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/Users/mgm61/Documents/cambridge_cfi/animal-ai-stablebaselines3/.venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/mgm61/Documents/cambridge_cfi/animal-ai-stablebaselines3/.venv/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/mgm61/Documents/cambridge_cfi/animal-ai-stablebaselines3/.venv/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/Users/mgm61/Documents/cambridge_cfi/animal-ai-stablebaselines3/.venv/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: Calculated padded input size per channel: (2 x 2). Kernel size: (4 x 4). Kernel size can't be greater than actual input size
+Exception ignored in: <module 'threading' from '/Users/mgm61/.rye/py/cpython@3.9.18/lib/python3.9/threading.py'>
+Traceback (most recent call last):
+  File "/Users/mgm61/.rye/py/cpython@3.9.18/lib/python3.9/threading.py", line 1447, in _shutdown
+    atexit_call()
+  File "/Users/mgm61/.rye/py/cpython@3.9.18/lib/python3.9/concurrent/futures/thread.py", line 31, in _python_exit
+    t.join()
+  File "/Users/mgm61/.rye/py/cpython@3.9.18/lib/python3.9/threading.py", line 1060, in join
+    self._wait_for_tstate_lock()
+  File "/Users/mgm61/.rye/py/cpython@3.9.18/lib/python3.9/threading.py", line 1080, in _wait_for_tstate_lock
+    if lock.acquire(block, timeout):
+KeyboardInterrupt:

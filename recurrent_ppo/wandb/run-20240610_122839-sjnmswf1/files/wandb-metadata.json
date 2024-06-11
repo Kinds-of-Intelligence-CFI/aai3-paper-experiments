@@ -1,0 +1,49 @@
+{
+    "os": "macOS-14.3.1-arm64-arm-64bit",
+    "python": "3.9.18",
+    "heartbeatAt": "2024-06-10T11:28:40.379712",
+    "startedAt": "2024-06-10T11:28:39.495109",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/Users/mgm61/Documents/cambridge_cfi/animal-ai-stablebaselines3/.venv/bin/train",
+    "codePathLocal": ".venv/bin/train",
+    "codePath": ".venv/bin/train",
+    "git": {
+        "remote": "git@github.com:Kinds-of-Intelligence-CFI/animal-ai-stablebaselines3.git",
+        "commit": "826ec22020cdba2a442504877769ab91c498515d"
+    },
+    "email": "mgm18@ic.ac.uk",
+    "root": "/Users/mgm61/Documents/cambridge_cfi/animal-ai-stablebaselines3",
+    "host": "dhcp-10-248-176-46.eduroam.wireless.private.cam.ac.uk",
+    "username": "mgm61",
+    "executable": "/Users/mgm61/Documents/cambridge_cfi/animal-ai-stablebaselines3/.venv/bin/python",
+    "cpu_count": 11,
+    "cpu_count_logical": 11,
+    "cpu_freq": {
+        "current": 4056,
+        "min": 696,
+        "max": 4056
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 4056,
+            "min": 696,
+            "max": 4056
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 460.4317207336426,
+            "used": 13.404560089111328
+        }
+    },
+    "gpuapple": {
+        "type": "Apple M3 Pro",
+        "vendor": "sppci_vendor_Apple"
+    },
+    "memory": {
+        "total": 18.0
+    }
+}
