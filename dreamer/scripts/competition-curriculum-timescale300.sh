@@ -83,4 +83,4 @@ CUDA_VISIBLE_DEVICES=1 xvfb-run -a python train.py \
   --from-checkpoint ./logdir/competition-curriculum/competition-curriculum-timescale300-L1_10/checkpoint.ckpt \
   --logdir ./logdir/competition-curriculum/competition-curriculum-timescale300-L1_10_5M \
   --dreamer-args "--run.steps 25000000" \
-  --timescale 300
+  --aai-timescale 300
