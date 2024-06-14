@@ -1,0 +1,261 @@
+[2024-06-13 21:24:51,075] [INFO    ] [train] Args: Args(task=PosixPath('aai/configs/paper/competition1'), env=PosixPath('aai/env/env3.1.3/AAI.x86_64'), eval_mode=True, from_checkpoint=PosixPath('logdir/competition-curriculum/competition-curriculum-timescale300-L1_10_5M/checkpoint.ckpt'), logdir=PosixPath('logdir/competition-curriculum/competition-curriculum-timescale300-eval-ind1_6'), dreamer_args='--run.steps 750000', aai_timescale=300)
+[2024-06-13 21:24:51,076] [INFO    ] [train] Creating DreamerV3 config
+[2024-06-13 21:24:57,327] [INFO    ] [train] Creating AAI Dreamer Environment
+[2024-06-13 21:24:57,328] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-10-01.yaml
+[2024-06-13 21:25:00,104] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:25:01,474] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:25:01,487] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:25:01,566] [INFO    ] [train] Using observation space {'image': Space(dtype=uint8, shape=(64, 64, 3), low=0, high=255), 'reward': Space(dtype=float32, shape=(), low=-inf, high=inf), 'is_first': Space(dtype=bool, shape=(), low=False, high=True), 'is_last': Space(dtype=bool, shape=(), low=False, high=True), 'is_terminal': Space(dtype=bool, shape=(), low=False, high=True)}
+[2024-06-13 21:25:01,568] [INFO    ] [train] Using action space {'action': Space(dtype=int32, shape=(), low=0, high=9), 'reset': Space(dtype=bool, shape=(), low=False, high=True)}
+[2024-06-13 21:25:01,569] [INFO    ] [train] Creating DreamerV3 Agent
+[2024-06-13 21:25:01,714] [INFO    ] [xla_bridge] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: Interpreter CUDA
+[2024-06-13 21:25:01,715] [INFO    ] [xla_bridge] Unable to initialize backend 'tpu': module 'jaxlib.xla_extension' has no attribute 'get_tpu_client'
+[2024-06-13 21:25:15,268] [INFO    ] [train] Starting evaluation
+[2024-06-13 21:25:40,363] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-11-01.yaml
+[2024-06-13 21:25:43,213] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:25:44,541] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:25:44,545] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:26:12,031] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-12-01.yaml
+[2024-06-13 21:26:14,957] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:26:16,355] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:26:16,360] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:26:38,753] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-13-01.yaml
+[2024-06-13 21:26:41,573] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:26:43,067] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:26:43,072] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:27:00,660] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-14-01.yaml
+[2024-06-13 21:27:03,492] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:27:04,965] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:27:04,970] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:27:23,979] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-15-01.yaml
+[2024-06-13 21:27:26,804] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:27:28,294] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:27:28,299] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:27:50,100] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-16-01.yaml
+[2024-06-13 21:27:52,963] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:27:54,488] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:27:54,493] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:28:11,718] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-17-01.yaml
+[2024-06-13 21:28:14,527] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:28:16,022] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:28:16,025] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:28:38,394] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-18-01.yaml
+[2024-06-13 21:28:41,225] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:28:42,784] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:28:42,788] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:29:12,899] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-19-01.yaml
+[2024-06-13 21:29:15,707] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:29:17,239] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:29:17,244] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:29:33,959] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-20-01.yaml
+[2024-06-13 21:29:36,785] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:29:38,291] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:29:38,296] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:29:59,089] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-21-01.yaml
+[2024-06-13 21:30:01,904] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:30:03,404] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:30:03,409] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:30:20,800] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-22-01.yaml
+[2024-06-13 21:30:23,621] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:30:25,180] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:30:25,184] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:30:43,460] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-23-01.yaml
+[2024-06-13 21:30:46,277] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:30:47,788] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:30:47,793] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:31:12,704] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-24-01.yaml
+[2024-06-13 21:31:15,549] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:31:17,047] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:31:17,052] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:31:48,775] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-25-01.yaml
+[2024-06-13 21:31:51,618] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:31:53,119] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:31:53,124] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:32:18,078] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-26-01.yaml
+[2024-06-13 21:32:20,875] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:32:22,369] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:32:22,374] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:32:53,912] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-27-01.yaml
+[2024-06-13 21:32:56,703] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:32:58,097] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:32:58,102] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:33:15,277] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-28-01.yaml
+[2024-06-13 21:33:18,102] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:33:19,406] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:33:19,411] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:33:51,978] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-29-01.yaml
+[2024-06-13 21:33:54,795] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:33:56,132] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:33:56,137] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:34:35,168] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-30-01.yaml
+[2024-06-13 21:34:37,917] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:34:39,190] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:34:39,195] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:35:17,056] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-01-01.yaml
+[2024-06-13 21:35:19,931] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:35:21,363] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:35:21,370] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:35:32,522] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-02-01.yaml
+[2024-06-13 21:35:35,385] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:35:36,722] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:35:36,728] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:35:49,587] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-03-01.yaml
+[2024-06-13 21:35:52,393] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:35:53,730] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:35:53,735] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:36:04,074] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-04-01.yaml
+[2024-06-13 21:36:06,909] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:36:08,253] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:36:08,258] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:36:42,026] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-05-01.yaml
+[2024-06-13 21:36:44,938] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:36:46,301] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:36:46,308] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:37:01,464] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-06-01.yaml
+[2024-06-13 21:37:04,325] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:37:05,664] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:37:05,667] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:37:35,989] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-07-01.yaml
+[2024-06-13 21:37:38,823] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:37:40,156] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:37:40,160] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:37:56,450] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-08-01.yaml
+[2024-06-13 21:37:59,371] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:38:00,852] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:38:00,857] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:38:33,601] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-09-01.yaml
+[2024-06-13 21:38:36,449] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:38:37,811] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:38:37,816] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:39:05,358] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-10-01.yaml
+[2024-06-13 21:39:08,176] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:39:09,523] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:39:09,528] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:39:41,950] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-11-01.yaml
+[2024-06-13 21:39:44,752] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:39:46,106] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:39:46,111] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:40:14,163] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-12-01.yaml
+[2024-06-13 21:40:16,966] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:40:18,315] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:40:18,319] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:40:52,138] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-13-01.yaml
+[2024-06-13 21:40:54,998] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:40:56,364] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:40:56,369] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:41:24,331] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-14-01.yaml
+[2024-06-13 21:41:27,187] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:41:28,509] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:41:28,514] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:42:01,637] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-15-01.yaml
+[2024-06-13 21:42:04,460] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:42:05,809] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:42:05,813] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:42:18,748] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-16-01.yaml
+[2024-06-13 21:42:21,559] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:42:22,940] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:42:22,945] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:42:53,051] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-17-01.yaml
+[2024-06-13 21:42:55,842] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:42:57,221] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:42:57,225] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:43:26,252] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-18-01.yaml
+[2024-06-13 21:43:29,084] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:43:30,436] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:43:30,441] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:44:03,529] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-19-01.yaml
+[2024-06-13 21:44:06,343] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:44:07,671] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:44:07,676] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:44:36,699] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-20-01.yaml
+[2024-06-13 21:44:39,530] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:44:40,870] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:44:40,874] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:45:16,591] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-21-01.yaml
+[2024-06-13 21:45:19,407] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:45:20,741] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:45:20,744] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:45:50,600] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-22-01.yaml
+[2024-06-13 21:45:53,425] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:45:54,760] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:45:54,764] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:46:28,675] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-23-01.yaml
+[2024-06-13 21:46:31,533] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:46:32,898] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:46:32,903] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:46:58,980] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-24-01.yaml
+[2024-06-13 21:47:01,776] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:47:03,104] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:47:03,110] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:47:57,884] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-25-01.yaml
+[2024-06-13 21:48:00,711] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:48:02,059] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:48:02,064] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:48:40,582] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-26-01.yaml
+[2024-06-13 21:48:43,387] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:48:44,725] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:48:44,730] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:49:12,091] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-27-01.yaml
+[2024-06-13 21:49:14,911] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:49:16,275] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:49:16,279] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:49:49,786] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-28-01.yaml
+[2024-06-13 21:49:52,590] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:49:54,094] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:49:54,099] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:50:23,686] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-29-01.yaml
+[2024-06-13 21:50:26,610] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:50:27,939] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:50:27,942] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:51:04,353] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/10-30-01.yaml
+[2024-06-13 21:51:07,200] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:51:08,596] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:51:08,601] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:51:35,667] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-10-01.yaml
+[2024-06-13 21:51:38,512] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:51:39,860] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:51:39,865] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:52:01,797] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-11-01.yaml
+[2024-06-13 21:52:04,604] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:52:05,939] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:52:05,941] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:52:22,250] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-12-01.yaml
+[2024-06-13 21:52:25,064] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:52:26,390] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:52:26,395] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:52:42,224] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-13-01.yaml
+[2024-06-13 21:52:45,075] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:52:46,619] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:52:46,623] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:53:08,544] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-14-01.yaml
+[2024-06-13 21:53:11,406] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:53:12,914] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:53:12,918] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:53:31,461] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-15-01.yaml
+[2024-06-13 21:53:34,270] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:53:35,773] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:53:35,777] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:53:58,118] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-16-01.yaml
+[2024-06-13 21:54:00,940] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:54:02,483] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:54:02,486] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:54:20,609] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-17-01.yaml
+[2024-06-13 21:54:23,440] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:54:24,931] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:54:24,936] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:54:44,046] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-18-01.yaml
+[2024-06-13 21:54:46,914] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:54:48,433] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:54:48,438] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:55:26,250] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-19-01.yaml
+[2024-06-13 21:55:29,065] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:55:30,561] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:55:30,566] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:55:47,087] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-20-01.yaml
+[2024-06-13 21:55:50,041] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:55:51,626] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:55:51,631] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.
+[2024-06-13 21:56:12,996] [INFO    ] [train] Initializing AAI environment for task aai/configs/paper/competition1/09-21-01.yaml
+[2024-06-13 21:56:15,823] [INFO    ] [environment] Connected to Unity environment with package version 2.3.0-exp.3 and communication version 1.5.0
+[2024-06-13 21:56:17,417] [INFO    ] [environment] Connected new brain: AnimalAI?team=0
+[2024-06-13 21:56:17,422] [WARNING ] [unity_gym_env] The environment contains multiple observations. You must define allow_multiple_obs=True to receive them all. Otherwise, only the first visual observation (or vector observation ifthere are no visual observations) will be provided in the observation.

@@ -198,8 +198,8 @@ class MultiAAIEnv(gym.Env):
         self.env_path = env_path
         self.tasks = tasks
         self.current_task_idx = 0
-        self.current_env = self.__initialize(self.current_task_idx, self.aai_timescale)
         self.aai_timescale = aai_timescale
+        self.current_env = self.__initialize(self.current_task_idx, self.aai_timescale)
         super().__init__()
 
     def step(self, action):

@@ -4,7 +4,7 @@ CUDA_VISIBLE_DEVICES=1 xvfb-run -a python train.py \
   --logdir ./logdir/competition-curriculum/competition-curriculum-timescale300-eval-ind1 \
   --from-checkpoint ./logdir/competition-curriculum/competition-curriculum-timescale300-L1_10_5M/checkpoint.ckpt \
   --eval-mode \
-  --dreamer-args "--run.steps 900000" \
+  --dreamer-args "--run.steps 300000" \
   --aai-timescale 300
 
 CUDA_VISIBLE_DEVICES=1 xvfb-run -a python train.py \
@@ -13,7 +13,7 @@ CUDA_VISIBLE_DEVICES=1 xvfb-run -a python train.py \
   --logdir ./logdir/competition-curriculum/competition-curriculum-timescale300-eval-ind2 \
   --from-checkpoint ./logdir/competition-curriculum/competition-curriculum-timescale300-L1_10_5M/checkpoint.ckpt \
   --eval-mode \
-  --dreamer-args "--run.steps 900000" \
+  --dreamer-args "--run.steps 300000" \
   --aai-timescale 300
 
 CUDA_VISIBLE_DEVICES=1 xvfb-run -a python train.py \
@@ -22,5 +22,5 @@ CUDA_VISIBLE_DEVICES=1 xvfb-run -a python train.py \
   --logdir ./logdir/competition-curriculum/competition-curriculum-timescale300-eval-ind3 \
   --from-checkpoint ./logdir/competition-curriculum/competition-curriculum-timescale300-L1_10_5M/checkpoint.ckpt \
   --eval-mode \
-  --dreamer-args "--run.steps 900000" \
+  --dreamer-args "--run.steps 300000" \
   --aai-timescale 300
