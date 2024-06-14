@@ -1,0 +1,9 @@
+# Animal-AI build
+AnimalAI.app
+
+# IDE-specific files
+.DS_Store
+../.idea/
+
+# Virtual environment
+recurrent_ppo/.venv/
