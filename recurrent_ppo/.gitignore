@@ -7,3 +7,11 @@ AnimalAI.app
 
 # Virtual environment
 recurrent_ppo/.venv/
+
+# python generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
