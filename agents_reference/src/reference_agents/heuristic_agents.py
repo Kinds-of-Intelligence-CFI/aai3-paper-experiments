@@ -121,7 +121,7 @@ class operantBraitenberg(Braitenberg):
 class ramBraitenberg(Braitenberg):
   def __init__(self, no_rays):
     super().__init__(no_rays)
-    self.listOfObjects = [RayCastObjects.GOODGOAL, RayCastObjects.GOODGOALMULTI, RayCastObjects.BADGOAL, RayCastObjects.IMMOVABLE, RayCastObjects.DECOYGOAL]
+    self.listOfObjects = [RayCastObjects.GOODGOAL, RayCastObjects.GOODGOALMULTI, RayCastObjects.BADGOAL, RayCastObjects.IMMOVABLE]
     self.raycast_parser = RayCastParser(self.listOfObjects, self.no_rays) 
 
   def checkStationarity(self, raycast): #checks whether the agent is stationary by examining its velocities. If they are below 1 in all directions, it turns.

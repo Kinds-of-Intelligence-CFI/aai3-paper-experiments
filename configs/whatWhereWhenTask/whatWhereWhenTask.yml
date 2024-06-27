@@ -175,7 +175,7 @@ arenas:
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
     - !Item
-      name: DecoyGoal
+      name: GoodGoalMulti
       positions:
       - !Vector3 {x: 20, y: 0, z: 2}
       sizes:
