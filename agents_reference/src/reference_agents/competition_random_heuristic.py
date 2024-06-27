@@ -143,9 +143,9 @@ def main():
         5, 1))
     heuristicAgent = Braitenberg(no_rays=15)
 
-    #simulate = run_evaluation(folder, randomAgent, "Random", "results/competition/randomAgent.csv")
-    #if simulate:
-    #    print("Random Agent successfully simulated.")
+    simulate = run_evaluation(folder, randomAgent, "Random", "results/competition/randomAgent.csv")
+    if simulate:
+        print("Random Agent successfully simulated.")
     
     simulate = run_evaluation(folder, heuristicAgent, "Heuristic", "results/competition/heuristicAgent.csv", degrees=30)
     if simulate:
