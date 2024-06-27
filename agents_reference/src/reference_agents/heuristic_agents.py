@@ -161,19 +161,19 @@ class ramBraitenberg(Braitenberg):
 def main():
     num_runs = 100
     
-    print(f"Running {num_runs} of Heuristic Agent on foraging task.")
+    print(f"Running {num_runs} runs of the standard Heuristic (Braitenberg) Agent on foraging task.")
     agent = Braitenberg(no_rays=15)
     config_file = "../configs/foragingTask/foragingTaskSpawnerTree.yml"
     results = run_evaluation(config_file, agent, num_runs, 30, multi_obs=False)
     results.to_csv("./results/foragingTask/heuristic.csv", index=False)
 
-    print(f"Running {num_runs} of bespoke Heuristic Agent on operant chamber task.")
+    print(f"Running {num_runs} runs of a bespoke Heuristic Agent on operant chamber task.")
     agent = operantBraitenberg(no_rays=99)
     config_file = "../configs/operantChamberTask/operantChamberTask.yml"
     results = run_evaluation(config_file, agent, num_runs, 30, multi_obs=True)
     results.to_csv("./results/operantChamberTask/heuristic.csv", index=False)
 
-    print(f"Running {num_runs} of bespoke Heuristic Agent on what-where-when task.")
+    print(f"Running {num_runs} runs of a bespoke Heuristic Agent on what-where-when task.")
     agent = ramBraitenberg(no_rays=15)
     config_file = "../configs/whatWhereWhenTask/whatWhereWhenTask.yml"
     results = run_evaluation(config_file, agent, num_runs, 30, multi_obs=True)
