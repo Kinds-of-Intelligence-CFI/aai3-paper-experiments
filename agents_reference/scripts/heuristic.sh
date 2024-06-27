@@ -1,1 +1,1 @@
-rye run heuristic
+xvfb-run -a rye run heuristic

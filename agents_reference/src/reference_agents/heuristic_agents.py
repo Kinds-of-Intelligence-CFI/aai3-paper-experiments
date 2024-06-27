@@ -21,7 +21,7 @@ def run_evaluation(config: str, agent, num_episodes: int, num_degrees: int = 30,
         play=False,
         inference=False,
         timescale=timescale,
-        no_graphics=True,
+        no_graphics=False,
     )
 
     behavior = list(env.behavior_specs.keys())[0]
