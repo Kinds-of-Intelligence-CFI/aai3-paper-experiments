@@ -22,3 +22,4 @@ allow-direct-references = true
 
 [project.scripts]
 heuristic = "reference_agents.heuristic_agents:main"
+random = "reference_agents.random_agents:main"
