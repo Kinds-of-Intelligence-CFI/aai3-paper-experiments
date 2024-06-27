@@ -5,14 +5,12 @@ import os
 from pathlib import Path
 
 import numpy as np
-import pandas as pd
 
 from animalai import AnimalAIEnvironment # type: ignore
-from animalai.actions import AAIAction, AAIActions # type: ignore
+from animalai.actions import AAIActions # type: ignore
 from animalai.agents.braitenberg import Braitenberg # type: ignore
 from animalai.executable import find_executable # type: ignore
 from animalai.agents.randomActionAgent import RandomActionAgent # type: ignore
-from animalai.raycastparser import RayCastObjects, RayCastParser # type: ignore
 
 def find_yaml_files(directory):
     yaml_files = []
