@@ -68,6 +68,7 @@ def run_evaluation(config: str, agent: RandomActionAgent, num_episodes: int, tim
     return results_dataframe
 
 def main():
+    random.seed(2024)
     num_runs = 100
     agent = RandomActionAgent(step_length_distribution=lambda: np.random.normal(
         5, 1))  # a Rayleigh walker (sampling from normal distribution)

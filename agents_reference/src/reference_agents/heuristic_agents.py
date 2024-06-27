@@ -159,6 +159,7 @@ class ramBraitenberg(Braitenberg):
 
 
 def main():
+    random.seed(2024)
     num_runs = 100
     
     print(f"Running {num_runs} runs of the standard Heuristic (Braitenberg) Agent on foraging task.")
