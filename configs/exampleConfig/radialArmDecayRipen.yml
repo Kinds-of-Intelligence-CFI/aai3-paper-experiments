@@ -93,7 +93,7 @@ arenas:
       delays: [100]
       changeRates: [-0.003]
     - !Item
-      name: AntiDecayGoal
+      name: RipenGoal
       positions:
       - !Vector3 {x: 2, y: 0, z: 20} # In blue arm
       initialValues: [0]
