@@ -80,16 +80,16 @@ def main():
     print(f"Running {num_runs} of Heuristic Agent on foraging task.")
     config_file = "../configs/foragingTask/foragingTaskSpawnerTree.yml"
     results = run_evaluation(config_file, agent, num_runs)
-    results.to_csv("./results/foragingTask/heuristic.csv", index=False)
+    results.to_csv("./results/foragingTask/random.csv", index=False)
 
     print(f"Running {num_runs} of bespoke Heuristic Agent on operant chamber task.")
     config_file = "../configs/operantChamberTask/operantChamberTask.yml"
     results = run_evaluation(config_file, agent, num_runs)
-    results.to_csv("./results/operantChamberTask/heuristic.csv", index=False)
+    results.to_csv("./results/operantChamberTask/random.csv", index=False)
 
     print(f"Running {num_runs} of bespoke Heuristic Agent on what-where-when task.")
     config_file = "../configs/whatWhereWhenTask/whatWhereWhenTask.yml"
     results = run_evaluation(config_file, agent, num_runs)
-    results.to_csv("./results/whatWhereWhenTask/heuristic.csv", index=False)
+    results.to_csv("./results/whatWhereWhenTask/random.csv", index=False)
 
     print("Finished simulation.")
