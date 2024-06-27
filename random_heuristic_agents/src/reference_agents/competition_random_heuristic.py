@@ -75,7 +75,8 @@ def run_evaluation(config_folder: str, agent, agent_type: str, save_path_csv: st
                         print(f"Episode Reward: {episodeReward} on task: {n}.")
                         done = True
                         break  # Go to next episode
-                
+                    
+                    episodeReward += dec.reward if len(dec.reward) > 0 else 0
                 new_action = agent.get_new_action(prev_step=previous_action)
 
             print("Closing environment")

@@ -58,6 +58,8 @@ def run_evaluation(config: str, agent: RandomActionAgent, num_episodes: int, tim
                     done = True
                     break  # Go to next episode
                 
+                episodeReward += dec.reward if len(dec.reward) > 0 else 0
+                
             new_action = agent.get_new_action(prev_step=previous_action)
 
     print("Closing environment")
