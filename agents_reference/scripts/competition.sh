@@ -1,0 +1,1 @@
+xvfb-run -a rye run competition_random_heuristic
