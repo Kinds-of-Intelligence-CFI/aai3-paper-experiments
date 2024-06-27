@@ -87,7 +87,7 @@ def run_evaluation(config_folder: str, agent, agent_type: str, save_path_csv: st
             env = AnimalAIEnvironment(
                 file_name=str(find_executable(Path(".."))),
                 arenas_configurations=str(p),
-                base_port=5005 + random.randint(0, 1000),
+                base_port=port,
                 useRayCasts=True,
                 rayMaxDegrees=degrees,
                 raysPerSide=(agent.no_rays - 1) // 2,
