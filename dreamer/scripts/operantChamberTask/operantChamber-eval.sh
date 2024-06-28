@@ -1,6 +1,6 @@
 xvfb-run -a python train.py \
   --task ../configs/operantChamberTask/operantChamberTask.yml \
-  --env ./aai/env/env3.1.3/AAI.x86_64 \
+  --env ../env/AAI.x86_64 \
   --logdir ./logdir/operantChamber/operantChamber-eval \
   --from-checkpoint ./logdir/operantChamber/operantChamber-train/checkpoint.ckpt \
   --eval-mode \
