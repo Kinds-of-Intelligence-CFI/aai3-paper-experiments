@@ -27,6 +27,7 @@ def run_evaluation(config: str, agent, num_episodes: int, num_degrees: int = 30,
         no_graphics=False,
     )
 
+    random.seed(2024)
     behavior = list(env.behavior_specs.keys())[0]
 
     episode_rewards = []
@@ -162,23 +163,22 @@ class ramBraitenberg(Braitenberg):
 
 
 def main():
-    random.seed(2024)
     num_runs = 100
-    
+
     print(f"Running {num_runs} runs of the standard Heuristic (Braitenberg) Agent on foraging task.")
-    agent = Braitenberg(no_rays=15)
+    agent = Braitenberg(no_rays=45)
     config_file = "../configs/foragingTask/foragingTaskSpawnerTree.yml"
     results = run_evaluation(config_file, agent, num_runs, 30, multi_obs=False)
     results.to_csv("./results/foragingTask/heuristic.csv", index=False)
 
     print(f"Running {num_runs} runs of a bespoke Heuristic Agent on operant chamber task.")
-    agent = operantBraitenberg(no_rays=99)
+    agent = operantBraitenberg(no_rays=45)
     config_file = "../configs/operantChamberTask/operantChamberTask.yml"
     results = run_evaluation(config_file, agent, num_runs, 30, multi_obs=True)
     results.to_csv("./results/operantChamberTask/heuristic.csv", index=False)
 
     print(f"Running {num_runs} runs of a bespoke Heuristic Agent on what-where-when task.")
-    agent = ramBraitenberg(no_rays=15)
+    agent = ramBraitenberg(no_rays=45)
     config_file = "../configs/whatWhereWhenTask/whatWhereWhenTask.yml"
     results = run_evaluation(config_file, agent, num_runs, 30, multi_obs=True)
     results.to_csv("./results/whatWhereWhenTask/heuristic.csv", index=False)
