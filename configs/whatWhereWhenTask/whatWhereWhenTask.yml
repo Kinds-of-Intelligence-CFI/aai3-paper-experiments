@@ -1,5 +1,4 @@
-# Perceptual distinction determined as such: https://mokole.com/palette.html
-
+# Perceptual distinction of colours determined as such: https://mokole.com/palette.html
 !ArenaConfig
 arenas:
   0: !Arena
@@ -187,7 +186,7 @@ arenas:
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
     - !Item
-      name: RipenGoal
+      name: AntiDecayGoal #using alias for AAI 3.1.3 compatibility
       positions:
       - !Vector3 {x: 32.5, y: 3.1, z: 32.5}
       initialValues: [1]
@@ -206,14 +205,14 @@ arenas:
       - !Vector3 {x: 7.5, y: 0, z: 32.5}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-      changeRates: [0.001]
+      changeRates: [0.005]
     - !Item
       name: GrowGoal
       positions:
       - !Vector3 {x: 32.5, y: 0, z: 7.5}
       sizes:
       - !Vector3 {x: 1, y: 1, z: 1}
-      changeRates: [0.001]
+      changeRates: [0.005]
     - !Item
       name: Agent
       positions:
