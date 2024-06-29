@@ -33,22 +33,23 @@ def run_evaluation(config_folder: str, agent, agent_type: str, save_path_csv: st
 
     for p, n in zip(paths, names):
         print(f"Running episode: {n}")
-        env = AnimalAIEnvironment(
-            file_name=str(find_executable(Path(".."))),
-            arenas_configurations=str(p),
-            base_port=port,
-            useRayCasts=True,
-            rayMaxDegrees=degrees,
-            raysPerSide=1,
-            play=False,
-            inference=False,
-            timescale=timescale,
-            no_graphics=False,
-        )
-
-        behavior = list(env.behavior_specs.keys())[0]
         
         if agent_type == "Random":
+            env = AnimalAIEnvironment(
+                file_name=str(find_executable(Path(".."))),
+                arenas_configurations=str(p),
+                base_port=port,
+                worker_id=0,
+                useRayCasts=True,
+                rayMaxDegrees=degrees,
+                raysPerSide=1,
+                play=False,
+                inference=False,
+                timescale=timescale,
+                no_graphics=False,
+                )
+
+            behavior = list(env.behavior_specs.keys())[0]
             print("Running Random Agent...")
             actions = AAIActions()
 
@@ -89,6 +90,7 @@ def run_evaluation(config_folder: str, agent, agent_type: str, save_path_csv: st
                 file_name=str(find_executable(Path(".."))),
                 arenas_configurations=str(p),
                 base_port=port,
+                worker_id=1000,
                 useRayCasts=True,
                 rayMaxDegrees=degrees,
                 raysPerSide=(agent.no_rays - 1) // 2,
@@ -149,7 +151,11 @@ def main():
     simulate = run_evaluation(folder, randomAgent, "Random", "results/competition/randomAgent.csv")
     if simulate:
         print("Random Agent successfully simulated.")
+    else:
+        print("Error")
     
     simulate = run_evaluation(folder, heuristicAgent, "Heuristic", "results/competition/heuristicAgent.csv", degrees=30)
     if simulate:
         print("Heuristic Agent successfully simulated.")
+    else:
+        print("Error")
