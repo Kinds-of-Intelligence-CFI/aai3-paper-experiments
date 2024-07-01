@@ -25,6 +25,7 @@ def run_evaluation(config: str, agent: RandomActionAgent, num_episodes: int, tim
         no_graphics=False,
     )
 
+    random.seed(1234)
     behavior = list(env.behavior_specs.keys())[0]
 
     actions = AAIActions()
@@ -72,22 +73,21 @@ def run_evaluation(config: str, agent: RandomActionAgent, num_episodes: int, tim
     return results_dataframe
 
 def main():
-    random.seed(2024)
     num_runs = 100
     agent = RandomActionAgent(step_length_distribution=lambda: np.random.normal(
         5, 1))  # a Rayleigh walker (sampling from normal distribution)
-    
-    print(f"Running {num_runs} of Heuristic Agent on foraging task.")
+     
+    print(f"Running {num_runs} runs of the Random Action Agent (Rayleigh) on foraging task.")
     config_file = "../configs/foragingTask/foragingTaskSpawnerTree.yml"
     results = run_evaluation(config_file, agent, num_runs)
     results.to_csv("./results/foragingTask/random.csv", index=False)
 
-    print(f"Running {num_runs} of bespoke Heuristic Agent on operant chamber task.")
+    print(f"Running {num_runs} runs of the Random Action Agent (Rayleigh) on operant chamber task.")
     config_file = "../configs/operantChamberTask/operantChamberTask.yml"
     results = run_evaluation(config_file, agent, num_runs)
     results.to_csv("./results/operantChamberTask/random.csv", index=False)
 
-    print(f"Running {num_runs} of bespoke Heuristic Agent on what-where-when task.")
+    print(f"Running {num_runs} runs of the Random Action Agent (Rayleigh) on what-where-when task.")
     config_file = "../configs/whatWhereWhenTask/whatWhereWhenTask.yml"
     results = run_evaluation(config_file, agent, num_runs)
     results.to_csv("./results/whatWhereWhenTask/random.csv", index=False)
