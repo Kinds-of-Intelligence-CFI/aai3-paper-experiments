@@ -111,9 +111,10 @@ def train(task: Path,
     if wandb:
         import wandb
         from wandb.integration.sb3 import WandbCallback
-
-        wandb.login(key=os.getenv("WANDB_API_KEY"))
-
+        
+        WANDB_API_KEY = os.getenv("WANDB_API_KEY")
+        wandb.login(verify=True, key=WANDB_API_KEY)
+        
         config = {
             "policy_type": policy,
             "total_timesteps": timesteps,
