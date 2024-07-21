@@ -1,5 +1,5 @@
 xvfb-run -a python train.py \
-  --task ../configs/whatWhereWhenTask/whatWhereWhenTask-Curriculum.yml \
+  --task ../configs/whatWhereWhenTask/whatWhereWhenTask.yml \
   --env ../env/AAI.x86_64 \
   --logdir ./logdir/whatWhereWhen/whatWhereWhen-curriculum-eval \
   --from-checkpoint ./logdir/whatWhereWhen/whatWhereWhen-curriculum-train/checkpoint.ckpt \
