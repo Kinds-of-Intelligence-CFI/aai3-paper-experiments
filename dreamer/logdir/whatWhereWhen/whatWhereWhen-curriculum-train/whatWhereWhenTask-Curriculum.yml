@@ -1,0 +1,1968 @@
+# Perceptual distinction of colours determined as such: https://mokole.com/palette.html
+!ArenaConfig
+arenas:
+  0: !Arena #goodgoal only
+    pass_mark: 0
+    t: 750
+    items:
+    - !Item
+      name: Wall #Non-diag arms
+      positions:
+      - !Vector3 {x: 18, y: 0, z: 7.5}
+      - !Vector3 {x: 22, y: 0, z: 7.5}
+      - !Vector3 {x: 18, y: 0, z: 32.5}
+      - !Vector3 {x: 22, y: 0, z: 32.5}
+      - !Vector3 {x: 7.5, y: 0, z: 18}
+      - !Vector3 {x: 7.5, y: 0, z: 22}
+      - !Vector3 {x: 32.5, y: 0, z: 18}
+      - !Vector3 {x: 32.5, y: 0, z: 22}
+      rotations: [0,0,0,0,0,0,0,0]
+      sizes:
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Wall #Non-diag backplates
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 0.5}
+      - !Vector3 {x: 20, y: 0, z: 39.5}
+      - !Vector3 {x: 0.5, y: 0, z: 20}
+      - !Vector3 {x: 39.5, y: 0, z: 20}
+      rotations: [0,0,90,90]
+      sizes:
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Ramp #Non-diag long ramps
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 9}
+      - !Vector3 {x: 20, y: 0, z: 31}
+      - !Vector3 {x: 9, y: 0, z: 20}
+      - !Vector3 {x: 31, y: 0, z: 20}
+      - !Vector3 {x: 20, y: 0, z: 14.5}
+      - !Vector3 {x: 20, y: 0, z: 25.5}
+      - !Vector3 {x: 14.5, y: 0, z: 20}
+      - !Vector3 {x: 25.5, y: 0, z: 20}
+      rotations: [180,0,270, 90, 0,180,90,270]
+      sizes:
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Wall #Diag arms
+      positions:
+      - !Vector3 {x: 12.61, y: 0, z: 30.4}
+      - !Vector3 {x: 9.7, y: 0, z: 27.39}
+      - !Vector3 {x: 30.3, y: 0, z: 12.61}
+      - !Vector3 {x: 27.39, y: 0, z: 9.6}
+      - !Vector3 {x: 12.61, y: 0, z: 9.6}
+      - !Vector3 {x: 9.7, y: 0, z: 12.61}
+      - !Vector3 {x: 27.39, y: 0, z: 30.4}
+      - !Vector3 {x: 30.3, y: 0, z: 27.39}
+      rotations: [135,135,135,135,45,45,45,45]
+      sizes:
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      colors:
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: Wall #Diag backplates
+      positions:
+      - !Vector3 {x: 34, y: 0, z: 6}
+      - !Vector3 {x: 6, y: 0, z: 34}
+      - !Vector3 {x: 6, y: 0, z: 6}
+      - !Vector3 {x: 34, y: 0, z: 34}
+      rotations: [135,134,45,45]
+      sizes:
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      colors:
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: Ramp #Diag Ramps
+      positions:
+      - !Vector3 {x: 12.155, y: 0, z: 27.895}
+      - !Vector3 {x: 27.845, y: 0, z: 12.105}
+      - !Vector3 {x: 12.155, y: 0, z: 12.105}
+      - !Vector3 {x: 27.845, y: 0, z: 27.895}
+      - !Vector3 {x: 16.045, y: 0, z: 24.005}
+      - !Vector3 {x: 23.955, y: 0, z: 15.995}
+      - !Vector3 {x: 16.045, y: 0, z: 15.995}
+      - !Vector3 {x: 23.955, y: 0, z: 24.005}
+      rotations: [315,135,225,45,135,315,45,225]
+      sizes:
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      colors:
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 2, y: 0, z: 20}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 20, y: 0.5, z: 20}
+      rotations: [-1]
+  1: !Arena #GoodGoalMulti 1 Only
+    pass_mark: 0
+    t: 750
+    items:
+    - !Item
+      name: Wall #Non-diag arms
+      positions:
+      - !Vector3 {x: 18, y: 0, z: 7.5}
+      - !Vector3 {x: 22, y: 0, z: 7.5}
+      - !Vector3 {x: 18, y: 0, z: 32.5}
+      - !Vector3 {x: 22, y: 0, z: 32.5}
+      - !Vector3 {x: 7.5, y: 0, z: 18}
+      - !Vector3 {x: 7.5, y: 0, z: 22}
+      - !Vector3 {x: 32.5, y: 0, z: 18}
+      - !Vector3 {x: 32.5, y: 0, z: 22}
+      rotations: [0,0,0,0,0,0,0,0]
+      sizes:
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Wall #Non-diag backplates
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 0.5}
+      - !Vector3 {x: 20, y: 0, z: 39.5}
+      - !Vector3 {x: 0.5, y: 0, z: 20}
+      - !Vector3 {x: 39.5, y: 0, z: 20}
+      rotations: [0,0,90,90]
+      sizes:
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Ramp #Non-diag long ramps
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 9}
+      - !Vector3 {x: 20, y: 0, z: 31}
+      - !Vector3 {x: 9, y: 0, z: 20}
+      - !Vector3 {x: 31, y: 0, z: 20}
+      - !Vector3 {x: 20, y: 0, z: 14.5}
+      - !Vector3 {x: 20, y: 0, z: 25.5}
+      - !Vector3 {x: 14.5, y: 0, z: 20}
+      - !Vector3 {x: 25.5, y: 0, z: 20}
+      rotations: [180,0,270, 90, 0,180,90,270]
+      sizes:
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Wall #Diag arms
+      positions:
+      - !Vector3 {x: 12.61, y: 0, z: 30.4}
+      - !Vector3 {x: 9.7, y: 0, z: 27.39}
+      - !Vector3 {x: 30.3, y: 0, z: 12.61}
+      - !Vector3 {x: 27.39, y: 0, z: 9.6}
+      - !Vector3 {x: 12.61, y: 0, z: 9.6}
+      - !Vector3 {x: 9.7, y: 0, z: 12.61}
+      - !Vector3 {x: 27.39, y: 0, z: 30.4}
+      - !Vector3 {x: 30.3, y: 0, z: 27.39}
+      rotations: [135,135,135,135,45,45,45,45]
+      sizes:
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      colors:
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: Wall #Diag backplates
+      positions:
+      - !Vector3 {x: 34, y: 0, z: 6}
+      - !Vector3 {x: 6, y: 0, z: 34}
+      - !Vector3 {x: 6, y: 0, z: 6}
+      - !Vector3 {x: 34, y: 0, z: 34}
+      rotations: [135,134,45,45]
+      sizes:
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      colors:
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: Ramp #Diag Ramps
+      positions:
+      - !Vector3 {x: 12.155, y: 0, z: 27.895}
+      - !Vector3 {x: 27.845, y: 0, z: 12.105}
+      - !Vector3 {x: 12.155, y: 0, z: 12.105}
+      - !Vector3 {x: 27.845, y: 0, z: 27.895}
+      - !Vector3 {x: 16.045, y: 0, z: 24.005}
+      - !Vector3 {x: 23.955, y: 0, z: 15.995}
+      - !Vector3 {x: 16.045, y: 0, z: 15.995}
+      - !Vector3 {x: 23.955, y: 0, z: 24.005}
+      rotations: [315,135,225,45,135,315,45,225]
+      sizes:
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      colors:
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: GoodGoalMulti
+      positions:
+      - !Vector3 {x: 38, y: 0, z: 20}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 20, y: 0.5, z: 20}
+      rotations: [-1]
+  2: !Arena #GoodGoalMulti 2 Only
+    pass_mark: 0
+    t: 750
+    items:
+    - !Item
+      name: Wall #Non-diag arms
+      positions:
+      - !Vector3 {x: 18, y: 0, z: 7.5}
+      - !Vector3 {x: 22, y: 0, z: 7.5}
+      - !Vector3 {x: 18, y: 0, z: 32.5}
+      - !Vector3 {x: 22, y: 0, z: 32.5}
+      - !Vector3 {x: 7.5, y: 0, z: 18}
+      - !Vector3 {x: 7.5, y: 0, z: 22}
+      - !Vector3 {x: 32.5, y: 0, z: 18}
+      - !Vector3 {x: 32.5, y: 0, z: 22}
+      rotations: [0,0,0,0,0,0,0,0]
+      sizes:
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Wall #Non-diag backplates
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 0.5}
+      - !Vector3 {x: 20, y: 0, z: 39.5}
+      - !Vector3 {x: 0.5, y: 0, z: 20}
+      - !Vector3 {x: 39.5, y: 0, z: 20}
+      rotations: [0,0,90,90]
+      sizes:
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Ramp #Non-diag long ramps
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 9}
+      - !Vector3 {x: 20, y: 0, z: 31}
+      - !Vector3 {x: 9, y: 0, z: 20}
+      - !Vector3 {x: 31, y: 0, z: 20}
+      - !Vector3 {x: 20, y: 0, z: 14.5}
+      - !Vector3 {x: 20, y: 0, z: 25.5}
+      - !Vector3 {x: 14.5, y: 0, z: 20}
+      - !Vector3 {x: 25.5, y: 0, z: 20}
+      rotations: [180,0,270, 90, 0,180,90,270]
+      sizes:
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Wall #Diag arms
+      positions:
+      - !Vector3 {x: 12.61, y: 0, z: 30.4}
+      - !Vector3 {x: 9.7, y: 0, z: 27.39}
+      - !Vector3 {x: 30.3, y: 0, z: 12.61}
+      - !Vector3 {x: 27.39, y: 0, z: 9.6}
+      - !Vector3 {x: 12.61, y: 0, z: 9.6}
+      - !Vector3 {x: 9.7, y: 0, z: 12.61}
+      - !Vector3 {x: 27.39, y: 0, z: 30.4}
+      - !Vector3 {x: 30.3, y: 0, z: 27.39}
+      rotations: [135,135,135,135,45,45,45,45]
+      sizes:
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      colors:
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: Wall #Diag backplates
+      positions:
+      - !Vector3 {x: 34, y: 0, z: 6}
+      - !Vector3 {x: 6, y: 0, z: 34}
+      - !Vector3 {x: 6, y: 0, z: 6}
+      - !Vector3 {x: 34, y: 0, z: 34}
+      rotations: [135,134,45,45]
+      sizes:
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      colors:
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: Ramp #Diag Ramps
+      positions:
+      - !Vector3 {x: 12.155, y: 0, z: 27.895}
+      - !Vector3 {x: 27.845, y: 0, z: 12.105}
+      - !Vector3 {x: 12.155, y: 0, z: 12.105}
+      - !Vector3 {x: 27.845, y: 0, z: 27.895}
+      - !Vector3 {x: 16.045, y: 0, z: 24.005}
+      - !Vector3 {x: 23.955, y: 0, z: 15.995}
+      - !Vector3 {x: 16.045, y: 0, z: 15.995}
+      - !Vector3 {x: 23.955, y: 0, z: 24.005}
+      rotations: [315,135,225,45,135,315,45,225]
+      sizes:
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      colors:
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: GoodGoalMulti
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 2}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 20, y: 0.5, z: 20}
+      rotations: [-1]
+  3: !Arena #BadGoal Only
+    pass_mark: -1
+    t: 750
+    items:
+    - !Item
+      name: Wall #Non-diag arms
+      positions:
+      - !Vector3 {x: 18, y: 0, z: 7.5}
+      - !Vector3 {x: 22, y: 0, z: 7.5}
+      - !Vector3 {x: 18, y: 0, z: 32.5}
+      - !Vector3 {x: 22, y: 0, z: 32.5}
+      - !Vector3 {x: 7.5, y: 0, z: 18}
+      - !Vector3 {x: 7.5, y: 0, z: 22}
+      - !Vector3 {x: 32.5, y: 0, z: 18}
+      - !Vector3 {x: 32.5, y: 0, z: 22}
+      rotations: [0,0,0,0,0,0,0,0]
+      sizes:
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Wall #Non-diag backplates
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 0.5}
+      - !Vector3 {x: 20, y: 0, z: 39.5}
+      - !Vector3 {x: 0.5, y: 0, z: 20}
+      - !Vector3 {x: 39.5, y: 0, z: 20}
+      rotations: [0,0,90,90]
+      sizes:
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Ramp #Non-diag long ramps
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 9}
+      - !Vector3 {x: 20, y: 0, z: 31}
+      - !Vector3 {x: 9, y: 0, z: 20}
+      - !Vector3 {x: 31, y: 0, z: 20}
+      - !Vector3 {x: 20, y: 0, z: 14.5}
+      - !Vector3 {x: 20, y: 0, z: 25.5}
+      - !Vector3 {x: 14.5, y: 0, z: 20}
+      - !Vector3 {x: 25.5, y: 0, z: 20}
+      rotations: [180,0,270, 90, 0,180,90,270]
+      sizes:
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Wall #Diag arms
+      positions:
+      - !Vector3 {x: 12.61, y: 0, z: 30.4}
+      - !Vector3 {x: 9.7, y: 0, z: 27.39}
+      - !Vector3 {x: 30.3, y: 0, z: 12.61}
+      - !Vector3 {x: 27.39, y: 0, z: 9.6}
+      - !Vector3 {x: 12.61, y: 0, z: 9.6}
+      - !Vector3 {x: 9.7, y: 0, z: 12.61}
+      - !Vector3 {x: 27.39, y: 0, z: 30.4}
+      - !Vector3 {x: 30.3, y: 0, z: 27.39}
+      rotations: [135,135,135,135,45,45,45,45]
+      sizes:
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      colors:
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: Wall #Diag backplates
+      positions:
+      - !Vector3 {x: 34, y: 0, z: 6}
+      - !Vector3 {x: 6, y: 0, z: 34}
+      - !Vector3 {x: 6, y: 0, z: 6}
+      - !Vector3 {x: 34, y: 0, z: 34}
+      rotations: [135,134,45,45]
+      sizes:
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      colors:
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: Ramp #Diag Ramps
+      positions:
+      - !Vector3 {x: 12.155, y: 0, z: 27.895}
+      - !Vector3 {x: 27.845, y: 0, z: 12.105}
+      - !Vector3 {x: 12.155, y: 0, z: 12.105}
+      - !Vector3 {x: 27.845, y: 0, z: 27.895}
+      - !Vector3 {x: 16.045, y: 0, z: 24.005}
+      - !Vector3 {x: 23.955, y: 0, z: 15.995}
+      - !Vector3 {x: 16.045, y: 0, z: 15.995}
+      - !Vector3 {x: 23.955, y: 0, z: 24.005}
+      rotations: [315,135,225,45,135,315,45,225]
+      sizes:
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      colors:
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: BadGoal
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 38}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 20, y: 0.5, z: 20}
+      rotations: [-1]
+  4: !Arena #AntiDecay/Ripen Goal Only
+    pass_mark: 1
+    t: 750
+    items:
+    - !Item
+      name: Wall #Non-diag arms
+      positions:
+      - !Vector3 {x: 18, y: 0, z: 7.5}
+      - !Vector3 {x: 22, y: 0, z: 7.5}
+      - !Vector3 {x: 18, y: 0, z: 32.5}
+      - !Vector3 {x: 22, y: 0, z: 32.5}
+      - !Vector3 {x: 7.5, y: 0, z: 18}
+      - !Vector3 {x: 7.5, y: 0, z: 22}
+      - !Vector3 {x: 32.5, y: 0, z: 18}
+      - !Vector3 {x: 32.5, y: 0, z: 22}
+      rotations: [0,0,0,0,0,0,0,0]
+      sizes:
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Wall #Non-diag backplates
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 0.5}
+      - !Vector3 {x: 20, y: 0, z: 39.5}
+      - !Vector3 {x: 0.5, y: 0, z: 20}
+      - !Vector3 {x: 39.5, y: 0, z: 20}
+      rotations: [0,0,90,90]
+      sizes:
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Ramp #Non-diag long ramps
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 9}
+      - !Vector3 {x: 20, y: 0, z: 31}
+      - !Vector3 {x: 9, y: 0, z: 20}
+      - !Vector3 {x: 31, y: 0, z: 20}
+      - !Vector3 {x: 20, y: 0, z: 14.5}
+      - !Vector3 {x: 20, y: 0, z: 25.5}
+      - !Vector3 {x: 14.5, y: 0, z: 20}
+      - !Vector3 {x: 25.5, y: 0, z: 20}
+      rotations: [180,0,270, 90, 0,180,90,270]
+      sizes:
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Wall #Diag arms
+      positions:
+      - !Vector3 {x: 12.61, y: 0, z: 30.4}
+      - !Vector3 {x: 9.7, y: 0, z: 27.39}
+      - !Vector3 {x: 30.3, y: 0, z: 12.61}
+      - !Vector3 {x: 27.39, y: 0, z: 9.6}
+      - !Vector3 {x: 12.61, y: 0, z: 9.6}
+      - !Vector3 {x: 9.7, y: 0, z: 12.61}
+      - !Vector3 {x: 27.39, y: 0, z: 30.4}
+      - !Vector3 {x: 30.3, y: 0, z: 27.39}
+      rotations: [135,135,135,135,45,45,45,45]
+      sizes:
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      colors:
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: Wall #Diag backplates
+      positions:
+      - !Vector3 {x: 34, y: 0, z: 6}
+      - !Vector3 {x: 6, y: 0, z: 34}
+      - !Vector3 {x: 6, y: 0, z: 6}
+      - !Vector3 {x: 34, y: 0, z: 34}
+      rotations: [135,134,45,45]
+      sizes:
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      colors:
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: Ramp #Diag Ramps
+      positions:
+      - !Vector3 {x: 12.155, y: 0, z: 27.895}
+      - !Vector3 {x: 27.845, y: 0, z: 12.105}
+      - !Vector3 {x: 12.155, y: 0, z: 12.105}
+      - !Vector3 {x: 27.845, y: 0, z: 27.895}
+      - !Vector3 {x: 16.045, y: 0, z: 24.005}
+      - !Vector3 {x: 23.955, y: 0, z: 15.995}
+      - !Vector3 {x: 16.045, y: 0, z: 15.995}
+      - !Vector3 {x: 23.955, y: 0, z: 24.005}
+      rotations: [315,135,225,45,135,315,45,225]
+      sizes:
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      colors:
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: AntiDecayGoal #using alias for AAI 3.1.3 compatibility
+      positions:
+      - !Vector3 {x: 32.5, y: 3.1, z: 32.5}
+      initialValues: [1]
+      finalValues: [2]
+      changeRates: [0.001]
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 20, y: 0.5, z: 20}
+      rotations: [-1]
+  5: !Arena #DecayGoal Only
+    pass_mark: 0.5 #the agent must obtain the goal before it has decayed to half its original valence
+    t: 750
+    items:
+    - !Item
+      name: Wall #Non-diag arms
+      positions:
+      - !Vector3 {x: 18, y: 0, z: 7.5}
+      - !Vector3 {x: 22, y: 0, z: 7.5}
+      - !Vector3 {x: 18, y: 0, z: 32.5}
+      - !Vector3 {x: 22, y: 0, z: 32.5}
+      - !Vector3 {x: 7.5, y: 0, z: 18}
+      - !Vector3 {x: 7.5, y: 0, z: 22}
+      - !Vector3 {x: 32.5, y: 0, z: 18}
+      - !Vector3 {x: 32.5, y: 0, z: 22}
+      rotations: [0,0,0,0,0,0,0,0]
+      sizes:
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Wall #Non-diag backplates
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 0.5}
+      - !Vector3 {x: 20, y: 0, z: 39.5}
+      - !Vector3 {x: 0.5, y: 0, z: 20}
+      - !Vector3 {x: 39.5, y: 0, z: 20}
+      rotations: [0,0,90,90]
+      sizes:
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Ramp #Non-diag long ramps
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 9}
+      - !Vector3 {x: 20, y: 0, z: 31}
+      - !Vector3 {x: 9, y: 0, z: 20}
+      - !Vector3 {x: 31, y: 0, z: 20}
+      - !Vector3 {x: 20, y: 0, z: 14.5}
+      - !Vector3 {x: 20, y: 0, z: 25.5}
+      - !Vector3 {x: 14.5, y: 0, z: 20}
+      - !Vector3 {x: 25.5, y: 0, z: 20}
+      rotations: [180,0,270, 90, 0,180,90,270]
+      sizes:
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Wall #Diag arms
+      positions:
+      - !Vector3 {x: 12.61, y: 0, z: 30.4}
+      - !Vector3 {x: 9.7, y: 0, z: 27.39}
+      - !Vector3 {x: 30.3, y: 0, z: 12.61}
+      - !Vector3 {x: 27.39, y: 0, z: 9.6}
+      - !Vector3 {x: 12.61, y: 0, z: 9.6}
+      - !Vector3 {x: 9.7, y: 0, z: 12.61}
+      - !Vector3 {x: 27.39, y: 0, z: 30.4}
+      - !Vector3 {x: 30.3, y: 0, z: 27.39}
+      rotations: [135,135,135,135,45,45,45,45]
+      sizes:
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      colors:
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: Wall #Diag backplates
+      positions:
+      - !Vector3 {x: 34, y: 0, z: 6}
+      - !Vector3 {x: 6, y: 0, z: 34}
+      - !Vector3 {x: 6, y: 0, z: 6}
+      - !Vector3 {x: 34, y: 0, z: 34}
+      rotations: [135,134,45,45]
+      sizes:
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      colors:
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: Ramp #Diag Ramps
+      positions:
+      - !Vector3 {x: 12.155, y: 0, z: 27.895}
+      - !Vector3 {x: 27.845, y: 0, z: 12.105}
+      - !Vector3 {x: 12.155, y: 0, z: 12.105}
+      - !Vector3 {x: 27.845, y: 0, z: 27.895}
+      - !Vector3 {x: 16.045, y: 0, z: 24.005}
+      - !Vector3 {x: 23.955, y: 0, z: 15.995}
+      - !Vector3 {x: 16.045, y: 0, z: 15.995}
+      - !Vector3 {x: 23.955, y: 0, z: 24.005}
+      rotations: [315,135,225,45,135,315,45,225]
+      sizes:
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      colors:
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: DecayGoal
+      positions: 
+      - !Vector3 {x: 7.5, y: 3.1, z: 7.5}
+      initialValues: [1]
+      finalValues: [0.1]
+      changeRates: [-0.001]
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 20, y: 0.5, z: 20}
+      rotations: [-1]
+  6: !Arena #ShrinkGoal Only
+    pass_mark: -0.5 #The agent must obtain the reward before it has shrunk to half of its original size
+    t: 750
+    items:
+    - !Item
+      name: Wall #Non-diag arms
+      positions:
+      - !Vector3 {x: 18, y: 0, z: 7.5}
+      - !Vector3 {x: 22, y: 0, z: 7.5}
+      - !Vector3 {x: 18, y: 0, z: 32.5}
+      - !Vector3 {x: 22, y: 0, z: 32.5}
+      - !Vector3 {x: 7.5, y: 0, z: 18}
+      - !Vector3 {x: 7.5, y: 0, z: 22}
+      - !Vector3 {x: 32.5, y: 0, z: 18}
+      - !Vector3 {x: 32.5, y: 0, z: 22}
+      rotations: [0,0,0,0,0,0,0,0]
+      sizes:
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Wall #Non-diag backplates
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 0.5}
+      - !Vector3 {x: 20, y: 0, z: 39.5}
+      - !Vector3 {x: 0.5, y: 0, z: 20}
+      - !Vector3 {x: 39.5, y: 0, z: 20}
+      rotations: [0,0,90,90]
+      sizes:
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Ramp #Non-diag long ramps
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 9}
+      - !Vector3 {x: 20, y: 0, z: 31}
+      - !Vector3 {x: 9, y: 0, z: 20}
+      - !Vector3 {x: 31, y: 0, z: 20}
+      - !Vector3 {x: 20, y: 0, z: 14.5}
+      - !Vector3 {x: 20, y: 0, z: 25.5}
+      - !Vector3 {x: 14.5, y: 0, z: 20}
+      - !Vector3 {x: 25.5, y: 0, z: 20}
+      rotations: [180,0,270, 90, 0,180,90,270]
+      sizes:
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Wall #Diag arms
+      positions:
+      - !Vector3 {x: 12.61, y: 0, z: 30.4}
+      - !Vector3 {x: 9.7, y: 0, z: 27.39}
+      - !Vector3 {x: 30.3, y: 0, z: 12.61}
+      - !Vector3 {x: 27.39, y: 0, z: 9.6}
+      - !Vector3 {x: 12.61, y: 0, z: 9.6}
+      - !Vector3 {x: 9.7, y: 0, z: 12.61}
+      - !Vector3 {x: 27.39, y: 0, z: 30.4}
+      - !Vector3 {x: 30.3, y: 0, z: 27.39}
+      rotations: [135,135,135,135,45,45,45,45]
+      sizes:
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      colors:
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: Wall #Diag backplates
+      positions:
+      - !Vector3 {x: 34, y: 0, z: 6}
+      - !Vector3 {x: 6, y: 0, z: 34}
+      - !Vector3 {x: 6, y: 0, z: 6}
+      - !Vector3 {x: 34, y: 0, z: 34}
+      rotations: [135,134,45,45]
+      sizes:
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      colors:
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: Ramp #Diag Ramps
+      positions:
+      - !Vector3 {x: 12.155, y: 0, z: 27.895}
+      - !Vector3 {x: 27.845, y: 0, z: 12.105}
+      - !Vector3 {x: 12.155, y: 0, z: 12.105}
+      - !Vector3 {x: 27.845, y: 0, z: 27.895}
+      - !Vector3 {x: 16.045, y: 0, z: 24.005}
+      - !Vector3 {x: 23.955, y: 0, z: 15.995}
+      - !Vector3 {x: 16.045, y: 0, z: 15.995}
+      - !Vector3 {x: 23.955, y: 0, z: 24.005}
+      rotations: [315,135,225,45,135,315,45,225]
+      sizes:
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      colors:
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: ShrinkGoal
+      positions:
+      - !Vector3 {x: 7.5, y: 0, z: 32.5}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}
+      changeRates: [0.005]
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 20, y: 0.5, z: 20}
+      rotations: [-1]
+  7: !Arena #GrowGoal Only
+    pass_mark: 0
+    t: 750
+    items:
+    - !Item
+      name: Wall #Non-diag arms
+      positions:
+      - !Vector3 {x: 18, y: 0, z: 7.5}
+      - !Vector3 {x: 22, y: 0, z: 7.5}
+      - !Vector3 {x: 18, y: 0, z: 32.5}
+      - !Vector3 {x: 22, y: 0, z: 32.5}
+      - !Vector3 {x: 7.5, y: 0, z: 18}
+      - !Vector3 {x: 7.5, y: 0, z: 22}
+      - !Vector3 {x: 32.5, y: 0, z: 18}
+      - !Vector3 {x: 32.5, y: 0, z: 22}
+      rotations: [0,0,0,0,0,0,0,0]
+      sizes:
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Wall #Non-diag backplates
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 0.5}
+      - !Vector3 {x: 20, y: 0, z: 39.5}
+      - !Vector3 {x: 0.5, y: 0, z: 20}
+      - !Vector3 {x: 39.5, y: 0, z: 20}
+      rotations: [0,0,90,90]
+      sizes:
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Ramp #Non-diag long ramps
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 9}
+      - !Vector3 {x: 20, y: 0, z: 31}
+      - !Vector3 {x: 9, y: 0, z: 20}
+      - !Vector3 {x: 31, y: 0, z: 20}
+      - !Vector3 {x: 20, y: 0, z: 14.5}
+      - !Vector3 {x: 20, y: 0, z: 25.5}
+      - !Vector3 {x: 14.5, y: 0, z: 20}
+      - !Vector3 {x: 25.5, y: 0, z: 20}
+      rotations: [180,0,270, 90, 0,180,90,270]
+      sizes:
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Wall #Diag arms
+      positions:
+      - !Vector3 {x: 12.61, y: 0, z: 30.4}
+      - !Vector3 {x: 9.7, y: 0, z: 27.39}
+      - !Vector3 {x: 30.3, y: 0, z: 12.61}
+      - !Vector3 {x: 27.39, y: 0, z: 9.6}
+      - !Vector3 {x: 12.61, y: 0, z: 9.6}
+      - !Vector3 {x: 9.7, y: 0, z: 12.61}
+      - !Vector3 {x: 27.39, y: 0, z: 30.4}
+      - !Vector3 {x: 30.3, y: 0, z: 27.39}
+      rotations: [135,135,135,135,45,45,45,45]
+      sizes:
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      colors:
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: Wall #Diag backplates
+      positions:
+      - !Vector3 {x: 34, y: 0, z: 6}
+      - !Vector3 {x: 6, y: 0, z: 34}
+      - !Vector3 {x: 6, y: 0, z: 6}
+      - !Vector3 {x: 34, y: 0, z: 34}
+      rotations: [135,134,45,45]
+      sizes:
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      colors:
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: Ramp #Diag Ramps
+      positions:
+      - !Vector3 {x: 12.155, y: 0, z: 27.895}
+      - !Vector3 {x: 27.845, y: 0, z: 12.105}
+      - !Vector3 {x: 12.155, y: 0, z: 12.105}
+      - !Vector3 {x: 27.845, y: 0, z: 27.895}
+      - !Vector3 {x: 16.045, y: 0, z: 24.005}
+      - !Vector3 {x: 23.955, y: 0, z: 15.995}
+      - !Vector3 {x: 16.045, y: 0, z: 15.995}
+      - !Vector3 {x: 23.955, y: 0, z: 24.005}
+      rotations: [315,135,225,45,135,315,45,225]
+      sizes:
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      colors:
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: GrowGoal
+      positions:
+      - !Vector3 {x: 32.5, y: 0, z: 7.5}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}
+      changeRates: [0.005]
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 20, y: 0.5, z: 20}
+      rotations: [-1]
+  8: !Arena #GoodGoal and 2 GoodGoalMulti
+    pass_mark: 7
+    t: 750
+    items:
+    - !Item
+      name: Wall #Non-diag arms
+      positions:
+      - !Vector3 {x: 18, y: 0, z: 7.5}
+      - !Vector3 {x: 22, y: 0, z: 7.5}
+      - !Vector3 {x: 18, y: 0, z: 32.5}
+      - !Vector3 {x: 22, y: 0, z: 32.5}
+      - !Vector3 {x: 7.5, y: 0, z: 18}
+      - !Vector3 {x: 7.5, y: 0, z: 22}
+      - !Vector3 {x: 32.5, y: 0, z: 18}
+      - !Vector3 {x: 32.5, y: 0, z: 22}
+      rotations: [0,0,0,0,0,0,0,0]
+      sizes:
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Wall #Non-diag backplates
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 0.5}
+      - !Vector3 {x: 20, y: 0, z: 39.5}
+      - !Vector3 {x: 0.5, y: 0, z: 20}
+      - !Vector3 {x: 39.5, y: 0, z: 20}
+      rotations: [0,0,90,90]
+      sizes:
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Ramp #Non-diag long ramps
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 9}
+      - !Vector3 {x: 20, y: 0, z: 31}
+      - !Vector3 {x: 9, y: 0, z: 20}
+      - !Vector3 {x: 31, y: 0, z: 20}
+      - !Vector3 {x: 20, y: 0, z: 14.5}
+      - !Vector3 {x: 20, y: 0, z: 25.5}
+      - !Vector3 {x: 14.5, y: 0, z: 20}
+      - !Vector3 {x: 25.5, y: 0, z: 20}
+      rotations: [180,0,270, 90, 0,180,90,270]
+      sizes:
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Wall #Diag arms
+      positions:
+      - !Vector3 {x: 12.61, y: 0, z: 30.4}
+      - !Vector3 {x: 9.7, y: 0, z: 27.39}
+      - !Vector3 {x: 30.3, y: 0, z: 12.61}
+      - !Vector3 {x: 27.39, y: 0, z: 9.6}
+      - !Vector3 {x: 12.61, y: 0, z: 9.6}
+      - !Vector3 {x: 9.7, y: 0, z: 12.61}
+      - !Vector3 {x: 27.39, y: 0, z: 30.4}
+      - !Vector3 {x: 30.3, y: 0, z: 27.39}
+      rotations: [135,135,135,135,45,45,45,45]
+      sizes:
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      colors:
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: Wall #Diag backplates
+      positions:
+      - !Vector3 {x: 34, y: 0, z: 6}
+      - !Vector3 {x: 6, y: 0, z: 34}
+      - !Vector3 {x: 6, y: 0, z: 6}
+      - !Vector3 {x: 34, y: 0, z: 34}
+      rotations: [135,134,45,45]
+      sizes:
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      colors:
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: Ramp #Diag Ramps
+      positions:
+      - !Vector3 {x: 12.155, y: 0, z: 27.895}
+      - !Vector3 {x: 27.845, y: 0, z: 12.105}
+      - !Vector3 {x: 12.155, y: 0, z: 12.105}
+      - !Vector3 {x: 27.845, y: 0, z: 27.895}
+      - !Vector3 {x: 16.045, y: 0, z: 24.005}
+      - !Vector3 {x: 23.955, y: 0, z: 15.995}
+      - !Vector3 {x: 16.045, y: 0, z: 15.995}
+      - !Vector3 {x: 23.955, y: 0, z: 24.005}
+      rotations: [315,135,225,45,135,315,45,225]
+      sizes:
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      colors:
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 2, y: 0, z: 20}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}
+    - !Item
+      name: GoodGoalMulti
+      positions:
+      - !Vector3 {x: 38, y: 0, z: 20}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}
+    - !Item
+      name: GoodGoalMulti
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 2}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 20, y: 0.5, z: 20}
+      rotations: [-1]
+  9: !Arena #shrinkGoal, growGoal, decayGoal, ripenGoal
+    pass_mark: 7
+    t: 750
+    items:
+    - !Item
+      name: Wall #Non-diag arms
+      positions:
+      - !Vector3 {x: 18, y: 0, z: 7.5}
+      - !Vector3 {x: 22, y: 0, z: 7.5}
+      - !Vector3 {x: 18, y: 0, z: 32.5}
+      - !Vector3 {x: 22, y: 0, z: 32.5}
+      - !Vector3 {x: 7.5, y: 0, z: 18}
+      - !Vector3 {x: 7.5, y: 0, z: 22}
+      - !Vector3 {x: 32.5, y: 0, z: 18}
+      - !Vector3 {x: 32.5, y: 0, z: 22}
+      rotations: [0,0,0,0,0,0,0,0]
+      sizes:
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Wall #Non-diag backplates
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 0.5}
+      - !Vector3 {x: 20, y: 0, z: 39.5}
+      - !Vector3 {x: 0.5, y: 0, z: 20}
+      - !Vector3 {x: 39.5, y: 0, z: 20}
+      rotations: [0,0,90,90]
+      sizes:
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Ramp #Non-diag long ramps
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 9}
+      - !Vector3 {x: 20, y: 0, z: 31}
+      - !Vector3 {x: 9, y: 0, z: 20}
+      - !Vector3 {x: 31, y: 0, z: 20}
+      - !Vector3 {x: 20, y: 0, z: 14.5}
+      - !Vector3 {x: 20, y: 0, z: 25.5}
+      - !Vector3 {x: 14.5, y: 0, z: 20}
+      - !Vector3 {x: 25.5, y: 0, z: 20}
+      rotations: [180,0,270, 90, 0,180,90,270]
+      sizes:
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Wall #Diag arms
+      positions:
+      - !Vector3 {x: 12.61, y: 0, z: 30.4}
+      - !Vector3 {x: 9.7, y: 0, z: 27.39}
+      - !Vector3 {x: 30.3, y: 0, z: 12.61}
+      - !Vector3 {x: 27.39, y: 0, z: 9.6}
+      - !Vector3 {x: 12.61, y: 0, z: 9.6}
+      - !Vector3 {x: 9.7, y: 0, z: 12.61}
+      - !Vector3 {x: 27.39, y: 0, z: 30.4}
+      - !Vector3 {x: 30.3, y: 0, z: 27.39}
+      rotations: [135,135,135,135,45,45,45,45]
+      sizes:
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      colors:
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: Wall #Diag backplates
+      positions:
+      - !Vector3 {x: 34, y: 0, z: 6}
+      - !Vector3 {x: 6, y: 0, z: 34}
+      - !Vector3 {x: 6, y: 0, z: 6}
+      - !Vector3 {x: 34, y: 0, z: 34}
+      rotations: [135,134,45,45]
+      sizes:
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      colors:
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: Ramp #Diag Ramps
+      positions:
+      - !Vector3 {x: 12.155, y: 0, z: 27.895}
+      - !Vector3 {x: 27.845, y: 0, z: 12.105}
+      - !Vector3 {x: 12.155, y: 0, z: 12.105}
+      - !Vector3 {x: 27.845, y: 0, z: 27.895}
+      - !Vector3 {x: 16.045, y: 0, z: 24.005}
+      - !Vector3 {x: 23.955, y: 0, z: 15.995}
+      - !Vector3 {x: 16.045, y: 0, z: 15.995}
+      - !Vector3 {x: 23.955, y: 0, z: 24.005}
+      rotations: [315,135,225,45,135,315,45,225]
+      sizes:
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      colors:
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: AntiDecayGoal #using alias for AAI 3.1.3 compatibility
+      positions:
+      - !Vector3 {x: 32.5, y: 3.1, z: 32.5}
+      initialValues: [1]
+      finalValues: [2]
+      changeRates: [0.001]
+    - !Item
+      name: DecayGoal
+      positions: 
+      - !Vector3 {x: 7.5, y: 3.1, z: 7.5}
+      initialValues: [1]
+      finalValues: [0.1]
+      changeRates: [-0.001]
+    - !Item
+      name: ShrinkGoal
+      positions:
+      - !Vector3 {x: 7.5, y: 0, z: 32.5}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}
+      changeRates: [0.005]
+    - !Item
+      name: GrowGoal
+      positions:
+      - !Vector3 {x: 32.5, y: 0, z: 7.5}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}
+      changeRates: [0.005]
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 20, y: 0.5, z: 20}
+      rotations: [-1]
+  10: !Arena #full set
+    pass_mark: 7
+    t: 750
+    items:
+    - !Item
+      name: Wall #Non-diag arms
+      positions:
+      - !Vector3 {x: 18, y: 0, z: 7.5}
+      - !Vector3 {x: 22, y: 0, z: 7.5}
+      - !Vector3 {x: 18, y: 0, z: 32.5}
+      - !Vector3 {x: 22, y: 0, z: 32.5}
+      - !Vector3 {x: 7.5, y: 0, z: 18}
+      - !Vector3 {x: 7.5, y: 0, z: 22}
+      - !Vector3 {x: 32.5, y: 0, z: 18}
+      - !Vector3 {x: 32.5, y: 0, z: 22}
+      rotations: [0,0,0,0,0,0,0,0]
+      sizes:
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      - !Vector3 {x: 15, y: 3, z: 0.1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Wall #Non-diag backplates
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 0.5}
+      - !Vector3 {x: 20, y: 0, z: 39.5}
+      - !Vector3 {x: 0.5, y: 0, z: 20}
+      - !Vector3 {x: 39.5, y: 0, z: 20}
+      rotations: [0,0,90,90]
+      sizes:
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      - !Vector3 {x: 3.9, y: 3, z: 1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Ramp #Non-diag long ramps
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 9}
+      - !Vector3 {x: 20, y: 0, z: 31}
+      - !Vector3 {x: 9, y: 0, z: 20}
+      - !Vector3 {x: 31, y: 0, z: 20}
+      - !Vector3 {x: 20, y: 0, z: 14.5}
+      - !Vector3 {x: 20, y: 0, z: 25.5}
+      - !Vector3 {x: 14.5, y: 0, z: 20}
+      - !Vector3 {x: 25.5, y: 0, z: 20}
+      rotations: [180,0,270, 90, 0,180,90,270]
+      sizes:
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 10}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      - !Vector3 {x: 3.9, y: 1, z: 1}
+      colors:
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 25, g: 25, b: 112}
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 255, g: 0, b: 255}
+    - !Item
+      name: Wall #Diag arms
+      positions:
+      - !Vector3 {x: 12.61, y: 0, z: 30.4}
+      - !Vector3 {x: 9.7, y: 0, z: 27.39}
+      - !Vector3 {x: 30.3, y: 0, z: 12.61}
+      - !Vector3 {x: 27.39, y: 0, z: 9.6}
+      - !Vector3 {x: 12.61, y: 0, z: 9.6}
+      - !Vector3 {x: 9.7, y: 0, z: 12.61}
+      - !Vector3 {x: 27.39, y: 0, z: 30.4}
+      - !Vector3 {x: 30.3, y: 0, z: 27.39}
+      rotations: [135,135,135,135,45,45,45,45]
+      sizes:
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      - !Vector3 {x: 0.1, y: 3, z: 15}
+      colors:
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: Wall #Diag backplates
+      positions:
+      - !Vector3 {x: 34, y: 0, z: 6}
+      - !Vector3 {x: 6, y: 0, z: 34}
+      - !Vector3 {x: 6, y: 0, z: 6}
+      - !Vector3 {x: 34, y: 0, z: 34}
+      rotations: [135,134,45,45]
+      sizes:
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      - !Vector3 {x: 4, y: 3, z: 1}
+      colors:
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: Ramp #Diag Ramps
+      positions:
+      - !Vector3 {x: 12.155, y: 0, z: 27.895}
+      - !Vector3 {x: 27.845, y: 0, z: 12.105}
+      - !Vector3 {x: 12.155, y: 0, z: 12.105}
+      - !Vector3 {x: 27.845, y: 0, z: 27.895}
+      - !Vector3 {x: 16.045, y: 0, z: 24.005}
+      - !Vector3 {x: 23.955, y: 0, z: 15.995}
+      - !Vector3 {x: 16.045, y: 0, z: 15.995}
+      - !Vector3 {x: 23.955, y: 0, z: 24.005}
+      rotations: [315,135,225,45,135,315,45,225]
+      sizes:
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 10}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      - !Vector3 {x: 4, y: 1, z: 1}
+      colors:
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+      - !RGB {r: 0, g: 100, b: 0}
+      - !RGB {r: 255, g: 215, b: 0}
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 255, g: 182, b: 193}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 2, y: 0, z: 20}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}
+    - !Item
+      name: GoodGoalMulti
+      positions:
+      - !Vector3 {x: 38, y: 0, z: 20}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}
+    - !Item
+      name: GoodGoalMulti
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 2}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}
+    - !Item
+      name: BadGoal
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 38}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}
+    - !Item
+      name: AntiDecayGoal #using alias for AAI 3.1.3 compatibility
+      positions:
+      - !Vector3 {x: 32.5, y: 3.1, z: 32.5}
+      initialValues: [1]
+      finalValues: [2]
+      changeRates: [0.001]
+    - !Item
+      name: DecayGoal
+      positions: 
+      - !Vector3 {x: 7.5, y: 3.1, z: 7.5}
+      initialValues: [1]
+      finalValues: [0.1]
+      changeRates: [-0.001]
+    - !Item
+      name: ShrinkGoal
+      positions:
+      - !Vector3 {x: 7.5, y: 0, z: 32.5}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}
+      changeRates: [0.005]
+    - !Item
+      name: GrowGoal
+      positions:
+      - !Vector3 {x: 32.5, y: 0, z: 7.5}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}
+      changeRates: [0.005]
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 20, y: 0.5, z: 20}
+      rotations: [-1]
