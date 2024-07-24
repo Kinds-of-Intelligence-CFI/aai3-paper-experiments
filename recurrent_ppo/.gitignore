@@ -4,7 +4,7 @@ aai/env
 
 # IDE-specific files
 .DS_Store
-../.idea/
+.idea/
 
 # Cache files
 src/animalai_stable_baselines/__pycache__
@@ -25,4 +25,4 @@ logdir*/
 
 
 # Logs
-wandb/
+ignore-wandb/

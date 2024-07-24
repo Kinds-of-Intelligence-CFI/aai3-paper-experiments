@@ -1,2 +1,35 @@
+# Animal-AI build
+AnimalAI.app
+aai/env
+
+# IDE-specific files
+.DS_Store
+.idea/
+
+# Cache files
+src/animalai_stable_baselines/__pycache__
+
+# Virtual environment
+recurrent_ppo/.venv/
+
+# Python generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Checkpoint files
+logdir*/
+
+
+# Logs
+wandb/
+
+
 #server
 *.vnc
+
+# Custom files to ignore
+ignore*

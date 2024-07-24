@@ -16,6 +16,7 @@ class Args:
     from_checkpoint: Optional[Path]
     logdir: Optional[Path]
     aai_timescale: Optional[int]
+    algorithm: Optional[str]
 
 
 def main():
@@ -27,8 +28,10 @@ def main():
     parser.add_argument('--timesteps', type=int, required=True, help='Number of steps to train agent on.')
     parser.add_argument('--aai_timescale', type=int, required=False, default=1,
                         help='The timescale to run AAI at. Defaults to 1, the human-play timescale.')
+    parser.add_argument("--algorithm", type=str, required=False, default="recurrent_ppo")
     args_raw = parser.parse_args()
     args = Args(**vars(args_raw))
+    print(args)
 
     try:
 
@@ -38,11 +41,12 @@ def main():
               logdir=args.logdir,
               timesteps=args.timesteps,
               aai_timescale=args.aai_timescale,
-              algorithm="recurrent_ppo",
+              algorithm=args.algorithm,
               observations="camera",
               resolution=64,
               numsaves=20,
-              wandb=True)
+              wandb=True,
+              inference=False)
     except Exception as e:
         logging.error(f"Exception: {e}")
         sys.exit(1)
