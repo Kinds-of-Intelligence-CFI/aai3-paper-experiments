@@ -3,6 +3,7 @@ from __future__ import annotations
 import csv
 import os
 import random
+import time
 from typing import TYPE_CHECKING, List, Union
 
 if TYPE_CHECKING:
@@ -12,7 +13,8 @@ if TYPE_CHECKING:
 from animalai.environment import AnimalAIEnvironment
 from mlagents_envs.envs.unity_gym_env import UnityToGymWrapper
 from sb3_contrib import RecurrentPPO
-from src.animalai_stable_baselines.yaml_handling import find_yaml_files, yaml_combinor
+from stable_baselines3 import PPO
+from yaml_handling import find_yaml_files, yaml_combinor
 
 
 def evaluate(aai_env_path: str,
@@ -29,11 +31,17 @@ def evaluate(aai_env_path: str,
              agent_inference: bool = False,
              base_port: int = 6600,
              verbose: bool = True,
-             random_seed: int = 42,
+             random_seed: int = 0,
              first_arena_ix_to_test: int = 0,
              save_step_results: bool = False,
-             no_graphics=False
+             no_graphics=False,
+             deterministic_prediction=True,
              ) -> None:
+
+    assert os.path.exists(aai_env_path)
+    assert os.path.exists(model_save_path)
+    assert os.path.exists(arenas_dir_path)
+
     arena_file_paths, arena_names = find_yaml_files(arenas_dir_path)
     model = load(model_save_path)
     random.seed(random_seed)
@@ -95,8 +103,8 @@ def evaluate(aai_env_path: str,
             step_counter = 0
 
             while not done:
-                action, _state = model.predict(obs, deterministic=False,)
-                print(action.item())
+                action, _state = model.predict(obs, deterministic=deterministic_prediction,)
+                print(action)
                 obs, reward, done, info = env.step(action.item())
                 episode_reward += reward
                 step_counter += 1
@@ -112,7 +120,8 @@ def evaluate(aai_env_path: str,
                                   "y_pos",
                                   "z_pos"]  # Extend this variable as needed
                     non_obs_labels = ["arena_name", "step_counter", "step_reward", "episode_reward"]
-                    col_data = [arena_name, step_counter, reward, episode_reward] + _get_obs_data_from_labels(obs_labels, obs)
+                    col_data = [arena_name, step_counter, reward, episode_reward] + _get_obs_data_from_labels(
+                        obs_labels, obs)
                     col_labels = non_obs_labels + obs_labels
                     _update_results_csv(results_csv_path=eval_csv_results_path,
                                         column_labels=col_labels,
@@ -167,28 +176,27 @@ def _increment_port_number(base_port: int,
 
 
 def example():
-    evaluate(aai_env_path="aai/env/env3.1.3/AAI.x86_64",
-             model_save_path="logdir/competition-curriculum/competition-curriculum-timescale300-L1_10_5M/training-5000000.0",
-             arenas_dir_path="aai/configs/paper/competition1",
-             eval_csv_results_path="results.csv",
-             load=RecurrentPPO.load,
-             use_camera=True,
-             resolution=64,
-             use_ray_casts=False,
-             timescale=1,
-             agent_inference=False,
-             save_step_results=False,
-             )
+    for seed in range(89, 100):
+        print(f"SEED: {seed}")
+        start = time.time()
+        evaluate(aai_env_path="/Users/mgm61/Documents/cambridge_cfi/aai3-paper-experiments/recurrent_ppo/aai/env"
+                              "/AnimalAI.app",
+                 model_save_path="logdir/foraging/foraging-train/rppo/training-1000000.0",
+                 arenas_dir_path="../configs/foragingTask",
+                 eval_csv_results_path=f"results/foragingTask/rppo/{seed}.csv",
+                 load=RecurrentPPO.load,
+                 use_camera=True,
+                 resolution=64,
+                 use_ray_casts=False,
+                 timescale=1,
+                 agent_inference=True,
+                 save_step_results=False,
+                 random_seed=seed,
+                 deterministic_prediction=False,
+                 )
+        end = time.time()
+        print(f"Done evaluating seed {seed}. Took {end-start} seconds.")
 
 
 if __name__ == "__main__":
     example()
-
-# TODO:
-#  - Strange behaviour from r-PPO when we try evaluation in this simple setting (not loading it properly?)
-
-# TODO:
-#  1. Trying to query actions on the super server
-#  2. Try to scp onto my own machine for visualisations
-#  3. Look at sbr_contrib predict method (is it different to sb3)
-#  4. model.set_env: extra arguments?
