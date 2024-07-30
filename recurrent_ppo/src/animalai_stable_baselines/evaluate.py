@@ -34,10 +34,10 @@ def evaluate(aai_env_path: str,
              random_seed: int = 0,
              first_arena_ix_to_test: int = 0,
              save_step_results: bool = False,
-             no_graphics=False,
-             deterministic_prediction=True,
+             no_graphics: bool = False,
+             deterministic_prediction: bool = True,
+             num_evals_per_instance: int = 1,
              ) -> None:
-
     assert os.path.exists(aai_env_path)
     assert os.path.exists(model_save_path)
     assert os.path.exists(arenas_dir_path)
@@ -97,46 +97,47 @@ def evaluate(aai_env_path: str,
         obs = env.reset()
 
         for instance_ix in range(batch_start_ix, batch_end_ix):
-            arena_name = arena_names[instance_ix]
-            done = False
-            episode_reward = 0
-            step_counter = 0
+            for _ in range(num_evals_per_instance):
+                arena_name = arena_names[instance_ix]
+                done = False
+                episode_reward = 0
+                step_counter = 0
 
-            while not done:
-                action, _state = model.predict(obs, deterministic=deterministic_prediction,)
-                print(action)
-                obs, reward, done, info = env.step(action.item())
-                episode_reward += reward
-                step_counter += 1
-                env.render()
+                while not done:
+                    action, _state = model.predict(obs, deterministic=deterministic_prediction, )
+                    print(action)
+                    obs, reward, done, info = env.step(action.item())
+                    episode_reward += reward
+                    step_counter += 1
+                    env.render()
 
-                if save_step_results:
-                    if verbose:
-                        print(f"Writing observation data for step {step_counter} of the '{arena_name}' arena.")
-                    obs_labels = ["x_velocity",
-                                  "y_velocity",
-                                  "z_velocity",
-                                  "x_pos",
-                                  "y_pos",
-                                  "z_pos"]  # Extend this variable as needed
-                    non_obs_labels = ["arena_name", "step_counter", "step_reward", "episode_reward"]
-                    col_data = [arena_name, step_counter, reward, episode_reward] + _get_obs_data_from_labels(
-                        obs_labels, obs)
-                    col_labels = non_obs_labels + obs_labels
-                    _update_results_csv(results_csv_path=eval_csv_results_path,
-                                        column_labels=col_labels,
-                                        column_data=col_data)
+                    if save_step_results:
+                        if verbose:
+                            print(f"Writing observation data for step {step_counter} of the '{arena_name}' arena.")
+                        obs_labels = ["x_velocity",
+                                      "y_velocity",
+                                      "z_velocity",
+                                      "x_pos",
+                                      "y_pos",
+                                      "z_pos"]  # Extend this variable as needed
+                        non_obs_labels = ["arena_name", "step_counter", "step_reward", "episode_reward"]
+                        col_data = [arena_name, step_counter, reward, episode_reward] + _get_obs_data_from_labels(
+                            obs_labels, obs)
+                        col_labels = non_obs_labels + obs_labels
+                        _update_results_csv(results_csv_path=eval_csv_results_path,
+                                            column_labels=col_labels,
+                                            column_data=col_data)
 
-                if done:
-                    if verbose:
-                        print(f"Episode Reward: {episode_reward}")
-                    obs = env.reset()
-                    col_labels = ["arena_name", "episode_reward"]
-                    col_data = [arena_name, episode_reward]
-                    _update_results_csv(results_csv_path=eval_csv_results_path,
-                                        column_labels=col_labels,
-                                        column_data=col_data)
-                    break
+                    if done:
+                        if verbose:
+                            print(f"Episode Reward: {episode_reward}")
+                        obs = env.reset()
+                        col_labels = ["arena_name", "episode_reward"]
+                        col_data = [arena_name, episode_reward]
+                        _update_results_csv(results_csv_path=eval_csv_results_path,
+                                            column_labels=col_labels,
+                                            column_data=col_data)
+                        break
         env.close()
         if verbose:
             print("Moving to next batch.")
@@ -176,26 +177,22 @@ def _increment_port_number(base_port: int,
 
 
 def example():
-    for seed in range(89, 100):
-        print(f"SEED: {seed}")
-        start = time.time()
-        evaluate(aai_env_path="/Users/mgm61/Documents/cambridge_cfi/aai3-paper-experiments/recurrent_ppo/aai/env"
-                              "/AnimalAI.app",
-                 model_save_path="logdir/foraging/foraging-train/rppo/training-1000000.0",
-                 arenas_dir_path="../configs/foragingTask",
-                 eval_csv_results_path=f"results/foragingTask/rppo/{seed}.csv",
-                 load=RecurrentPPO.load,
-                 use_camera=True,
-                 resolution=64,
-                 use_ray_casts=False,
-                 timescale=1,
-                 agent_inference=True,
-                 save_step_results=False,
-                 random_seed=seed,
-                 deterministic_prediction=False,
-                 )
-        end = time.time()
-        print(f"Done evaluating seed {seed}. Took {end-start} seconds.")
+    evaluate(aai_env_path="/Users/mgm61/Documents/cambridge_cfi/aai3-paper-experiments/recurrent_ppo/aai/env"
+                          "/AnimalAI.app",
+             model_save_path="logdir_important_checkpoints/ppo-niall_L1_with_sanity_green-2M_steps/training"
+                             "-2024_07_17_23_19/training-1000000.0",
+             arenas_dir_path="aai/configs/ignore-sanity_green",
+             eval_csv_results_path=f"results/ignore/ignore.csv",
+             load=RecurrentPPO.load,
+             use_camera=True,
+             resolution=64,
+             use_ray_casts=False,
+             timescale=1,
+             agent_inference=True,
+             save_step_results=False,
+             deterministic_prediction=False,
+             num_evals_per_instance=3,
+             )
 
 
 if __name__ == "__main__":

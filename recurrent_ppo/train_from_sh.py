@@ -28,7 +28,7 @@ def main():
     parser.add_argument('--timesteps', type=int, required=True, help='Number of steps to train agent on.')
     parser.add_argument('--aai_timescale', type=int, required=False, default=1,
                         help='The timescale to run AAI at. Defaults to 1, the human-play timescale.')
-    parser.add_argument("--algorithm", type=str, required=False, default="recurrent_ppo")
+    parser.add_argument("--algorithm", type=str, required=False, default="ppo")
     args_raw = parser.parse_args()
     args = Args(**vars(args_raw))
     print(args)
