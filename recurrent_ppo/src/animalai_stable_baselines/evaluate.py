@@ -14,7 +14,7 @@ from animalai.environment import AnimalAIEnvironment
 from mlagents_envs.envs.unity_gym_env import UnityToGymWrapper
 from sb3_contrib import RecurrentPPO
 from stable_baselines3 import PPO
-from yaml_handling import find_yaml_files, yaml_combinor
+from animalai_stable_baselines.yaml_handling import find_yaml_files, yaml_combinor
 
 
 def evaluate(aai_env_path: str,
@@ -105,7 +105,7 @@ def evaluate(aai_env_path: str,
 
                 while not done:
                     action, _state = model.predict(obs, deterministic=deterministic_prediction, )
-                    print(action)
+                    # print(action)
                     obs, reward, done, info = env.step(action.item())
                     episode_reward += reward
                     step_counter += 1
