@@ -4,4 +4,4 @@ xvfb-run -a python train_from_sh.py \
   --logdir ./logdir/operantChamber/operantChamber-train \
   --timesteps 2000000 \
   --aai_timescale 1 \
-  --algorithm ppo
+  --algorithm ppo \
