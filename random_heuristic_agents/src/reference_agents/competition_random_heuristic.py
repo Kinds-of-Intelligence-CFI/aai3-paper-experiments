@@ -33,6 +33,25 @@ def run_evaluation(config_folder: str, agent, agent_type: str, save_path_csv: st
 
     for p, n in zip(paths, names):
         print(f"Running episode: {n}")
+<<<<<<< Updated upstream:random_heuristic_agents/src/reference_agents/competition_random_heuristic.py
+=======
+        env = AnimalAIEnvironment(
+            file_name=str(find_executable(Path(".."))),
+            arenas_configurations=str(p),
+            worker_id=100,
+            base_port=port,
+            useRayCasts=True,
+            rayMaxDegrees=degrees,
+            raysPerSide=1,
+            play=False,
+            inference=False,
+            timescale=timescale,
+            no_graphics=False,
+        )
+
+        behavior = list(env.behavior_specs.keys())[0]
+        
+>>>>>>> Stashed changes:agents_reference/src/reference_agents/competition_random_heuristic.py
         if agent_type == "Random":
             env = AnimalAIEnvironment(
                 file_name=str(find_executable(Path(".."))),
@@ -156,5 +175,8 @@ def main():
     simulate = run_evaluation(folder, heuristicAgent, "Heuristic", "results/competition/heuristicAgent.csv", degrees=30)
     if simulate:
         print("Heuristic Agent successfully simulated.")
+<<<<<<< Updated upstream:random_heuristic_agents/src/reference_agents/competition_random_heuristic.py
     else:
         print("Error")
+=======
+>>>>>>> Stashed changes:agents_reference/src/reference_agents/competition_random_heuristic.py

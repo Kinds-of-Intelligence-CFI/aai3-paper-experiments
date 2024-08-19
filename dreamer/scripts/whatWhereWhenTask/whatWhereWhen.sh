@@ -1,4 +1,4 @@
-xvfb-run -a python train.py \
+CUDA_VISIBLE_DEVICES=0 xvfb-run -a python train.py \
   --task ../configs/whatWhereWhenTask/whatWhereWhenTask.yml \
   --env ../env/AAI.x86_64 \
   --logdir ./logdir/whatWhereWhen/whatWhereWhen-train \
