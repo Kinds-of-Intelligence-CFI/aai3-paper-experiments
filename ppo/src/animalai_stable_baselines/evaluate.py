@@ -177,7 +177,7 @@ def _increment_port_number(base_port: int,
 
 
 def example():
-    evaluate(aai_env_path="/Users/mgm61/Documents/cambridge_cfi/aai3-paper-experiments/recurrent_ppo/aai/env"
+    evaluate(aai_env_path="/ppo/aai/env"
                           "/AnimalAI.app",
              model_save_path="logdir_important_checkpoints/ppo-niall_L1_with_sanity_green-2M_steps/training"
                              "-2024_07_17_23_19/training-1000000.0",

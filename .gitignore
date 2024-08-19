@@ -10,7 +10,7 @@ aai/env
 src/animalai_stable_baselines/__pycache__
 
 # Virtual environment
-recurrent_ppo/.venv/
+ppo/.venv/
 
 # Python generated files
 __pycache__/

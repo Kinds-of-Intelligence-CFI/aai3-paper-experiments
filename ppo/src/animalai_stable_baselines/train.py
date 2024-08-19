@@ -1,4 +1,6 @@
 # ruff: noqa: E402
+from typing import Literal, Union
+
 import logging
 import os
 import random
@@ -52,7 +54,7 @@ def train(task: Path,
           no_graphics: bool = False,
           device: str = 'auto',
           wandb: bool = False,
-          inference: bool = False):
+          inference: bool = False,):
     # Argument checks
     assert from_checkpoint.exists() if from_checkpoint is not None else True, f"Checkpoint not found: {from_checkpoint}."
     assert from_checkpoint.is_file() if from_checkpoint is not None else True, f"Checkpoint must be a file but is not: {from_checkpoint}."
@@ -104,7 +106,7 @@ def train(task: Path,
             policy = "CnnLstmPolicy"
             policy_kwargs = dict(activation_fn=th.nn.ReLU,
                                  enable_critic_lstm=False,
-                                 lstm_hidden_size=32, )
+                                 lstm_hidden_size=32,)
         else:
             policy = "CnnPolicy"
             policy_kwargs = dict(activation_fn=th.nn.ReLU)
@@ -215,19 +217,19 @@ def train(task: Path,
 
 def main():
     before = time.time()
-    num_time_steps = 1 * 10 ** 6
-    train(task=Path("../configs/foragingTask/foragingTaskSpawnerTree.yml"),
+    num_time_steps = 500 * 10**3
+    train(task=Path("../configs/operantChamberTask/operantChamberTaskCurriculum-A.yml"),
           algorithm="ppo",
-          env=Path("/Users/mgm61/Documents/cambridge_cfi/aai3-paper-experiments/recurrent_ppo/aai/env/AnimalAI.app"),
+          env=Path("/ppo/aai/env/AnimalAI.app"),
           observations='camera',
           timesteps=num_time_steps,
           resolution=64,
           numsaves=10,
           wandb=True,
           from_checkpoint=None,
-          aai_timescale=300,
-          inference=False,
-          logdir=Path("/Users/mgm61/Documents/cambridge_cfi/aai3-paper-experiments/recurrent_ppo/logdir/foraging/foraging-train"),
+          aai_timescale=1,
+          inference=True,
+          logdir=Path("/ppo/logdir/operant-curriculum-debugging"),
           )
     after = time.time()
     print(f"Total runtime: {(after - before) / 60} minutes for {num_time_steps} time steps.")
