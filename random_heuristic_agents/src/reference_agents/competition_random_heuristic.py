@@ -33,7 +33,6 @@ def run_evaluation(config_folder: str, agent, agent_type: str, save_path_csv: st
 
     for p, n in zip(paths, names):
         print(f"Running episode: {n}")
-        
         if agent_type == "Random":
             env = AnimalAIEnvironment(
                 file_name=str(find_executable(Path(".."))),
