@@ -26,10 +26,10 @@
 #   --aai-timescale 300
 
 CUDA_VISIBLE_DEVICES=1 xvfb-run -a python train.py \
-  --task ./aai/configs/paper/competition-extra \
+  --task ./aai/configs/paper/competition-extra2 \
   --env ./aai/env/env3.1.3/AAI.x86_64 \
-  --logdir ./logdir/competition-curriculum/competition-curriculum-timescale300-eval-extra \
+  --logdir ./logdir/competition-curriculum/competition-curriculum-timescale300-eval-extra2 \
   --from-checkpoint ./logdir/competition-curriculum/competition-curriculum-timescale300-L1_10_5M/checkpoint.ckpt \
   --eval-mode \
-  --dreamer-args "--run.steps 64000" \
+  --dreamer-args "--run.steps 6000" \
   --aai-timescale 300
