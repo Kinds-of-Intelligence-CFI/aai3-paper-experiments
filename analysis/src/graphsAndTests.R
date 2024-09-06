@@ -213,7 +213,7 @@ ggsave("operantChamberBasicTrainingPlot.svg", plot = operantChamber_training_plo
 
 (operantChamber_training_plot_curriculum <- ggplot()  + 
     geom_rect(data = background_colour_rects, aes(xmin = start, xmax = end, ymin = -1, ymax = 1, fill = level), alpha = 0.5, inherit.aes = FALSE) +
-    scale_color_manual(values = c("#984ea3", "#4daf4a")) +
+    scale_color_manual(values = c("#984ef7", "#4dee4a")) +
     scale_fill_manual(values=colours, guide="none") + geom_line(data = operantchamber_combined_training_curriculum,
                                                                 aes(x=Step, y=Score, colour = Agent), size = 1.5) +
     # annotate("segment", x=0, xend=2000000, y=mean(random$finalReward), yend=mean(random$finalReward), color = "black", linetype="dashed") +
