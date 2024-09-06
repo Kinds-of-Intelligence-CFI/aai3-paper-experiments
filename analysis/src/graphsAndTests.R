@@ -422,7 +422,7 @@ names(colours) <- background_colour_rects$level
     geom_rect(data = background_colour_rects, aes(xmin = start, xmax = end, ymin = -1, ymax = 5, fill = level), alpha = 0.5, inherit.aes = FALSE) +
     scale_fill_manual(values=colours, guide="none") + geom_line(data = competition_combined_training,
                                                                 aes(x=Step, y=Score, colour = Agent), size = 1.5)  +
-    scale_color_manual(values = c("#984ea3", "#4daf4a")) +
+    scale_color_manual(values = c("#4daf4a", "#984ea3")) +
     theme_minimal() +
     theme(text = element_text(size=20)))
 
