@@ -84,7 +84,7 @@ foraging_combined_training <- rbind(ppo_training, dreamer_training) %>%
 
 (foraging_line_plot <- ggplot(data = foraging_combined_training,
                               aes(x=Step, y=Score, colour = Agent)) + geom_line(size = 1.5) +
-    scale_color_manual(values = c("#984ea3", "#4daf4a")) +
+    scale_color_manual(values = c("#4daf4a", "#984ea3")) +
     theme_minimal() +
     theme(text = element_text(size=20)))
 
@@ -199,7 +199,7 @@ names(colours) <- background_colour_rects$level
 (operantChamber_training_plot_basic <- ggplot()  + 
     scale_fill_manual(values=colours) + geom_line(data = operantchamber_combined_training_basic,
                                                   aes(x=Step, y=Score, colour = Agent), size = 1.5)  +
-    scale_color_manual(values = c("#984ea3", "#4daf4a")) +
+    scale_color_manual(values = c("#4daf4a", "#984ea3")) +
     # annotate("segment", x=0, xend=2000000, y=mean(random$finalReward), yend=mean(random$finalReward), color = "black", linetype="dashed") +
     # annotate("segment", x=0, xend=2000000, y=mean(heuristic$finalReward), yend=mean(heuristic$finalReward), color = "black", linetype="dashed") +
     # #annotate("label", x = 2050000, y = tail(ppo_basic_training$Score, n=1), label = "PPO") +
@@ -213,7 +213,7 @@ ggsave("operantChamberBasicTrainingPlot.svg", plot = operantChamber_training_plo
 
 (operantChamber_training_plot_curriculum <- ggplot()  + 
     geom_rect(data = background_colour_rects, aes(xmin = start, xmax = end, ymin = -1, ymax = 1, fill = level), alpha = 0.5, inherit.aes = FALSE) +
-    scale_color_manual(values = c("#984ef7", "#4dee4a")) +
+    scale_color_manual(values = c("#4dee4a", "#984ef7")) +
     scale_fill_manual(values=colours, guide="none") + geom_line(data = operantchamber_combined_training_curriculum,
                                                                 aes(x=Step, y=Score, colour = Agent), size = 1.5) +
     # annotate("segment", x=0, xend=2000000, y=mean(random$finalReward), yend=mean(random$finalReward), color = "black", linetype="dashed") +
@@ -483,7 +483,7 @@ se <- sqrt(diag(vcov(model)))
 (tab <- cbind(Est = fixef(model), LL = fixef(model) - 1.96 * se, UL = fixef(model) + 1.96 *
                 se))
 
-odds_ratios_CIs <- exp(tab)
+(odds_ratios_CIs <- exp(tab))
 
 sink()
 
