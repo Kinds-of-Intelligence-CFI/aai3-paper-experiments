@@ -1,13 +1,13 @@
 ### Graph Plotting and Analysis for Animal-AI 3 Paper
-### Author: K. Voudouris, 2023 (C)
-### Version: 4.3.1 (Beagle Scouts)
+### Author: K. Voudouris, 2024 (C)
+### Version: 4.4.1 (Race for Your Life)
 
 ### Packages and Preamble
-
 
 library(FSA)
 library(jsonlite)
 library(lme4)
+library(svglite)
 library(tidyverse)
 
 options(scipen = 999)
@@ -19,34 +19,32 @@ set.seed(2023)
 ### Foraging Tree                                                           ####
 ################################################################################
 
-dreamer <- stream_in(file("../../dreamer/logdir/foraging/foraging-eval/metrics.jsonl")) %>%
-  select(`episode/score`) %>%
-  mutate(`episode/score` = str_remove_all(`episode/score`, "\\[|\\]"),
-         `episode/score` = as.numeric(`episode/score`)) %>%
-  drop_na() %>%
-  slice_sample(n = 100)
+dreamer <- read.csv("../../dreamer/results/foragingTask-eval.csv")
 
-heuristic <- read.csv("../data/foraging/heuristicAgent100Foraging.csv") %>%
+heuristic <- read.csv("../../random_heuristic_agents/results/foragingTask/heuristic.csv") %>%
   select(FinalReward) %>%
-  mutate(FinalReward = str_remove_all(FinalReward, "\\[|\\]"),
-         FinalReward = as.numeric(FinalReward))
+  transmute(finalReward = str_remove_all(FinalReward, "\\[|\\]"),
+            finalReward = as.numeric(finalReward))
 
-randomactionagent <- read.csv("../data/foraging/randomActionAgent100Foraging.csv") %>%
-  select(FinalReward)
+random <- read.csv("../../random_heuristic_agents/results/foragingTask/random.csv") %>%
+  select(FinalReward) %>%
+  transmute(finalReward = str_remove_all(FinalReward, "\\[|\\]"),
+            finalReward = as.numeric(finalReward))
 
-ppo <- read.csv("../data/foraging/PPORaycast100Foraging.csv") %>%
-  select(FinalReward)
+ppo <- read.csv("../../ppo/results/foragingTask/ppo/all.csv") %>%
+  select(episode_reward) %>%
+  rename(finalReward = episode_reward)
 
-foraging_combined_data <- tibble(`Random Action Agent` = randomactionagent$FinalReward,
-                        `Heuristic Agent` = heuristic$FinalReward,
-                        `PPO (Raycast)` = ppo$FinalReward,
-                        `Dreamer-v3 (64x64 Image)` = dreamer$`episode/score`) %>%
+foraging_combined_data <- tibble(`Random Action Agent` = random$finalReward,
+                                 `Heuristic Agent` = heuristic$finalReward,
+                                 `PPO` = ppo$finalReward,
+                                 `Dreamer-v3` = dreamer$finalReward) %>%
   pivot_longer(cols = everything(),
                names_to = "Agent",
                values_to = "Score") %>%
   mutate(Agent = as_factor(Agent))
 
-sink("../data/foraging/foragingTaskOmnibusTests.txt")
+sink("../outputs/foragingTaskOmnibusTests.txt")
 
 cat("Foraging Task: 100 runs\n")
 cat("Today's Date:", Sys.Date(), "\n")
@@ -58,188 +56,188 @@ dunnTest(Score ~ Agent, data = foraging_combined_data,
 sink()
 
 (foraging_plot <- ggplot(data = foraging_combined_data,
-                aes(x=Agent, y=Score)) + geom_violin(aes(fill = Agent)) + geom_point() +
+                         aes(x=Agent, y=Score)) + geom_violin(aes(fill = Agent), scale = "width") + geom_point() +
     theme_minimal() +
-    theme(text = element_text(size=20)) +
-    scale_fill_manual(values = c("#e41a1c", "#377eb8", "#4daf4a", "#984ea3")))
+    theme(text = element_text(size=20),
+          axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
+    scale_color_manual(values = c("#e41a1c", "#377eb8", "#984ea3", "#4daf4a")) +
+    scale_fill_manual(values = c("#e41a1c", "#377eb8", "#984ea3", "#4daf4a")))
 
+ggsave("foragingTaskViolinPlot.svg", plot = foraging_plot, device = "svg", path = "../figures/", width = 5000, height = 2800, units = "px")
 
 ## Training runs
 
-dreamer_training <- stream_in(file("../../dreamer/logdir/foraging/foraging-train/metrics.jsonl")) %>%
-  select(step, `episode/score`) %>%
-  mutate(`episode/score` = str_remove_all(`episode/score`, "\\[|\\]"),
-         `episode/score` = as.numeric(`episode/score`)) %>%
-  drop_na() %>%
-  rename(Step = step,
-         Score = `episode/score`)
-
-dreamer_training <- dreamer_training %>% mutate(Agent = rep("Dreamer-v3 (64x64 Image)"))
-
-ppo_training <- read.csv("../data/foraging/PPORaycastForagingTraining.csv") %>%
-  transmute(Agent = rep("PPO (Raycast)", nrow(.)),
+dreamer_training <- read.csv("../../dreamer/results/foragingTask-training.csv") %>% 
+  transmute(Agent = rep("Dreamer-v3"),
             Step = Step,
-            Score = Value)
+            Score = Score_movingavg)
+
+ppo_training <- read.csv("../../ppo/results/foragingTask/ppo/training.csv") %>%
+  transmute(Agent = rep("PPO", nrow(.)),
+            Step = (Step+1)*(1000000/(max(.$Step)+1)),
+            Score = PPO..foraging.training..1M.steps..aai_timescale.1...rollout.ep_rew_mean)
 
 foraging_combined_training <- rbind(ppo_training, dreamer_training) %>%
-  mutate(Agent = as_factor(Agent),
+  mutate(Agent = factor(Agent, levels = c("Dreamer-v3", "PPO")),
          Step = as.numeric(Step),
          Score = as.numeric(Score))
 
-(line_plot <- ggplot(data = foraging_combined_training,
-                     aes(x=Step, y=Score, colour = Agent)) + geom_line() +
+(foraging_line_plot <- ggplot(data = foraging_combined_training,
+                              aes(x=Step, y=Score, colour = Agent)) + geom_line(size = 1.5) +
+    scale_color_manual(values = c("#984ea3", "#4daf4a")) +
     theme_minimal() +
     theme(text = element_text(size=20)))
 
-(smooth_plot <- ggplot(data = foraging_combined_training,
-                       aes(x=Step, y=Score, colour = Agent)) + geom_smooth() +
-    theme_minimal() +
-    theme(text = element_text(size=20)))
-
+ggsave("foragingTaskTrainingPlot.svg", plot = foraging_line_plot, device = "svg", path = "../figures/", width = 5000, height = 2800, units = "px")
 
 ################################################################################
-### Button Press                                                            ####
+### Operant Chamber Task                                                    ####
 ################################################################################
 
 
-dreamer <- stream_in(file("../../dreamer/logdir/button/button-eval/metrics.jsonl")) %>%
-  select(`episode/score`) %>%
-  mutate(`episode/score` = str_remove_all(`episode/score`, "\\[|\\]"),
-         `episode/score` = as.numeric(`episode/score`)) %>%
-  drop_na() %>%
-  slice_sample(n = 100)
+dreamer_basic <- read.csv("../../dreamer/results/operantChamber-eval.csv")
 
-heuristic <- read.csv("../data/buttonPress/heuristicAgent100Button.csv") %>%
+dreamer_curriculum <- read.csv("../../dreamer/results/operantChamberCurriculum-eval.csv")
+
+heuristic <- read.csv("../../random_heuristic_agents/results/operantChamberTask/heuristic.csv") %>%
   select(FinalReward) %>%
-  mutate(FinalReward = str_remove_all(FinalReward, "\\[|\\]"),
-         FinalReward = as.numeric(FinalReward))
+  transmute(finalReward = str_remove_all(FinalReward, "\\[|\\]"),
+            finalReward = as.numeric(finalReward))
 
-randomactionagent <- read.csv("../data/buttonPress/randomActionAgent100Button.csv") %>%
-  select(FinalReward)
+random <- read.csv("../../random_heuristic_agents/results/operantChamberTask/random.csv") %>%
+  select(FinalReward) %>%
+  mutate(finalReward = str_remove_all(FinalReward, "\\[|\\]"),
+         finalReward = as.numeric(finalReward))
 
-ppo <- read.csv("../data/buttonPress/PPORaycast100Button.csv") %>%
-  select(FinalReward)
+ppo_basic <- read.csv("../../ppo/results/operantChamber/ppo/all.csv") %>%
+  transmute(finalReward = as.numeric(episode_reward))
 
-button_combined_data <- tibble(`Random Action Agent` = randomactionagent$FinalReward,
-                        `Heuristic Agent` = heuristic$FinalReward,
-                        `PPO (Raycast)` = ppo$FinalReward,
-                        `Dreamer-v3 (64x64 Image)` = dreamer$`episode/score`) %>%
+ppo_curriculum <- read.csv("../../ppo/results/operantChamber/ppo/all-curriculum.csv") %>%
+  transmute(finalReward = as.numeric(episode_reward))
+
+operantchamber_combined_data <- tibble(`Random Action Agent` = random$finalReward,
+                                       `Heuristic Agent` = heuristic$finalReward,
+                                       `PPO` = ppo_basic$finalReward,
+                                       `PPO Curriculum` = ppo_curriculum$finalReward,
+                                       `Dreamer-v3` = dreamer_basic$finalReward,
+                                       `Dreamer-v3 Curriculum` = dreamer_curriculum$finalReward) %>%
   pivot_longer(cols = everything(),
                names_to = "Agent",
                values_to = "Score") %>%
   mutate(Agent = as_factor(Agent))
 
-sink("../data/buttonPress/ButtonPressTaskOmnibusTests.txt")
+sink("../outputs/operantChamberTaskOmnibusTests.txt")
 
-cat("Foraging Task: 100 runs\n")
+cat("Operant Chamber Task: 100 runs\n")
 cat("Today's Date:", Sys.Date(), "\n")
-kruskal.test(Score ~ Agent, data = button_combined_data)
+kruskal.test(Score ~ Agent, data = operantchamber_combined_data)
 
-dunnTest(Score ~ Agent, data = button_combined_data,
+dunnTest(Score ~ Agent, data = operantchamber_combined_data,
          method="bonferroni")
 
 sink()
 
-(button_plot <- ggplot(data = button_combined_data,
-                aes(x=Agent, y=Score)) + geom_violin(aes(fill = Agent)) + geom_point() +
+(operantChamber_plot <- ggplot(data = operantchamber_combined_data,
+                               aes(x=Agent, y=Score)) + geom_violin(aes(fill = Agent), scale = "width") + geom_point() +
     theme_minimal() +
-    theme(text = element_text(size=20)) +
-    scale_fill_manual(values = c("#e41a1c", "#377eb8", "#4daf4a", "#984ea3")))
+    theme(text = element_text(size=20),
+          axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
+    scale_fill_manual(values = c("#e41a1c", "#377eb8", "#984ea3", "#984ef7", "#4daf4a", "#4dee4a")))
+
+ggsave("operantChamberViolinPlot.svg", plot = operantChamber_plot, device = "svg", path = "../figures/", width = 5000, height = 2800, units = "px")
 
 ## Training runs
 
-dreamer_training <- stream_in(file("../../dreamer/logdir/button/button-train/metrics.jsonl")) %>%
-  select(step, `episode/score`) %>%
-  mutate(`episode/score` = str_remove_all(`episode/score`, "\\[|\\]"),
-         `episode/score` = as.numeric(`episode/score`)) %>%
-  drop_na() %>%
-  rename(Step = step,
-         Score = `episode/score`)
-
-dreamer_training <- dreamer_training %>% mutate(Agent = rep("Dreamer-v3 (64x64 Image)"))
-
-ppo_training <- read.csv("../data/buttonPress/PPORaycastButtonTraining.csv") %>%
-  transmute(Agent = rep("PPO (Raycast)", nrow(.)),
+dreamer_basic_training <- read.csv("../../dreamer/results/operantChamber-training.csv") %>%
+  transmute(Agent = rep("Dreamer-v3"),
             Step = Step,
-            Score = Value) %>%
-  filter(Step < 2000000)
+            Score = Score_movingavg)
 
-button_combined_training <- rbind(ppo_training, dreamer_training) %>%
-  mutate(Agent = as_factor(Agent),
+dreamer_curriculum_training <- read.csv("../../dreamer/results/operantChamberCurriculum-training.csv") %>%
+  transmute(Agent = rep("Dreamer-v3"),
+            Step = Step,
+            Score = Score_movingavg)
+
+ppo_basic_training <- read.csv("../../ppo/results/operantChamber/ppo/training.csv") %>%
+  transmute(Agent = rep("PPO", nrow(.)),
+            Step = (Step+1)*(2000000/(max(.$Step)+1)),
+            Score = PPO..default...operant.training..aai_timescale.1..2M.steps...rollout.ep_rew_mean)
+
+ppo_curriculum_training_data <- read.csv("../../ppo/results/operantChamber/ppo/training-curriculum.csv") %>%
+  select(!(ends_with("_MIN") | ends_with("_MAX")))
+
+rewards <- c(ppo_curriculum_training_data$PPO..default...operantCurriculum.A..timescale.1..400K.timesteps...rollout.ep_rew_mean,
+             ppo_curriculum_training_data$PPO..default...operantCurriculum.B..timescale.1..400K.timesteps...rollout.ep_rew_mean,
+             ppo_curriculum_training_data$PPO..default...operantCurriculum.C..timescale.1..400K.timesteps...rollout.ep_rew_mean,
+             ppo_curriculum_training_data$PPO..default...operantCurriculum.D..timescale.1..400K.timesteps...rollout.ep_rew_mean,
+             ppo_curriculum_training_data$PPO..default...operantCurriculum.E..timescale.1..400K.timesteps...rollout.ep_rew_mean
+)
+
+ppo_curriculum_training <- tibble(Agent = rep("PPO", 1000),
+                                  Step = seq(2000, 2000000, 2000),
+                                  Score = rewards)
+
+operantchamber_combined_training_basic <- bind_rows(ppo_basic_training, 
+                                                    dreamer_basic_training) %>%
+  mutate(Agent = factor(Agent, levels=c("Dreamer-v3", "PPO")),
          Step = as.numeric(Step),
          Score = as.numeric(Score))
 
-(line_plot <- ggplot(data = button_combined_training,
-                     aes(x=Step, y=Score, colour = Agent)) + geom_line() +
+operantchamber_combined_training_curriculum <- bind_rows(ppo_curriculum_training, 
+                                                         dreamer_curriculum_training) %>%
+  mutate(Agent = factor(Agent, levels=c("Dreamer-v3", "PPO")),
+         Step = as.numeric(Step),
+         Score = as.numeric(Score))
+
+background_colour_rects <- data.frame(start = seq(0, 1600000, 400000), 
+                                      end = seq(400000, 2000000, 400000), 
+                                      level = c ("A", "B", "C", "D", "E"))
+
+colours <- c("grey","white","grey","white","grey")
+names(colours) <- background_colour_rects$level
+
+(operantChamber_training_plot_basic <- ggplot()  + 
+    scale_fill_manual(values=colours) + geom_line(data = operantchamber_combined_training_basic,
+                                                  aes(x=Step, y=Score, colour = Agent), size = 1.5)  +
+    scale_color_manual(values = c("#984ea3", "#4daf4a")) +
+    # annotate("segment", x=0, xend=2000000, y=mean(random$finalReward), yend=mean(random$finalReward), color = "black", linetype="dashed") +
+    # annotate("segment", x=0, xend=2000000, y=mean(heuristic$finalReward), yend=mean(heuristic$finalReward), color = "black", linetype="dashed") +
+    # #annotate("label", x = 2050000, y = tail(ppo_basic_training$Score, n=1), label = "PPO") +
+    # #annotate("label", x = 2050000, y = tail(dreamer_basic_training$Score, n=1), label = "Dreamer") +
+    # annotate("label", x = 250000, y = mean(random$finalReward)+0.05, label = "Random") +
+    # annotate("label", x = 250000, y = mean(heuristic$finalReward)+0.05, label = "Heuristic") +
     theme_minimal() +
     theme(text = element_text(size=20)))
 
-(smooth_plot <- ggplot(data = button_combined_training,
-                       aes(x=Step, y=Score, colour = Agent)) + geom_smooth() +
+ggsave("operantChamberBasicTrainingPlot.svg", plot = operantChamber_training_plot_basic, device = "svg", path = "../figures/", width = 5000, height = 2800, units = "px")
+
+(operantChamber_training_plot_curriculum <- ggplot()  + 
+    geom_rect(data = background_colour_rects, aes(xmin = start, xmax = end, ymin = -1, ymax = 1, fill = level), alpha = 0.5, inherit.aes = FALSE) +
+    scale_color_manual(values = c("#984ea3", "#4daf4a")) +
+    scale_fill_manual(values=colours, guide="none") + geom_line(data = operantchamber_combined_training_curriculum,
+                                                                aes(x=Step, y=Score, colour = Agent), size = 1.5) +
+    # annotate("segment", x=0, xend=2000000, y=mean(random$finalReward), yend=mean(random$finalReward), color = "black", linetype="dashed") +
+    # annotate("segment", x=0, xend=2000000, y=mean(heuristic$finalReward), yend=mean(heuristic$finalReward), color = "black", linetype="dashed") +
+    # #annotate("label", x = 2050000, y = tail(ppo_basic_training$Score, n=1), label = "PPO") +
+    # #annotate("label", x = 2050000, y = tail(dreamer_basic_training$Score, n=1), label = "Dreamer") +
+    # annotate("label", x = 1800000, y = mean(random$finalReward)+0.05, label = "Random") +
+    # annotate("label", x = 1800000, y = mean(heuristic$finalReward)+0.05, label = "Heuristic") +
     theme_minimal() +
-    theme(text = element_text(size=20)) + ylim(-1.1,1))
+    theme(text = element_text(size=20)))
+
+ggsave("operantChamberCurriculumTrainingPlot.svg", plot = operantChamber_training_plot_curriculum, device = "svg", path = "../figures/", width = 5000, height = 2800, units = "px")
 
 
 ################################################################################
 ### Competition                                                             ####
 ################################################################################
 
-
-## Load all data - lots
-
-ppo_results <- read.csv("../data/competitionAAITestbed/PPOAAITestbed2050.csv") %>%
-  mutate(episode = str_remove_all(episode, ".yaml"),
-         finalReward = as.numeric(finalReward),
-         Agent = rep("PPO (Raycast)", nrow(.)))
-
-ppo_training <- read.csv("../data/competitionAAITestbed/competition_raycastppo_training.csv")
-
-heuristic_1319 <- read.csv("../data/competitionAAITestbed/Heuristic_1319.csv") %>%
-  mutate(seed = rep("1319", nrow(.)))
-heuristic_1357 <- read.csv("../data/competitionAAITestbed/Heuristic_1357.csv") %>%
-  mutate(seed = rep("1357", nrow(.)))
-heuristic_1602 <- read.csv("../data/competitionAAITestbed/Heuristic_1602.csv") %>%
-  mutate(seed = rep("1602", nrow(.)))
-heuristic_5281 <- read.csv("../data/competitionAAITestbed/Heuristic_5281.csv") %>%
-  mutate(seed = rep("5281", nrow(.)))
-heuristic_8198 <- read.csv("../data/competitionAAITestbed/Heuristic_8198.csv") %>%
-  mutate(seed = rep("8198", nrow(.)))
-
-heuristic_results <- heuristic_1319 %>%
-  mutate(episode = str_remove_all(episode, ".yaml"),
-         finalReward = as.numeric(str_remove_all(finalReward, "\\[|\\]")),
-         Agent = rep("Heuristic Agent", nrow(.)))
-
-all_heuristic_results <- rbind(heuristic_1319, heuristic_1357) %>%
-  rbind(., heuristic_1602) %>%
-  rbind(., heuristic_5281) %>%
-  rbind(., heuristic_8198) %>%
-  mutate(episode = str_remove_all(episode, ".yaml"),
-         finalReward = as.numeric(str_remove_all(finalReward, "\\[|\\]")),
-         Agent = rep("Heuristic Agent", nrow(.)))
-
-raa_1056 <- read.csv("../data/competitionAAITestbed/RandomActionAgent_1056.csv") %>%
-  mutate(seed = rep("1056", nrow(.)))
-raa_1942 <- read.csv("../data/competitionAAITestbed/RandomActionAgent_1942.csv") %>%
-  mutate(seed = rep("1942", nrow(.)))
-raa_8812 <- read.csv("../data/competitionAAITestbed/RandomActionAgent_8812.csv") %>%
-  mutate(seed = rep("8812", nrow(.)))
-raa_9022 <- read.csv("../data/competitionAAITestbed/RandomActionAgent_9022.csv") %>%
-  mutate(seed = rep("9022", nrow(.)))
-raa_9917 <- read.csv("../data/competitionAAITestbed/RandomActionAgent_9917.csv") %>%
-  mutate(seed = rep("9917", nrow(.)))
-
-raa_results <- rbind(raa_1056, raa_1942) %>%
-  rbind(., raa_8812) %>%
-  rbind(., raa_9022) %>%
-  rbind(., raa_9917) %>%
-  mutate(episode = str_remove_all(episode, ".yaml"),
-         finalReward = as.numeric(str_remove_all(finalReward, "\\[|\\]")),
-         Agent = rep("Random Action Agent", nrow(.)))
-
+## Load all data
 
 pass_marks <- read.csv("../data/competitionAAITestbed/passmarks.csv") %>%
   mutate(episode = str_remove_all(episode, ".yaml"))
+
+olympics_scores <- read.csv("../data/competitionAAITestbed/olympics_scores_long.csv")
 
 episode_names_1 <- pass_marks %>% filter(str_detect(episode, "[0-1][0-9]-[0-3][0-9]-01")) %>% select(episode)
 
@@ -247,118 +245,25 @@ episode_names_2 <- pass_marks %>% filter(str_detect(episode, "[0-1][0-9]-[0-3][0
 
 episode_names_3 <- pass_marks %>% filter(str_detect(episode, "[0-1][0-9]-[0-3][0-9]-03")) %>% select(episode)
 
+dreamer_results <- read.csv("../../dreamer/results/competition-eval.csv") %>%
+  mutate(Agent = rep("Dreamer-v3", nrow(.)))
 
+ppo_results <- read.csv("../../ppo/results/competition/ppo/all.csv") %>%
+  transmute(episode = str_remove_all(arena_name, ".yaml"),
+            finalReward = as.numeric(episode_reward),
+            Agent = rep("PPO", nrow(.)))
 
-dreamer_1_4m <- stream_in(file("../../dreamer/logdir/competition/competition-eval-ind1/metrics.jsonl")) %>%
-  select(`episode/score`) %>%
-  mutate(`episode/score` = str_remove_all(`episode/score`, "\\[|\\]"),
-         `episode/score` = as.numeric(`episode/score`)) %>%
-  drop_na() %>%
-  slice_head(n = 300) %>%
-  rename(finalReward = `episode/score`)
+heuristic_results <- read.csv("../../random_heuristic_agents/results/competition/heuristicAgent.csv") %>%
+  transmute(episode = str_remove_all(episode, ".yaml"),
+            finalReward = str_remove_all(finalReward, "\\[|\\]"),
+            finalReward = as.numeric(finalReward),
+            Agent = rep("Heuristic Agent", nrow(.)))
 
-dreamer_1_4m$episode <- episode_names_1$episode
-
-dreamer_2_4m <- stream_in(file("../../dreamer/logdir/competition/competition-eval-ind2/metrics.jsonl")) %>%
-  select(`episode/score`) %>%
-  mutate(`episode/score` = str_remove_all(`episode/score`, "\\[|\\]"),
-         `episode/score` = as.numeric(`episode/score`)) %>%
-  drop_na() %>%
-  slice_head(n = 300) %>%
-  rename(finalReward = `episode/score`)
-
-dreamer_2_4m$episode <- episode_names_2$episode
-
-
-dreamer_3_4m <- stream_in(file("../../dreamer/logdir/competition/competition-eval-ind3/metrics.jsonl")) %>%
-  select(`episode/score`) %>%
-  mutate(`episode/score` = str_remove_all(`episode/score`, "\\[|\\]"),
-         `episode/score` = as.numeric(`episode/score`)) %>%
-  drop_na() %>%
-  slice_head(n = 300) %>%
-  rename(finalReward = `episode/score`)
-
-dreamer_3_4m$episode <- episode_names_3$episode
-
-dreamer_4m_results <- rbind(dreamer_1_4m, dreamer_2_4m) %>%
-  rbind(., dreamer_3_4m) %>%
-  mutate(Agent = rep("Dreamer-v3 (64x64 Image) - 4M"))
-
-
-dreamer_1_8m <- stream_in(file("../../dreamer/logdir/competition-long8m/competition-long8m-eval-ind1/metrics.jsonl")) %>%
-  select(`episode/score`) %>%
-  mutate(`episode/score` = str_remove_all(`episode/score`, "\\[|\\]"),
-         `episode/score` = as.numeric(`episode/score`)) %>%
-  drop_na() %>%
-  slice_head(n = 300) %>%
-  rename(finalReward = `episode/score`)
-
-dreamer_1_8m$episode <- episode_names_1$episode
-
-dreamer_2_8m <- stream_in(file("../../dreamer/logdir/competition-long8m/competition-long8m-eval-ind2/metrics.jsonl")) %>%
-  select(`episode/score`) %>%
-  mutate(`episode/score` = str_remove_all(`episode/score`, "\\[|\\]"),
-         `episode/score` = as.numeric(`episode/score`)) %>%
-  drop_na() %>%
-  slice_head(n = 300) %>%
-  rename(finalReward = `episode/score`)
-
-dreamer_2_8m$episode <- episode_names_2$episode
-
-
-dreamer_3_8m <- stream_in(file("../../dreamer/logdir/competition-long8m/competition-long8m-eval-ind3/metrics.jsonl")) %>%
-  select(`episode/score`) %>%
-  mutate(`episode/score` = str_remove_all(`episode/score`, "\\[|\\]"),
-         `episode/score` = as.numeric(`episode/score`)) %>%
-  drop_na() %>%
-  slice_head(n = 300) %>%
-  rename(finalReward = `episode/score`)
-
-dreamer_3_8m$episode <- episode_names_3$episode
-
-dreamer_8m_results <- rbind(dreamer_1_8m, dreamer_2_8m) %>%
-  rbind(., dreamer_3_8m) %>%
-  mutate(Agent = rep("Dreamer-v3 (64x64 Image) - 8M"))
-
-
-dreamer_1_12m <- stream_in(file("../../dreamer/logdir/competition-long12m/competition-long12m-eval-ind1/metrics.jsonl")) %>%
-  select(`episode/score`) %>%
-  mutate(`episode/score` = str_remove_all(`episode/score`, "\\[|\\]"),
-         `episode/score` = as.numeric(`episode/score`)) %>%
-  drop_na() %>%
-  slice_head(n = 300) %>%
-  rename(finalReward = `episode/score`)
-
-dreamer_1_12m$episode <- episode_names_1$episode
-
-dreamer_2_12m <- stream_in(file("../../dreamer/logdir/competition-long12m/competition-long12m-eval-ind2/metrics.jsonl")) %>%
-  select(`episode/score`) %>%
-  mutate(`episode/score` = str_remove_all(`episode/score`, "\\[|\\]"),
-         `episode/score` = as.numeric(`episode/score`)) %>%
-  drop_na() %>%
-  slice_head(n = 300) %>%
-  rename(finalReward = `episode/score`)
-
-dreamer_2_12m$episode <- episode_names_2$episode
-
-
-dreamer_3_12m <- stream_in(file("../../dreamer/logdir/competition-long12m/competition-long12m-eval-ind3/metrics.jsonl")) %>%
-  select(`episode/score`) %>%
-  mutate(`episode/score` = str_remove_all(`episode/score`, "\\[|\\]"),
-         `episode/score` = as.numeric(`episode/score`)) %>%
-  drop_na() %>%
-  slice_head(n = 300) %>%
-  rename(finalReward = `episode/score`)
-
-dreamer_3_12m$episode <- episode_names_3$episode
-
-dreamer_12m_results <- rbind(dreamer_1_12m, dreamer_2_12m) %>%
-  rbind(., dreamer_3_12m) %>%
-  mutate(Agent = rep("Dreamer-v3 (64x64 Image) - 12M"))
-
-
-olympics_scores <- read.csv("../data/competitionAAITestbed/olympics_scores_long.csv")
-
+random_results <- read.csv("../../random_heuristic_agents/results/competition/randomAgent.csv") %>%
+  transmute(episode = str_remove_all(episode, ".yaml"),
+            finalReward = str_remove_all(finalReward, "\\[|\\]"),
+            finalReward = as.numeric(finalReward),
+            Agent = rep("Random Action Agent", nrow(.)))
 
 children_results <- read.csv("../data/competitionAAITestbed/children_voudouris2022_data.csv") %>%
   drop_na()  %>%
@@ -368,7 +273,7 @@ children_results <- read.csv("../data/competitionAAITestbed/children_voudouris20
             episode = str_replace_all(episode, "^([1-9]-)", "0\\1"),
             episode = str_replace_all(episode, "(^[0-1][0-9]-)([1-3]{0}[1-9]-)", "\\10\\2"),
             episode = str_replace_all(episode, "([1-3]$)", "0\\1"),
-            Agent = rep("Human Child (Aged 6-10)"),
+            Agent = rep("Children (Aged 6-10)"),
             finalReward = finalReward) 
 
 children_results_all <- read.csv("../data/competitionAAITestbed/children_voudouris2022_data.csv") %>%
@@ -379,20 +284,15 @@ children_results_all <- read.csv("../data/competitionAAITestbed/children_voudour
             episode = str_replace_all(episode, "^([1-9]-)", "0\\1"),
             episode = str_replace_all(episode, "(^[0-1][0-9]-)([1-3]{0}[1-9]-)", "\\10\\2"),
             episode = str_replace_all(episode, "([1-3]$)", "0\\1"),
-            Agent = rep("Human Child (Aged 6-10)"),
+            Agent = rep("Children (Aged 6-10)"),
             finalReward = finalReward,
             id = User) 
 
-
-
 ## Combine all data
 
-
 all_results <- bind_rows(ppo_results, heuristic_results) %>%
-  bind_rows(., raa_results) %>%
-  bind_rows(., dreamer_4m_results) %>%
-  bind_rows(., dreamer_8m_results) %>%
-  bind_rows(., dreamer_12m_results) %>%
+  bind_rows(., random_results) %>%
+  bind_rows(., dreamer_results) %>%
   bind_rows(., olympics_scores) %>%
   bind_rows(., children_results) %>%
   left_join(., pass_marks, by = c("episode" = "episode")) %>%
@@ -412,8 +312,7 @@ all_results <- bind_rows(ppo_results, heuristic_results) %>%
 ## Plot data
 
 bar_plot_results <- all_results %>% group_by(Level, Agent) %>%
-  #filter(Agent == 'ironbar' | Agent == 'Trrrrr' | Agent == 'sirius' | Agent == 'Melflo' | Agent == 'sungbinchoi' | Agent == 'BronzeBlood' | Agent == 'ppo' | Agent == 'randomactionagent' | Agent == 'braitenberg' | Agent == 'Dreamer-v3 (64x64 Image)') %>%
-  filter(Agent == 'ironbar' | Agent == 'Trrrrr' | Agent == 'PPO (Raycast)' | Agent == 'Random Action Agent' | Agent == 'Heuristic Agent' | Agent == 'Dreamer-v3 (64x64 Image) - 4M' | Agent == 'Dreamer-v3 (64x64 Image) - 8M' | Agent == 'Dreamer-v3 (64x64 Image) - 12M' | Agent == "Human Child (Aged 6-10)") %>%
+  filter(Agent == 'ironbar' | Agent == 'Trrrrr' | Agent == 'PPO' | Agent == 'Random Action Agent' | Agent == 'Heuristic Agent' | Agent == 'Dreamer-v3' | Agent == "Children (Aged 6-10)") %>%
   summarise(`Proportion Passed` = sum(Pass)/n())
 
 bar_plot_results$Level <- factor(bar_plot_results$Level,
@@ -428,43 +327,30 @@ bar_plot_results$Level <- factor(bar_plot_results$Level,
                                             'Numerosity and\nAdvanced Preferences',
                                             'Causal Reasoning'))
 bar_plot_agents <- bar_plot_results %>%
-  filter(Agent == 'Heuristic Agent' | Agent == 'ironbar' | Agent == 'Trrrrr' | Agent == 'PPO (Raycast)' | Agent == 'Dreamer-v3 (64x64 Image) - 4M' | Agent == 'Dreamer-v3 (64x64 Image) - 8M' | Agent == 'Dreamer-v3 (64x64 Image) - 12M')
+  filter(Agent == 'Heuristic Agent' | Agent == 'ironbar' | Agent == 'Trrrrr' | Agent == 'PPO' | Agent == 'Dreamer-v3')
 
 bar_plot_agents$Agent <- factor(bar_plot_agents$Agent,
-                                levels = c(#'Random Action Agent',
-                                  'Heuristic Agent',
-                                  #'sungbinchoi',
-                                  #'Melflo',
-                                  #'BronzeBlood',
-                                  #'sirius',
-                                  'ironbar',
-                                  'Trrrrr',
-                                  'PPO (Raycast)',
-                                  'Dreamer-v3 (64x64 Image) - 4M',
-                                  'Dreamer-v3 (64x64 Image) - 8M',
-                                  'Dreamer-v3 (64x64 Image) - 12M'
-                                  #"Human Child (Aged 6-10)"
+                                levels = c('Heuristic Agent',
+                                           #'sungbinchoi',
+                                           #'Melflo',
+                                           #'BronzeBlood',
+                                           #'sirius',
+                                           'ironbar',
+                                           'Trrrrr',
+                                           'PPO',
+                                           'Dreamer-v3' #,
                                 ))
 
 bar_plot_references <- bar_plot_results %>%
-  filter(Agent == 'Random Action Agent' | Agent == 'Human Child (Aged 6-10)') %>%
+  filter(Agent == 'Random Action Agent' | Agent == 'Children (Aged 6-10)') %>%
   mutate(Reference = Agent)
 
 bar_plot_references$Reference <- factor(bar_plot_references$Reference,
                                         levels = c('Random Action Agent',
-                                                   #'Heuristic Agent',
-                                                   #'sungbinchoi',
-                                                   #'Melflo',
-                                                   #'BronzeBlood',
-                                                   #'sirius',
-                                                   #'ironbar',
-                                                   #'Trrrrr',
-                                                   #'PPO (Raycast)',
-                                                   #'Dreamer-v3 (64x64 Image)',
-                                                   "Human Child (Aged 6-10)"
+                                                   "Children (Aged 6-10)"
                                         ))
 
-(plot <- ggplot() + 
+(competition_bar_plot <- ggplot() + 
     geom_bar(data = bar_plot_agents,
              aes(x=Level, y=`Proportion Passed`, fill = Agent),
              position='dodge', stat='identity') +
@@ -481,94 +367,84 @@ bar_plot_references$Reference <- factor(bar_plot_references$Reference,
                    linetype = Reference
                  ), linewidth = 1) +
     #+
-    scale_fill_manual(values = c("#377eb8","#ff7f00", "#ffff33", "#4daf4a", "#756bb1",  "#984ea3", "#7a0177"))
-  #labs(caption = "Agents played all 90 tasks in each level. Children (n=59) played a randomly selected subset of 4 tasks in each level.") +  
-  # scale_fill_manual(values=c("#0073e6",
-  #                            "#e6308a",
-  #                            "#b51963",
-  #                            "#9efd38",
-  #                            "#006600",
-  #                            "#138808",
-  #                             "#568203")) + 
-  +  scale_color_manual(values = c(
-    "#1a237e",
-    "#000000"
-  ))
+    scale_fill_manual(values = c("#377eb8","#ff7f00", "#ffff33", "#984ea3", "#4daf4a")) +  scale_color_manual(values = c(
+      "#1a237e",
+      "#000000"
+    ))
 )
+
+ggsave("competitionBarPlot.svg", plot = competition_bar_plot, device = "svg", path = "../figures/", width = 5000, height = 2800, units = "px")
 
 ## Training
 
-dreamer_training_comp_4m <- stream_in(file("../../dreamer/logdir/competition/competition-train/metrics.jsonl")) %>%
-  select(step, `episode/score`) %>%
-  mutate(`episode/score` = str_remove_all(`episode/score`, "\\[|\\]"),
-         `episode/score` = as.numeric(`episode/score`)) %>%
-  drop_na() %>%
-  rename(Step = step,
-         Score = `episode/score`)
-
-dreamer_training_comp_8m <- stream_in(file("../../dreamer/logdir/competition-long8m/competition-train-long8m/metrics.jsonl")) %>%
-  select(step, `episode/score`) %>%
-  mutate(`episode/score` = str_remove_all(`episode/score`, "\\[|\\]"),
-         `episode/score` = as.numeric(`episode/score`)) %>%
-  drop_na() %>%
-  rename(Step = step,
-         Score = `episode/score`)
-
-dreamer_training_comp_8m <- dreamer_training_comp_8m[-1,] #remove the first row which is the first step
-
-dreamer_training_comp_12m <- stream_in(file("../../dreamer/logdir/competition-long12m/competition-train-long12m/metrics.jsonl")) %>%
-  select(step, `episode/score`) %>%
-  mutate(`episode/score` = str_remove_all(`episode/score`, "\\[|\\]"),
-         `episode/score` = as.numeric(`episode/score`)) %>%
-  drop_na() %>%
-  rename(Step = step,
-         Score = `episode/score`)
-
-dreamer_training_comp_12m <- dreamer_training_comp_12m[-1,] #remove the first row which is the first step
-
-dreamer_training_comp <- bind_rows(dreamer_training_comp_4m, dreamer_training_comp_8m) %>% 
-  bind_rows(., dreamer_training_comp_12m) %>%
-  mutate(Agent = rep("Dreamer-v3 (64x64 Image)"))
-
-ppo_training_comp <- read.csv("../data/competitionAAITestbed/competition_raycastppo_training.csv") %>%
-  transmute(Agent = rep("PPO (Raycast)", nrow(.)),
+dreamer_competition_training <- read.csv("../../dreamer/results/competition-training.csv") %>%
+  transmute(Agent = rep("Dreamer-v3"),
             Step = Step,
-            Score = Value)
+            Score = Score_movingavg)
 
+ppo_competition_training_scores <- read.csv("../../ppo/results/competition/ppo/training.csv") %>%
+  select(!(ends_with("_MIN") | ends_with("_MAX")))
 
-combined <- rbind(dreamer_training_comp, ppo_training_comp) %>%
-  mutate(Agent = as_factor(Agent),
+rewards <- c(ppo_competition_training_scores$PPO..default...level.1..aai_timescale.300..2M.time.steps...rollout.ep_rew_mean,
+             ppo_competition_training_scores$PPO..default...levels.1.2..aai_timescale.300..2M.time.steps...rollout.ep_rew_mean,
+             ppo_competition_training_scores$PPO..default...levels.1.3..aai_timescale.300..2M.time.steps...rollout.ep_rew_mean,
+             ppo_competition_training_scores$PPO..default...levels.1.4..aai_timescale.300..2M.time.steps...rollout.ep_rew_mean,
+             ppo_competition_training_scores$PPO..default...levels.1.5..aai_timescale.300..2M.time.steps...rollout.ep_rew_mean,
+             ppo_competition_training_scores$PPO..default...levels.1.6..aai_timescale.300..2M.time.steps...rollout.ep_rew_mean,
+             ppo_competition_training_scores$PPO..default...levels.1.7..aai_timescale.300..2M.time.steps...rollout.ep_rew_mean,
+             ppo_competition_training_scores$PPO..default...levels.1.8..aai_timescale.300..2M.time.steps...rollout.ep_rew_mean,
+             ppo_competition_training_scores$PPO..default...levels.1.9..aai_timescale.300..2M.time.steps...rollout.ep_rew_mean,
+             ppo_competition_training_scores$PPO..default...levels.1.10..aai_timescale.300..2M.time.steps...rollout.ep_rew_mean,
+             ppo_competition_training_scores$PPO..default...levels.1.10..aai_timescale.300..5M.time.steps...rollout.ep_rew_mean
+)
+
+rewards <- rewards[!is.na(rewards)]
+
+ppo_competition_training <- tibble(Agent = rep("PPO", length(rewards)),
+                                   Step = seq(0, 25000000, 25000000/(length(rewards)-1)),
+                                   Score = rewards)
+
+competition_combined_training <- bind_rows(ppo_competition_training, 
+                                           dreamer_competition_training) %>%
+  mutate(Agent = factor(Agent, levels=c("Dreamer-v3", "PPO")),
          Step = as.numeric(Step),
          Score = as.numeric(Score))
 
-(line_plot <- ggplot(data = combined,
-                     aes(x=Step, y=Score, colour = Agent)) + geom_line() +
+
+background_colour_rects <- data.frame(start = seq(0, 18000000, 2000000), 
+                                      end = c(seq(2000000, 18000000, 2000000), 25000000), 
+                                      level = c ("L1", "L1-2", "L1-3", "L1-4", "L1-5", "L1-6", "L1-7", "L1-8", "L1-9", "L1-10"))
+
+colours <- c("white", "grey","white","grey","white","grey","white","grey","white","grey")
+names(colours) <- background_colour_rects$level
+
+(line_plot_competition <- ggplot()  + 
+    geom_rect(data = background_colour_rects, aes(xmin = start, xmax = end, ymin = -1, ymax = 5, fill = level), alpha = 0.5, inherit.aes = FALSE) +
+    scale_fill_manual(values=colours, guide="none") + geom_line(data = competition_combined_training,
+                                                                aes(x=Step, y=Score, colour = Agent), size = 1.5)  +
+    scale_color_manual(values = c("#984ea3", "#4daf4a")) +
     theme_minimal() +
     theme(text = element_text(size=20)))
 
-(smooth_plot <- ggplot(data = combined,
-                       aes(x=Step, y=Score, colour = Agent)) + geom_smooth() +
-    theme_minimal() +
-    theme(text = element_text(size=20)) + ylim(-1.1,1))
-
+ggsave("competitionTrainingPlot.svg", plot = line_plot_competition, device = "svg", path = "../figures/", width = 5000, height = 2800, units = "px")
 
 ### Differences
 
-raa_results_all <- raa_results %>% rename(id = seed)
-dreamer_4m_results_all <- dreamer_4m_results %>% mutate(id = "Dreamer-v3 (64x64 Image) - 4M")
-dreamer_8m_results_all <- dreamer_8m_results %>% mutate(id = "Dreamer-v3 (64x64 Image) - 8M")
-dreamer_12m_results_all <- dreamer_12m_results %>% mutate(id = "Dreamer-v3 (64x64 Image) - 12M")
-ppo_results_all <- ppo_results %>% mutate(id = "PPO (Raycast)")
+random_results_id <- random_results %>% mutate(id = "Random Action Agent")
+
+heuristic_results_id <- heuristic_results %>% mutate(id = "Heuristic Agent")
+
+dreamer_results_id <- dreamer_results %>% mutate(id = "Dreamer-v3")
+
+ppo_results_id <- ppo_results %>% mutate(id = "PPO")
+
 olympics_scores_all <- olympics_scores %>%
   filter(Agent == "Trrrrr" | Agent == "ironbar") %>%
   mutate(id = Agent)
 
-
-all_results_lmer <- bind_rows(raa_results_all, all_heuristic_results) %>%
-  bind_rows(., dreamer_4m_results_all) %>%
-  bind_rows(., dreamer_8m_results_all) %>%
-  bind_rows(., dreamer_12m_results_all) %>%
-  bind_rows(., ppo_results_all) %>%
+all_results_lmer <- bind_rows(random_results_id, heuristic_results_id) %>%
+  bind_rows(., dreamer_results_id) %>%
+  bind_rows(., ppo_results_id) %>%
   bind_rows(., olympics_scores_all) %>%
   bind_rows(., children_results_all) %>%
   left_join(., pass_marks, by = c("episode" = "episode")) %>%
@@ -594,7 +470,7 @@ model <- glmer(Pass ~ Agent + Level + (1|id), data = all_results_lmer, family = 
                control = glmerControl(optimizer = "bobyqa"),
                nAGQ = 10)
 
-sink("../data/competitionAAITestbed/competitionGLMMTest.txt")
+sink("../outputs/competitionGLMMTest.txt")
 
 print(model, corr=FALSE)
 
@@ -620,11 +496,13 @@ odds_ratios_CIs_tib <- tibble("Factor" = row.names(odds_ratios_CIs),
          Factor = str_remove_all(Factor, "Level|Agent"))
 
 
-(gg0 <- (ggplot(odds_ratios_CIs_tib,
-                aes(x = `Mean Estimate`, y = `Factor`))
-         + geom_pointrange(aes(xmin = `Lower Bound`, xmax = `Upper Bound`))
-         + geom_vline(xintercept = 0, lty = 2)
+(competition_forest_plot <- (ggplot(odds_ratios_CIs_tib,
+                                    aes(x = `Mean Estimate`, y = `Factor`))
+                             + geom_pointrange(aes(xmin = `Lower Bound`, xmax = `Upper Bound`))
+                             + geom_vline(xintercept = 0, lty = 2)
 ))
+
+ggsave("competitionForestPlot.svg", plot = competition_forest_plot, device = "svg", path = "../figures/", width = 5000, height = 2800, units = "px")
 
 ## all results averages
 
@@ -634,3 +512,6 @@ proportions_passed_overall <- all_results %>%
   summarise(`Proportion Passed` = sum(Pass)/n()) %>%
   arrange(desc(`Proportion Passed`))
 
+write.csv(proportions_passed_overall, "../outputs/overallCompetitionLeaderboard.csv", row.names = FALSE)
+
+cat(".\n.\n.\nFinished!")

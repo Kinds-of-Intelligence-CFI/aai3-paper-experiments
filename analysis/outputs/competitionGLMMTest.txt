@@ -1,0 +1,82 @@
+Generalized linear mixed model fit by maximum likelihood (Adaptive Gauss-Hermite Quadrature, nAGQ = 10) ['glmerMod']
+ Family: binomial  ( logit )
+Formula: Pass ~ Agent + Level + (1 | id)
+   Data: all_results_lmer
+      AIC       BIC    logLik  deviance  df.resid 
+10159.385 10282.164 -5062.693 10125.385     10103 
+Random effects:
+ Groups Name        Std.Dev.
+ id     (Intercept) 0.6261  
+Number of obs: 10120, groups:  id, 65
+Fixed Effects:
+                               (Intercept)                        AgentHeuristic Agent                             AgentDreamer-v3                                    AgentPPO                                Agentironbar  
+                                  -3.03054                                     1.81878                                     1.87787                                    -0.47417                                     3.08766  
+                               AgentTrrrrr                   AgentChildren (Aged 6-10)                            LevelPreferences                       LevelStatic Obstacles                              LevelAvoidance  
+                                   3.09766                                     3.85435                                     0.32431                                     0.04507                                    -0.04499  
+       LevelSpatial Reasoning\nand Support                         LevelGeneralisation                     LevelInternal Modelling  LevelObject Permanence\nand Working Memory   LevelNumerosity and\nAdvanced Preferences  
+                                  -0.57530                                     0.57087                                     0.05636                                    -1.19127                                    -1.69141  
+                     LevelCausal Reasoning  
+                                  -1.00170  
+Generalized linear mixed model fit by maximum likelihood (Adaptive Gauss-Hermite Quadrature, nAGQ = 10) ['glmerMod']
+ Family: binomial  ( logit )
+Formula: Pass ~ Agent + Level + (1 | id)
+   Data: all_results_lmer
+Control: glmerControl(optimizer = "bobyqa")
+
+     AIC      BIC   logLik deviance df.resid 
+ 10159.4  10282.2  -5062.7  10125.4    10103 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-2.9359 -0.6236 -0.1798  0.6730 10.3762 
+
+Random effects:
+ Groups Name        Variance Std.Dev.
+ id     (Intercept) 0.3919   0.6261  
+Number of obs: 10120, groups:  id, 65
+
+Fixed effects:
+                                           Estimate Std. Error z value             Pr(>|z|)    
+(Intercept)                                -3.03054    0.65309  -4.640        0.00000347882 ***
+AgentHeuristic Agent                        1.81878    0.90603   2.007             0.044706 *  
+AgentDreamer-v3                             1.87787    0.90591   2.073             0.038181 *  
+AgentPPO                                   -0.47417    0.92689  -0.512             0.608951    
+Agentironbar                                3.08766    0.90479   3.413             0.000644 ***
+AgentTrrrrr                                 3.09766    0.90465   3.424             0.000617 ***
+AgentChildren (Aged 6-10)                   3.85435    0.65533   5.882        0.00000000407 ***
+LevelPreferences                            0.32431    0.10685   3.035             0.002403 ** 
+LevelStatic Obstacles                       0.04507    0.10615   0.425             0.671138    
+LevelAvoidance                             -0.04499    0.10605  -0.424             0.671425    
+LevelSpatial Reasoning\nand Support        -0.57530    0.10675  -5.389        0.00000007075 ***
+LevelGeneralisation                         0.57087    0.10794   5.289        0.00000012316 ***
+LevelInternal Modelling                     0.05636    0.10617   0.531             0.595556    
+LevelObject Permanence\nand Working Memory -1.19127    0.11061 -10.770 < 0.0000000000000002 ***
+LevelNumerosity and\nAdvanced Preferences  -1.69141    0.11673 -14.490 < 0.0000000000000002 ***
+LevelCausal Reasoning                      -1.00170    0.10903  -9.187 < 0.0000000000000002 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+                               (Intercept)                       AgentHeuristic Agent                            AgentDreamer-v3                                   AgentPPO                               Agentironbar 
+                                0.04828964                                 6.16432248                                 6.53957106                                 0.62240069                                21.92573697 
+                               AgentTrrrrr                  AgentChildren (Aged 6-10)                           LevelPreferences                      LevelStatic Obstacles                             LevelAvoidance 
+                               22.14603841                                47.19811038                                 1.38307136                                 1.04610237                                 0.95600975 
+       LevelSpatial Reasoning\nand Support                        LevelGeneralisation                    LevelInternal Modelling LevelObject Permanence\nand Working Memory  LevelNumerosity and\nAdvanced Preferences 
+                                0.56253336                                 1.76980461                                 1.05797332                                 0.30383446                                 0.18425866 
+                     LevelCausal Reasoning 
+                                0.36725482 
+                                                   Est          LL         UL
+(Intercept)                                -3.03053815 -4.31059297 -1.7504833
+AgentHeuristic Agent                        1.81877823  0.04295307  3.5946034
+AgentDreamer-v3                             1.87787158  0.10228026  3.6534629
+AgentPPO                                   -0.47417120 -2.29088079  1.3425384
+Agentironbar                                3.08766115  1.31427442  4.8610479
+AgentTrrrrr                                 3.09765863  1.32454189  4.8707754
+AgentChildren (Aged 6-10)                   3.85435386  2.56990113  5.1388066
+LevelPreferences                            0.32430665  0.11488848  0.5337248
+LevelStatic Obstacles                       0.04507123 -0.16298901  0.2531315
+LevelAvoidance                             -0.04498717 -0.25285237  0.1628780
+LevelSpatial Reasoning\nand Support        -0.57530484 -0.78453554 -0.3660741
+LevelGeneralisation                         0.57086915  0.35930589  0.7824324
+LevelInternal Modelling                     0.05635512 -0.15173780  0.2644480
+LevelObject Permanence\nand Working Memory -1.19127228 -1.40807202 -0.9744725
+LevelNumerosity and\nAdvanced Preferences  -1.69141477 -1.92021080 -1.4626187
+LevelCausal Reasoning                      -1.00169933 -1.21540701 -0.7879917
