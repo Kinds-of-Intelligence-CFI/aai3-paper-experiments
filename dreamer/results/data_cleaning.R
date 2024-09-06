@@ -6,19 +6,19 @@
 
 library(jsonlite)
 library(tidyverse)
-library(zoo)
+library(runner)
 
 options(scipen = 999)
 set.seed(2023)
 
-movingAverage <- function(path, width = 500){
+movingAverage <- function(path, width = 100){ #to match sb3 smoothin
   data <- stream_in(file(path)) %>%
     select(step, `episode/score`) %>%
     mutate(Lag0 = as.numeric(str_remove_all(`episode/score`, "\\[|\\]"))) %>%
     transmute(Step = step,
               Score_raw = Lag0,
-              Score_movingavg = zoo::rollapply(Lag0, width=width, FUN=function(x) mean(x, na.rm=TRUE), fill=NA, partial=TRUE))
-  
+              Score_movingavg = runner::mean_run(Lag0, k=width, na_rm = TRUE, na_pad = FALSE)
+    )
 }
 
 # Set working directory to path to this file
@@ -34,13 +34,7 @@ foraging_task <- stream_in(file("../logdir/foraging/foraging-eval/metrics.jsonl"
 
 write.csv(foraging_task, "foragingTask-eval.csv", row.names = FALSE)
 
-foraging_task_training <- stream_in(file("..//logdir/foraging/foraging-train/metrics.jsonl")) %>%
-  select(step, `episode/score`) %>%
-  mutate(`episode/score` = str_remove_all(`episode/score`, "\\[|\\]"),
-         `episode/score` = as.numeric(`episode/score`)) %>%
-  drop_na() %>%
-  rename(Step = step,
-         Score = `episode/score`)
+foraging_task_training <- movingAverage("../logdir/foraging/foraging-train/metrics.jsonl", width=100)
 
 write.csv(foraging_task_training, "foragingTask-training.csv", row.names = FALSE)
 
@@ -165,3 +159,20 @@ third_batch_missing <- stream_in(file("../logdir/competition-curriculum/competit
 competition_results <- bind_rows(competition_results, first_batch_missing, second_batch_missing, third_batch_missing)
 
 write.csv(competition_results, "competition-eval.csv", row.names = FALSE)
+
+# Training
+
+competition_curriculum_training <- movingAverage("../../dreamer/logdir/competition-curriculum/competition-curriculum-timescale300-L1/metrics.jsonl") %>%
+  bind_rows(movingAverage("../../dreamer/logdir/competition-curriculum/competition-curriculum-timescale300-L1_2/metrics.jsonl")) %>%
+  bind_rows(movingAverage("../../dreamer/logdir/competition-curriculum/competition-curriculum-timescale300-L1_3/metrics.jsonl")) %>%
+  bind_rows(movingAverage("../../dreamer/logdir/competition-curriculum/competition-curriculum-timescale300-L1_4/metrics.jsonl")) %>%
+  bind_rows(movingAverage("../../dreamer/logdir/competition-curriculum/competition-curriculum-timescale300-L1_5/metrics.jsonl")) %>%
+  bind_rows(movingAverage("../../dreamer/logdir/competition-curriculum/competition-curriculum-timescale300-L1_6/metrics.jsonl")) %>%
+  bind_rows(movingAverage("../../dreamer/logdir/competition-curriculum/competition-curriculum-timescale300-L1_7/metrics.jsonl")) %>%
+  bind_rows(movingAverage("../../dreamer/logdir/competition-curriculum/competition-curriculum-timescale300-L1_8/metrics.jsonl")) %>%
+  bind_rows(movingAverage("../../dreamer/logdir/competition-curriculum/competition-curriculum-timescale300-L1_9/metrics.jsonl")) %>%
+  bind_rows(movingAverage("../../dreamer/logdir/competition-curriculum/competition-curriculum-timescale300-L1_10/metrics.jsonl")) %>%
+  bind_rows(movingAverage("../../dreamer/logdir/competition-curriculum/competition-curriculum-timescale300-L1_10_5M/metrics.jsonl")) %>%
+  drop_na(Score_movingavg)
+
+write.csv(competition_curriculum_training, "competition-training.csv", row.names = FALSE)
